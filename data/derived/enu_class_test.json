@@ -10,7 +10,7 @@
   "n_cg_classforced_atlas": 243,
   "germline_cg_rate": 0.002,
   "jeffreys_hit_proportion": {
-    "lo": 0.06965666863961643,
+    "lo": 0.06965666863961642,
     "mean": 0.25,
     "hi": 0.49737212197534625
   },

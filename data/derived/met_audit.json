@@ -131,7 +131,7 @@
         "T>G": 3.0
       },
       "chi2_vs_germline": 50.436748525530845,
-      "p_chi2": 1.12799111106201e-09,
+      "p_chi2": 1.1279911110620107e-09,
       "classes_observed": [
         "C>A",
         "C>G",
@@ -296,11 +296,11 @@
     ],
     "expected_clones_under_supply": {
       "Y1230C": 18.801369863013697,
-      "Y1230D": 2.568493150684932,
+      "Y1230D": 2.5684931506849313,
       "Y1230F": 16.13013698630137,
       "Y1230H": 18.801369863013697,
       "Y1230N": 16.13013698630137,
-      "Y1230S": 2.568493150684932
+      "Y1230S": 2.5684931506849313
     },
     "observed_clones": {
       "Y1230C": 31,
@@ -311,7 +311,7 @@
       "Y1230S": 4
     },
     "chi2_within_codon": 26.387476198763245,
-    "p_chi2_within_codon": 7.504676199303642e-05,
+    "p_chi2_within_codon": 7.504676199303643e-05,
     "missing_variant_atlas_rank": {
       "Y1230F": 54
     }
@@ -363,7 +363,7 @@
     ],
     "chi2": 12.420123432255783,
     "dof": 5,
-    "p": 0.029463225369071463,
+    "p": 0.029463225369071474,
     "interpretation": "Same ENU protocol, same Ba/F3 TPR-MET cells, same laboratory; the two drugs give different class compositions, so composition is set by selection."
   }
 }

@@ -50,7 +50,7 @@ ALLOWED = {
     "0.78", "0.44", "0.57", "493", "45",
     # Derived in the sentence that reports them, from registered inputs.
     "9.7", "2.6", "26.2", "7.0", "49.7",   # ENU C>G inversion, see §3.5
-    "33", "1.1", "1.5",                     # sub-library enrichment, §3.6
+    "33", "1.1", "1.5", "16",               # sub-library enrichment, §3.6
     "2.1",                                  # 10^0.32, stated inline
 }
 

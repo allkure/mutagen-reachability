@@ -1,6 +1,6 @@
 # Paper numbers — master book
 
-*Last computed: 2026-10-30 19:02:21*
+*Last computed: 2026-10-30 18:12:10*
 *Source script: `scripts/compute_paper_numbers.py`*
 *Total registered: 208 entries*
 
@@ -184,7 +184,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - `proxy_rho_zotizalkib` = **0.57** — Spearman correlation between zotizalkib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices
 - `r68l_two_nt_routes` = **2** — two-substitution routes from AGG to a leucine codon
 - `reach_be_blocked_alk` = **172 of 273** — ALK residues whose top-sigma class-forced substitution CBE+ABE cannot make, under alectinib
-- `reach_be_blocked_kras` = **121 of 188** — KRAS G12C residues whose top-sigma class-forced substitution CBE+ABE cannot make, under adagrasib
+- `reach_be_blocked_kras` = **120 of 188** — KRAS G12C residues whose top-sigma class-forced substitution CBE+ABE cannot make, under adagrasib
 - `reach_be_blocked_met` = **183 of 287** — MET residues whose top-sigma class-forced substitution CBE+ABE cannot make, under NVP-BVU972
 - `reach_be_blocked_share_range` = **63\%--66\%** — range of the CBE+ABE blocked-residue share across all three genes and every drug arm
 - `reach_class_forced_alk` = **1,427** — ALK class-forced variants per drug arm
@@ -269,7 +269,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 
 **`met_two_screen_p`** = 0.029
 
-- Value: `0.029463225369071463`
+- Value: `0.029463225369071474`
 - Formula: `scipy.stats.chi2_contingency`
 - Computed from: p-value of that homogeneity test; the two screens differ, so the class composition of a hit list is set by the drug, not the mutagen
 - Inputs: `{'dof': 5}`
@@ -577,9 +577,9 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Inputs: `{'transcript': 'NM_033360.4'}`
 - Code: `scripts/compute_paper_numbers.py::build_reachability_track.py::load_variants`
 
-**`reach_be_blocked_kras`** = 121 of 188
+**`reach_be_blocked_kras`** = 120 of 188
 
-- Value: `121`
+- Value: `120`
 - Formula: `count of residues where S_CBE+ABE of the top-sigma class-forced substitution is zero`
 - Computed from: KRAS G12C residues whose top-sigma class-forced substitution CBE+ABE cannot make, under adagrasib
 - Inputs: `{'drug': 'adagrasib', 'n_residues': 188, 'note': 'the arm Figure 3C plots'}`
@@ -706,12 +706,12 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `12.420123432255783`
 - Formula: `scipy.stats.chi2_contingency(2 x 6 clone counts)`
 - Computed from: chi-square homogeneity of the six-class clone composition between the NVP-BVU972 and AMG 458 screens, which used the same ENU protocol in the same cells
-- Inputs: `{'dof': 5, 'p': 0.029463225369071463, 'table': '{...}'}`
+- Inputs: `{'dof': 5, 'p': 0.029463225369071474, 'table': '{...}'}`
 - Code: `scripts/compute_paper_numbers.py::met_audit.py::main`
 
 **`met_two_screen_p`** = 0.029
 
-- Value: `0.029463225369071463`
+- Value: `0.029463225369071474`
 - Formula: `scipy.stats.chi2_contingency`
 - Computed from: p-value of that homogeneity test; the two screens differ, so the class composition of a hit list is set by the drug, not the mutagen
 - Inputs: `{'dof': 5}`
@@ -1177,7 +1177,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.5149638802889577`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for alectinib, over 18 shared variants
-- Inputs: `{'n': 18, 'boot95': [-0.04275959677304641, 0.855497382198953], 'p': 0.028748754882630345, 'median_inter_study_spread_log10': 0.12928740120303056}`
+- Inputs: `{'n': 18, 'boot95': [-0.04275959677304641, 0.855497382198953], 'p': 0.028748754882630335, 'median_inter_study_spread_log10': 0.12928740120303056}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`transport_rho_lorlatinib`** = 0.17
@@ -1185,7 +1185,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.16615067079463364`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for lorlatinib, over 18 shared variants
-- Inputs: `{'n': 18, 'boot95': [-0.42618532491530653, 0.7229182515739769], 'p': 0.5099504603438955, 'median_inter_study_spread_log10': 0.3219465077435653}`
+- Inputs: `{'n': 18, 'boot95': [-0.42618532491530653, 0.7229182515739769], 'p': 0.509950460343896, 'median_inter_study_spread_log10': 0.32194650774356537}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`transport_rho_zotizalkib`** = 0.82
@@ -1193,7 +1193,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.8241758241758241`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for zotizalkib, over 13 shared variants
-- Inputs: `{'n': 13, 'boot95': [0.4871720116618075, 0.9602272727272727], 'p': 0.0005302228375973589, 'median_inter_study_spread_log10': 0.0}`
+- Inputs: `{'n': 13, 'boot95': [0.4871720116618075, 0.9602272727272727], 'p': 0.0005302228375973583, 'median_inter_study_spread_log10': 0.0}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`atlas_dose_ratio_alectinib`** = 1.7x
@@ -1222,7 +1222,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 
 **`lorlatinib_inter_study_spread`** = 0.32
 
-- Value: `0.3219465077435653`
+- Value: `0.32194650774356537`
 - Formula: `median over variants of max - min log10 fold change`
 - Computed from: median inter-study range of measured lorlatinib potency on the same variant
 - Inputs: `{'n': 18}`
@@ -2258,7 +2258,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.5149638802889577`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for alectinib, over 18 shared variants
-- Inputs: `{'n': 18, 'boot95': [-0.04275959677304641, 0.855497382198953], 'p': 0.028748754882630345, 'median_inter_study_spread_log10': 0.12928740120303056}`
+- Inputs: `{'n': 18, 'boot95': [-0.04275959677304641, 0.855497382198953], 'p': 0.028748754882630335, 'median_inter_study_spread_log10': 0.12928740120303056}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`transport_rho_lorlatinib`** = 0.17
@@ -2266,7 +2266,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.16615067079463364`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for lorlatinib, over 18 shared variants
-- Inputs: `{'n': 18, 'boot95': [-0.42618532491530653, 0.7229182515739769], 'p': 0.5099504603438955, 'median_inter_study_spread_log10': 0.3219465077435653}`
+- Inputs: `{'n': 18, 'boot95': [-0.42618532491530653, 0.7229182515739769], 'p': 0.509950460343896, 'median_inter_study_spread_log10': 0.32194650774356537}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`transport_rho_zotizalkib`** = 0.82
@@ -2274,7 +2274,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.8241758241758241`
 - Formula: `spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)`
 - Computed from: Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for zotizalkib, over 13 shared variants
-- Inputs: `{'n': 13, 'boot95': [0.4871720116618075, 0.9602272727272727], 'p': 0.0005302228375973589, 'median_inter_study_spread_log10': 0.0}`
+- Inputs: `{'n': 13, 'boot95': [0.4871720116618075, 0.9602272727272727], 'p': 0.0005302228375973583, 'median_inter_study_spread_log10': 0.0}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`proxy_rho_alectinib`** = 0.21
@@ -2290,7 +2290,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.5714285714285714`
 - Formula: `spearmanr(sigma_atlas[drug], log10 FC under neladalkib)`
 - Computed from: Spearman correlation between lorlatinib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices
-- Inputs: `{'n': 13, 'boot95': [0.0, 0.898883485978661], 'p': 0.0413422673717235}`
+- Inputs: `{'n': 13, 'boot95': [0.0, 0.898883485978661], 'p': 0.04134226737172355}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`proxy_rho_zotizalkib`** = 0.57
@@ -2298,7 +2298,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `0.5659340659340659`
 - Formula: `spearmanr(sigma_atlas[drug], log10 FC under neladalkib)`
 - Computed from: Spearman correlation between zotizalkib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices
-- Inputs: `{'n': 13, 'boot95': [-0.05148088531187118, 0.9150201661305036], 'p': 0.04379259223545486}`
+- Inputs: `{'n': 13, 'boot95': [-0.05148088531187118, 0.9150201661305036], 'p': 0.04379259223545482}`
 - Code: `scripts/compute_paper_numbers.py::sigma_transport_validation.py::main`
 
 **`atlas_dose_ratio_alectinib`** = 1.7x
@@ -2403,12 +2403,12 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Value: `12.420123432255783`
 - Formula: `scipy.stats.chi2_contingency(2 x 6 clone counts)`
 - Computed from: chi-square homogeneity of the six-class clone composition between the NVP-BVU972 and AMG 458 screens, which used the same ENU protocol in the same cells
-- Inputs: `{'dof': 5, 'p': 0.029463225369071463, 'table': '{...}'}`
+- Inputs: `{'dof': 5, 'p': 0.029463225369071474, 'table': '{...}'}`
 - Code: `scripts/compute_paper_numbers.py::met_audit.py::main`
 
 **`met_two_screen_p`** = 0.029
 
-- Value: `0.029463225369071463`
+- Value: `0.029463225369071474`
 - Formula: `scipy.stats.chi2_contingency`
 - Computed from: p-value of that homogeneity test; the two screens differ, so the class composition of a hit list is set by the drug, not the mutagen
 - Inputs: `{'dof': 5}`
@@ -2432,7 +2432,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 
 **`met_y1230_tg_expected_clones`** = 5.1
 
-- Value: `5.136986301369864`
+- Value: `5.136986301369863`
 - Formula: `sum of expected_clones_under_supply over the T>G routes`
 - Computed from: clones the two T>G routes out of Y1230 are predicted to carry under germline ENU supply alone
 - Inputs: `{'routes': ['Y1230D', 'Y1230S']}`
@@ -2521,9 +2521,9 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 - Inputs: `{'drug': 'alectinib', 'n_residues': 273, 'note': 'the arm Figure 3C plots'}`
 - Code: `scripts/compute_paper_numbers.py::build_reachability_track.py::build`
 
-**`reach_be_blocked_kras`** = 121 of 188
+**`reach_be_blocked_kras`** = 120 of 188
 
-- Value: `121`
+- Value: `120`
 - Formula: `count of residues where S_CBE+ABE of the top-sigma class-forced substitution is zero`
 - Computed from: KRAS G12C residues whose top-sigma class-forced substitution CBE+ABE cannot make, under adagrasib
 - Inputs: `{'drug': 'adagrasib', 'n_residues': 188, 'note': 'the arm Figure 3C plots'}`
@@ -2732,7 +2732,7 @@ Every quantitative claim in `paper.tex` comes from this manifest. If a number ap
 
 **`lorlatinib_inter_study_spread`** = 0.32
 
-- Value: `0.3219465077435653`
+- Value: `0.32194650774356537`
 - Formula: `median over variants of max - min log10 fold change`
 - Computed from: median inter-study range of measured lorlatinib potency on the same variant
 - Inputs: `{'n': 18}`
