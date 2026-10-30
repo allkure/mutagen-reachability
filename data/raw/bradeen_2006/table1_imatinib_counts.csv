@@ -1,0 +1,37 @@
+# Bradeen et al. 2006 Blood — Table 1, IMATINIB arm.
+# Source: pasted by MR from the published Table 1 (2026-10-13 20:52 Europe/Rome).
+# This records only the imatinib arm (nilotinib and dasatinib arms are saved separately if needed).
+# Variant names are the type Ia convention standard in modern BCR-ABL literature.
+# "incidence_n" is the total number of imatinib-resistant isolates carrying that variant across
+# all four imatinib concentrations (2, 4, 8, 16 μM).
+# "incidence_pct" is the paper-reported percentage; it uses a total of 372 (= 100 / 0.27 = 370.4,
+# consistent with the paper's reported "370 isolates" rounded).
+# counts_2uM..counts_16uM are the per-concentration isolate counts.
+# "†" in the paper flags second-site / co-occurring mutations; carried as note.
+variant_ia,incidence_n,incidence_pct,counts_2uM,counts_4uM,counts_8uM,counts_16uM,note
+M244V,1,0.27,1,0,0,0,
+L248R,2,0.54,1,0,1,0,
+L248V,3,0.81,3,0,0,0,
+G250E,4,1.08,3,1,0,0,
+Q252H,5,1.34,0,4,0,1,
+Y253H,168,45.16,56,65,31,16,"single most frequent imatinib variant; 45% of all recovered"
+E255K,22,5.91,12,8,1,1,
+E255V,1,0.27,0,1,0,0,
+D276G,2,0.54,2,0,0,0,
+E292V,0,0.00,0,0,0,0,"flagged with dagger - compound mutation only"
+V299L,0,0.00,0,0,0,0,
+F311I,4,1.08,4,0,0,0,
+F311V,3,0.81,3,0,0,0,
+T315I,139,37.37,39,56,29,15,"gatekeeper; 2nd most frequent imatinib variant; 37%"
+F317C,0,0.00,0,0,0,0,
+F317I,0,0.00,0,0,0,0,
+F317L,2,0.54,2,0,0,0,
+F317V,0,0.00,0,0,0,0,
+M351T,1,0.27,1,0,0,0,
+E355G,1,0.27,1,0,0,0,
+F359C,6,1.61,6,0,0,0,
+F359V,3,0.81,3,0,0,0,
+V379I,2,0.54,2,0,0,0,
+L384M,1,0.27,1,0,0,0,
+L387F,0,0.00,0,0,0,0,
+H396R,2,0.54,1,1,0,0,

@@ -1,0 +1,21 @@
+variant_ia,wt_aa,mut_aa,candidate_wt_codons,n_routes_total_across_candidates,n_routes_per_wt_codon,substitution_classes_set,class_forced_by_aa_change,forced_class,routes_detail,clinvar_anchor
+M244V,M,V,ATG,1,1,T>C,yes,T>C,ATG->GTG@p1:T>C,no
+L248R,L,R,CTA|CTC|CTG|CTT,4,1,T>G,yes,T>G,CTA->CGA@p2:T>G; CTC->CGC@p2:T>G; CTG->CGG@p2:T>G; CTT->CGT@p2:T>G,no
+L248V,L,V,CTA|CTC|CTG|CTT,4,1,C>G,yes,C>G,CTA->GTA@p1:C>G; CTC->GTC@p1:C>G; CTG->GTG@p1:C>G; CTT->GTT@p1:C>G,yes
+G250E,G,E,GGA|GGG,2,1,C>T,yes,C>T,GGA->GAA@p2:C>T; GGG->GAG@p2:C>T,no
+Q252H,Q,H,CAA|CAG,4,2,C>A|C>G|T>A|T>G,no,,CAA->CAC@p3:T>G; CAA->CAT@p3:T>A; CAG->CAC@p3:C>G; CAG->CAT@p3:C>A,no
+Y253H,Y,H,TAC,1,1,T>C,yes,T>C,TAC->CAC@p1:T>C,yes
+E255K,E,K,GAA|GAG,2,1,C>T,yes,C>T,GAA->AAA@p1:C>T; GAG->AAG@p1:C>T,no
+E255V,E,V,GAA|GAG,2,1,T>A,yes,T>A,GAA->GTA@p2:T>A; GAG->GTG@p2:T>A,no
+D276G,D,G,GAC|GAT,2,1,T>C,yes,T>C,GAC->GGC@p2:T>C; GAT->GGT@p2:T>C,no
+F311I,F,I,TTC|TTT,2,1,T>A,yes,T>A,TTC->ATC@p1:T>A; TTT->ATT@p1:T>A,no
+F311V,F,V,TTC|TTT,2,1,T>G,yes,T>G,TTC->GTC@p1:T>G; TTT->GTT@p1:T>G,no
+T315I,T,I,ACT,1,1,C>T,yes,C>T,ACT->ATT@p2:C>T,yes
+F317L,F,L,TTC|TTT,6,3,C>A|C>G|T>A|T>C|T>G,no,,TTC->CTC@p1:T>C; TTC->TTA@p3:C>A; TTC->TTG@p3:C>G; TTT->CTT@p1:T>C; TTT->TTA@p3:T>A; TTT->TTG@p3:T>G,no
+M351T,M,T,ATG,1,1,T>C,yes,T>C,ATG->ACG@p2:T>C,yes
+E355G,E,G,GAA|GAG,2,1,T>C,yes,T>C,GAA->GGA@p2:T>C; GAG->GGG@p2:T>C,no
+F359C,F,C,TTC|TTT,2,1,T>G,yes,T>G,TTC->TGC@p2:T>G; TTT->TGT@p2:T>G,no
+F359V,F,V,TTC|TTT,2,1,T>G,yes,T>G,TTC->GTC@p1:T>G; TTT->GTT@p1:T>G,no
+V379I,V,I,GTA|GTC|GTT,3,1,C>T,yes,C>T,GTA->ATA@p1:C>T; GTC->ATC@p1:C>T; GTT->ATT@p1:C>T,no
+L384M,L,M,CTG,1,1,C>A,yes,C>A,CTG->ATG@p1:C>A,yes
+H396R,H,R,CAC|CAT,2,1,T>C,yes,T>C,CAC->CGC@p2:T>C; CAT->CGT@p2:T>C,no

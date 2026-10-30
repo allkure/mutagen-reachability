@@ -1,0 +1,66 @@
+{
+  "source_repo": "github.com/fraser-lab/MET_kinase_Inhibitor_DMS",
+  "citation_key": "estevam2024",
+  "offset_applied": {
+    "WT": 1058,
+    "exon14del": 1058
+  },
+  "offset_anchors_used": {
+    "1092": "V",
+    "1094": "H",
+    "1163": "G",
+    "1195": "L",
+    "1200": "F",
+    "1211": "M",
+    "1228": "D",
+    "1230": "Y",
+    "1234": "Y",
+    "1235": "Y"
+  },
+  "canonical_residue_range": [
+    1059,
+    1345
+  ],
+  "n_positions": 287,
+  "inhibitors": [
+    "A458",
+    "Cabo",
+    "Camp",
+    "Crizo",
+    "DMSO",
+    "Gle",
+    "Glu",
+    "Mere",
+    "NVP",
+    "Savo",
+    "Tepo",
+    "Tiv"
+  ],
+  "author_type_I": [
+    "Crizo",
+    "Camp",
+    "Tepo",
+    "Glu",
+    "NVP",
+    "Savo"
+  ],
+  "author_type_II": [
+    "Cabo",
+    "Mere",
+    "Gle"
+  ],
+  "ungrouped_in_author_code": [
+    "A458",
+    "Tiv"
+  ],
+  "control_arm": "DMSO",
+  "tiedt_2011_inhibitors_present": {
+    "NVP": "NVP-BVU972",
+    "A458": "AMG 458"
+  },
+  "n_missense_WT": 55462,
+  "n_variants_WT_wide": 5136,
+  "note_dmso": "DMSO is the no-drug control and IS subtracted, giving delta_<inhibitor> columns. Estevam's per-arm ROSACE_effects still contains the growth component (DMSO correlates with the drug arms at r ~ 0.8), whereas Oh's Resistance score already nets growth out. The subtraction makes the two atlases report the same quantity; it matches the repository's own delta.score.",
+  "note_backgrounds": "The repository is ambiguous about which file is which background: MET_inhibitor_DMS_analysis.R reads EX_ as delta-exon14 and WT_ as exon-14-retained, while MET_inhibitor_DMS_Rosace_analysis.R reads WT_ into both objects, which is a copy-paste error. We follow the self-consistent script and report both backgrounds.",
+  "note_a458_class": "The authors' explicit type_II vector is Cabo/Mere/Gle; A458 is ordered immediately with that group in their plotting vectors but carries no explicit type label in the repository code."
+}

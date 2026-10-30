@@ -1,0 +1,49 @@
+variant,drug,mutagen,status,forced_class,S_mutagen,drug_z,rank_simulated,rank_chemfree,rank_shift
+R68L,sotorasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+R68L,sotorasib,ENU,NOT CLASS-FORCED,,,,,,
+R68L,adagrasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+R68L,adagrasib,ENU,NOT CLASS-FORCED,,,,,,
+R68S,sotorasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+R68S,sotorasib,ENU,NOT CLASS-FORCED,,,,,,
+R68S,adagrasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+R68S,adagrasib,ENU,NOT CLASS-FORCED,,,,,,
+R68M,sotorasib,MutazymeII,,C>A,0.18,0.92,93.0,60.0,33.0
+R68M,sotorasib,ENU,,C>A,0.09,0.92,359.0,60.0,299.0
+R68M,adagrasib,MutazymeII,,C>A,0.18,0.9,100.0,53.0,47.0
+R68M,adagrasib,ENU,,C>A,0.09,0.9,351.0,53.0,298.0
+H95D,sotorasib,MutazymeII,,C>G,0.05,-0.05,755.0,516.0,239.0
+H95D,sotorasib,ENU,,C>G,0.002,-0.05,928.0,516.0,412.0
+H95D,adagrasib,MutazymeII,,C>G,0.05,2.5,56.0,9.0,47.0
+H95D,adagrasib,ENU,,C>G,0.002,2.5,839.0,9.0,830.0
+H95Q,sotorasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+H95Q,sotorasib,ENU,NOT CLASS-FORCED,,,,,,
+H95Q,adagrasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+H95Q,adagrasib,ENU,NOT CLASS-FORCED,,,,,,
+H95R,sotorasib,MutazymeII,,T>C,0.18,0.42,202.0,192.0,10.0
+H95R,sotorasib,ENU,,T>C,0.366,0.42,77.0,192.0,-115.0
+H95R,adagrasib,MutazymeII,,T>C,0.18,3.77,2.0,2.0,0.0
+H95R,adagrasib,ENU,,T>C,0.366,3.77,1.0,2.0,-1.0
+Y96D,sotorasib,MutazymeII,,T>G,0.036,2.32,139.0,7.0,132.0
+Y96D,sotorasib,ENU,,T>G,0.05,2.32,96.0,7.0,89.0
+Y96D,adagrasib,MutazymeII,,T>G,0.036,1.82,245.0,16.0,229.0
+Y96D,adagrasib,ENU,,T>G,0.05,1.82,237.0,16.0,221.0
+Y96C,sotorasib,MutazymeII,,T>C,0.18,3.32,1.0,1.0,0.0
+Y96C,sotorasib,ENU,,T>C,0.366,3.32,1.0,1.0,0.0
+Y96C,adagrasib,MutazymeII,,T>C,0.18,3.3,3.0,3.0,0.0
+Y96C,adagrasib,ENU,,T>C,0.366,3.3,2.0,3.0,-1.0
+Y96H,sotorasib,MutazymeII,,T>C,0.18,2.71,5.0,4.0,1.0
+Y96H,sotorasib,ENU,,T>C,0.366,2.71,3.0,4.0,-1.0
+Y96H,adagrasib,MutazymeII,,T>C,0.18,2.1,13.0,13.0,0.0
+Y96H,adagrasib,ENU,,T>C,0.366,2.1,9.0,13.0,-4.0
+V8L,sotorasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+V8L,sotorasib,ENU,NOT CLASS-FORCED,,,,,,
+V8L,adagrasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+V8L,adagrasib,ENU,NOT CLASS-FORCED,,,,,,
+V8M,sotorasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+V8M,sotorasib,ENU,NOT CLASS-FORCED,,,,,,
+V8M,adagrasib,MutazymeII,NOT CLASS-FORCED,,,,,,
+V8M,adagrasib,ENU,NOT CLASS-FORCED,,,,,,
+C12F,sotorasib,MutazymeII,,C>A,0.18,2.76,4.0,3.0,1.0
+C12F,sotorasib,ENU,,C>A,0.09,2.76,10.0,3.0,7.0
+C12F,adagrasib,MutazymeII,,C>A,0.18,2.53,7.0,6.0,1.0
+C12F,adagrasib,ENU,,C>A,0.09,2.53,18.0,6.0,12.0

@@ -1,0 +1,50 @@
+name: checks
+
+# The manuscript's numbers come from this pipeline, so a change that breaks
+# the chain should fail here rather than in review.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Test suite
+        run: python -m pytest tests/ -q
+
+      # Forward direction: every registered value appears in the manuscript
+      # where the register says it does.
+      - name: Registered numbers appear in the manuscript
+        run: python scripts/audit_paper_numbers.py
+
+      # Reverse direction: every number written in the prose is accounted
+      # for by a registered value. This is the one that catches a
+      # hand-typed figure left behind by a recomputation.
+      - name: Manuscript numbers are all accounted for
+        run: python scripts/audit_unregistered_numbers.py
+
+      # The figures must still draw from the committed derived tables.
+      - name: Figures redraw
+        run: |
+          for n in 1 2 3 4 5; do python paper/figure_$n.py; done
+
+      # The notebook calls these same scripts, so it cannot disagree with
+      # them on substance. Checking that it still parses is enough.
+      - name: Notebook parses
+        run: |
+          python -c "import nbformat; nbformat.read('notebooks/reproduce_figures.ipynb', as_version=4)"

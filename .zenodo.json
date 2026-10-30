@@ -1,0 +1,41 @@
+{
+  "title": "Chemical reachability limits mutagen-based TKI-resistance screens: analysis code and derived data",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Ronco, Michele",
+      "orcid": "0000-0002-2160-2452",
+      "affiliation": "European Commission, Joint Research Centre (JRC), Ispra, Italy"
+    }
+  ],
+  "description": "<p>Analysis code and derived data for the manuscript <em>Chemical reachability limits mutagen-based TKI-resistance screens</em>.</p><p>Preclinical Ba/F3 mutagenesis screens are a first line of evidence for predicting kinase-inhibitor resistance, and every mutagen in use has a non-uniform substitution spectrum. This work separates a screen's expected output into a supply term, from codon tables and each mutagen's six-class spectrum, and a selection term, from chemistry-free deep mutational scans of KRAS G12C, ALK and MET, then tests the two halves separately across seven inhibitors and four mutagen chemistries.</p><p>Every quantitative claim in the manuscript is computed by a named function and recorded in a register (<code>data/derived/paper_numbers.json</code>, rendered as <code>paper/NUMBERS.md</code>) that carries, for each value, its formula, inputs, the function that produced it and where it appears in the paper. Two audit scripts check that register against the manuscript in both directions, and the test suite checks the hand-typed LaTeX tables against their source tables. <code>make all</code> reproduces the derived tables, the register, the figures, both audits and the tests.</p><p><strong>Licensing.</strong> Code is MIT. Derived tables under <code>data/derived/</code>, <code>data/reference/</code> and <code>data/processed/</code> are CC BY 4.0. Primary data remain under the terms of their original publications and are included only as derived tables with back-references to their sources; see <code>data/LICENSE</code>.</p><p><strong>Not included.</strong> Patient-level clinical records are not distributed. They are built in part from AACR Project GENIE, GENIE BPC, MSK-IMPACT and MSK-CHORD, whose data use agreements do not permit redistribution. No result in the manuscript depends on them: the pipeline reproduces every derived table byte for byte without them.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "preclinical resistance screens",
+    "mutational signatures",
+    "ENU",
+    "Mutazyme",
+    "base editing",
+    "prime editing",
+    "deep mutational scanning",
+    "KRAS G12C",
+    "sotorasib",
+    "adagrasib",
+    "ALK",
+    "alectinib",
+    "lorlatinib",
+    "neladalkib",
+    "MET",
+    "chemistry bias",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/allkure/mutagen-reachability",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

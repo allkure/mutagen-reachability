@@ -1,0 +1,147 @@
+{
+  "n_potency_rows": 388,
+  "n_studies": 7,
+  "transport": {
+    "alectinib": {
+      "n": 18,
+      "spearman_rho": 0.5149638802889577,
+      "p": 0.028748754882630345,
+      "boot95": [
+        -0.04275959677304641,
+        0.855497382198953
+      ],
+      "pearson_r": 0.4103117665702728,
+      "variants": [
+        "C1156Y",
+        "D1203N",
+        "E1210K",
+        "F1174I",
+        "F1174V",
+        "F1245V",
+        "G1269A",
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "L1196M",
+        "L1196Q",
+        "L1198F",
+        "L1256F",
+        "S1206F",
+        "S1206Y",
+        "T1151K",
+        "V1180L"
+      ],
+      "median_inter_study_spread_log10": 0.12928740120303056
+    },
+    "lorlatinib": {
+      "n": 18,
+      "spearman_rho": 0.16615067079463364,
+      "p": 0.5099504603438955,
+      "boot95": [
+        -0.42618532491530653,
+        0.7229182515739769
+      ],
+      "pearson_r": 0.02406132703351193,
+      "variants": [
+        "C1156Y",
+        "D1203N",
+        "E1210K",
+        "F1174I",
+        "F1174V",
+        "F1245V",
+        "G1269A",
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "L1196M",
+        "L1196Q",
+        "L1198F",
+        "L1256F",
+        "S1206F",
+        "S1206Y",
+        "T1151K",
+        "V1180L"
+      ],
+      "median_inter_study_spread_log10": 0.3219465077435653
+    },
+    "zotizalkib": {
+      "n": 13,
+      "spearman_rho": 0.8241758241758241,
+      "p": 0.0005302228375973589,
+      "boot95": [
+        0.4871720116618075,
+        0.9602272727272727
+      ],
+      "pearson_r": 0.8066540600388186,
+      "variants": [
+        "C1156Y",
+        "D1203N",
+        "E1210K",
+        "G1269A",
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "L1196M",
+        "L1196Q",
+        "L1198F",
+        "S1206F",
+        "S1206Y",
+        "V1180L"
+      ],
+      "median_inter_study_spread_log10": 0.0
+    }
+  },
+  "proxy": {
+    "alectinib": {
+      "n": 13,
+      "spearman_rho": 0.2087912087912088,
+      "p": 0.493621819356885,
+      "boot95": [
+        -0.43016759776536306,
+        0.726501937984496
+      ]
+    },
+    "lorlatinib": {
+      "n": 13,
+      "spearman_rho": 0.5714285714285714,
+      "p": 0.0413422673717235,
+      "boot95": [
+        0.0,
+        0.898883485978661
+      ]
+    },
+    "zotizalkib": {
+      "n": 13,
+      "spearman_rho": 0.5659340659340659,
+      "p": 0.04379259223545486,
+      "boot95": [
+        -0.05148088531187118,
+        0.9150201661305036
+      ]
+    }
+  },
+  "best_proxy": "lorlatinib",
+  "wt_ic50_nM_by_drug": {
+    "alectinib": 11.6,
+    "brigatinib": 5.0,
+    "ceritinib": 6.6,
+    "crizotinib": 38.5,
+    "ensartinib": 17.8,
+    "entrectinib": 19.0,
+    "gilteritinib": 0.78,
+    "lorlatinib": 1.35,
+    "neladalkib": 1.62,
+    "repotrectinib": 27.0,
+    "zotizalkib": 9.799999999999999
+  },
+  "atlas_dose_nM": {
+    "alectinib": 20,
+    "lorlatinib": 5,
+    "zotizalkib": 300
+  },
+  "atlas_dose_over_wt_ic50": {
+    "alectinib": 1.7241379310344829,
+    "lorlatinib": 3.7037037037037033,
+    "zotizalkib": 30.612244897959187
+  }
+}

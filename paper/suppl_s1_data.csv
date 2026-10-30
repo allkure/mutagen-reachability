@@ -1,0 +1,25 @@
+gene,variant,source,wt_codon,target_codon,reachability,forced_class,signature_concordance,note
+KRAS G12C,C12F,Awad 2021 in vitro DMS,TGT,TTT (pos2 G>T),class-forced,C>A,SBS4 (tobacco),G12C-mutant background; single-nt via pos 2.
+KRAS G12C,V8L,Awad 2021 in vitro DMS,GTA,CTA / TTA,multi-class SNV,—,multi-class SNV,Reachable in one nt via C>G (CTA) or C>A (TTA).
+KRAS G12C,V8M,Awad 2021 in vitro DMS,GTA,ATG (requires 2 nt),two-step SNV,—,two-step; 1 route,"Two substitutions required (pos 1 G>A and pos 3 A>G); 51- to 169-fold suppressed at N=1e7, mu=1e-4."
+KRAS G12C,R68L,Awad 2021 in vitro DMS,AGG,all Leu codons need ≥2 nt,two-step SNV,—,two-step; 2 routes (CTG/TTG),"Top-ranked variant in Feng chemfree atlas under both drugs; 51- to 169-fold suppressed at N=1e7, mu=1e-4."
+KRAS G12C,R68M,Awad 2021 in vitro DMS,AGG,ATG (pos2 G>T),class-forced,C>A,SBS4 (tobacco),Single-nt route via pos 2.
+KRAS G12C,R68S,Awad 2021 clinical,AGG,AGT / AGC,multi-class SNV,—,multi-class SNV,C>A (AGT) or C>G (AGC) at pos 3.
+KRAS G12C,H95D,Awad 2021 clinical,CAT,GAT (pos1 C>G),class-forced,C>G,SBS13 at TpC (otherwise rare),"H95D under adagrasib: chem-free rank 12 of 1,205, Mutazyme-simulated rank 90 (shift +78 at β=1; +0 to +812 across β ∈ [0.25, 4]). No in vitro-calibrated ENU row is reported; see §2.5."
+KRAS G12C,H95Q,Awad 2021 clinical,CAT,CAA / CAG,multi-class SNV,—,multi-class SNV,T>A (CAA) or T>G (CAG) at pos 3.
+KRAS G12C,H95R,Awad 2021 clinical,CAT,CGT (pos2 A>G),class-forced,T>C,SBS5 (clock-like),Single-nt route via pos 2.
+KRAS G12C,Y96C,Awad 2021 clinical,TAT,TGT (pos2 A>G),class-forced,T>C,SBS5 (clock-like),Chem-free rank 2 under sotorasib (near-zero shift under Mutazyme).
+KRAS G12C,Y96D,Tanaka 2021 case report,TAT,GAT (pos1 T>G),class-forced,T>G,low in common NSCLC signatures,"First reported clinically in Tanaka 2021; chem-free rank 9 under sotorasib, Mutazyme-simulated rank 223 (+214 at β=1); T>G is 5.0% of the germline ENU reference and 3.6% of Mutazyme II."
+KRAS G12C,Y96H,Awad 2021 in vitro DMS,TAT,CAT (pos1 T>C),class-forced,T>C,SBS5 (clock-like),Single-nt route via pos 1.
+ALK,V1180L,Doi 2022 (alectinib),GTT,CTT (pos1 G>C),class-forced,C>G,SBS13 at TpC (otherwise rare),"Chem-free rank 8, Mutazyme-simulated rank 15 under alectinib (class C>G at 5% in Mutazyme)."
+ALK,L1196M,Doi 2022 (alectinib),CTG,ATG (pos1 C>A),class-forced,C>A,SBS4 (tobacco),Gatekeeper. Rank 1 under both chem-free and Mutazyme-simulated for alectinib.
+ALK,I1171N,Doi 2022 (alectinib),ATC,AAC (pos2 T>A),class-forced,T>A,low in common NSCLC signatures,Compound-mutation background for Takei 2025 neladalkib screen.
+ALK,I1171T,Doi 2022 (alectinib),ATC,ACC (pos2 T>C),class-forced,T>C,SBS5 (clock-like),Class T>C — well-supplied by ENU.
+ALK,L1198F,Doi 2022 (alectinib),CTC,TTC (pos1 C>T),class-forced,C>T,SBS1 / SBS2 / SBS5 (common),Class C>T — well-supplied by Mutazyme (47%).
+ALK,G1202R,Doi 2022 (alectinib),GGA,CGA / AGA (two routes),multi-class SNV,—,multi-class SNV,C>G (CGA) or C>T (AGA) at pos 1 — not class-forced.
+ALK,G1269A,Takei 2025 (next-gen ALK),GGA,GCA (pos2 G>C),class-forced,C>G,SBS13 at TpC (otherwise rare),Single-nt route via pos 2.
+ALK,F1174C,Takei 2025 (next-gen ALK),TTC,TGC (pos2 T>G),class-forced,T>G,low in common NSCLC signatures,Also reported pre-existing in NVL-655 ALKOVE-1 responder (Lin 2024).
+ALK,F1174L,Takei 2025 (next-gen ALK),TTC,CTC / TTA / TTG,multi-class SNV,—,multi-class SNV,"Three single-nt routes to Leu — multi-class, not forced."
+ALK,L1196Q,Takei 2025 (next-gen ALK),CTG,CAG (pos2 T>A),class-forced,T>A,low in common NSCLC signatures,Compound-mutation partner reported with gatekeeper residue.
+ALK,C1156Y,Takei 2025 (next-gen ALK),TGC,TAC (pos2 G>A),class-forced,C>T,SBS1 / SBS2 / SBS5 (common),Class C>T — well-supplied by Mutazyme.
+ALK,L1152R,Takei 2025 (next-gen ALK),CTG,CGG (pos2 T>G),class-forced,T>G,low in common NSCLC signatures,"Largest predicted negative rank shift under Mutazyme × alectinib (+558 at β=1; +115 to +817 across β ∈ [0.25, 4])."

@@ -1,0 +1,230 @@
+# Mutagen substitution spectra used in this project.
+#
+# Every spectrum has an explicit primary source. "method" names how the spectrum
+# was measured (NGS of the actual library, germline survey, kit manufacturer).
+# "uncertainty" is a one-line human note.
+#
+# Loaded by src.spectrum.load_spectra() with validation (sums to ~1, non-negative,
+# all six classes present). This file is the single source of truth; the notebooks
+# never hard-code spectrum values.
+
+spectra:
+  # -----------------------------------------------------------------------
+  # Mutazyme II / GeneMorph II (Agilent) — the EP-PCR kit used in
+  # Doi 2022 + Takei 2022 + Takei 2025.
+  # -----------------------------------------------------------------------
+  MutazymeII_DoiSupp2022:
+    values:
+      "C>A": 0.180
+      "C>G": 0.050
+      "C>T": 0.470
+      "T>A": 0.105
+      "T>C": 0.180
+      "T>G": 0.036
+    source: >-
+      Doi Y, Tagaya H, Noge A, Semba K. Prediction of resistance mutations
+      against upcoming anaplastic lymphoma kinase inhibitors. Target Oncol
+      2022;17:695-707. Supplementary Figure S2b.
+    method: >-
+      Illumina MiSeq 2x300 bp NGS of the actual Mutazyme II library used in
+      the authors' crizotinib / alectinib / repotrectinib / ensartinib screens.
+      Six-class pyrimidine-referenced frequencies read from the Fig S2b bar chart,
+      with the top-level numeric values corroborated by the main text statement
+      "lowest mutation pattern frequency (A>C, T>G) was observed in 3.6% of the
+      PCR products" (Doi 2022 p. 699).
+    uncertainty: >-
+      Bar-chart precision ~±1 percentage point per class; totals rounded.
+      Target amplicon is 58% GC content (Doi 2022 p. 700), which the authors
+      explicitly flag as a factor in observed class ordering.
+    notes:
+      measurement_type: "empirical NGS of library"
+      target_gc_content: 0.58
+      target_region: "ALK kinase domain, GenBank AB663645 pos 1850-2383"
+      authors_describe_as: "biased mutation patterns"
+
+  # Independent cross-validation of Mutazyme II from Rasila 2009 (same kit,
+  # different lab, different reporter). Numeric agreement with Doi 2022 is
+  # close: C>T ~0.35 (Doi 0.47), T>C ~0.15 (Doi 0.18), C>A ~0.24 (Doi 0.18),
+  # T>A ~0.17 (Doi 0.11), C>G ~0.06 (Doi 0.05), T>G ~0.03 (Doi 0.036).
+  # Ordering and small-fraction classes match; the primary difference is a
+  # slightly flatter distribution in Rasila's assay, likely from the smaller
+  # amplicon and different template GC content.
+  MutazymeII_Rasila2009:
+    values:
+      "C>A": 0.241
+      "C>G": 0.063
+      "C>T": 0.354
+      "T>A": 0.165
+      "T>C": 0.152
+      "T>G": 0.025
+    source: >-
+      Rasila TS, Pajunen MI, Savilahti H. Critical evaluation of random
+      mutagenesis by error-prone polymerase chain reaction protocols,
+      Escherichia coli mutator strain, and hydroxylamine treatment.
+      Analytical Biochemistry 2009;388:71-80. Table 1, Mutazyme II
+      "amount of amplicon" column (n=86 total mutations, 7 indels excluded,
+      79 SNVs).
+    method: >-
+      GeneMorph II Random Mutagenesis Kit on lacZα + MuA target in pTLH2.
+      Sanger sequencing of selected clones; mutation types compiled across
+      multiple amplicon-DNA input amounts.
+    uncertainty: >-
+      Pyrimidine-referenced fractions re-derived from Rasila Table 1 SNV
+      counts (G:C→A:T=28, A:T→G:C=12, G:C→T:A=19, A:T→T:A=13, G:C→C:G=5,
+      A:T→C:G=2; total=79), excluding 4 deletions and 3 insertions. Cross-
+      checked against Doi 2022 S2b; see notes.
+    notes:
+      measurement_type: "empirical Sanger spectrum"
+      application_context: "T3 Mutazyme II sensitivity analysis vs Doi 2022 primary"
+      cross_validation: "close agreement with MutazymeII_DoiSupp2022"
+
+  # -----------------------------------------------------------------------
+  # ENU — best available spectrum for Ba/F3 culture context.
+  # Flagged: Arnold 2012 is a mouse germline survey; application to Ba/F3
+  # is a nominal assumption and will be sensitivity-tested.
+  # -----------------------------------------------------------------------
+  ENU_Arnold2012_nominal:
+    values:
+      "C>A": 0.090
+      "C>G": 0.002
+      "C>T": 0.179
+      "T>A": 0.314
+      "T>C": 0.366
+      "T>G": 0.050
+    source: >-
+      Arnold CN, Barnes MJ, Berger M, et al. ENU-induced phenovariance in mice:
+      inferences from 587 mutations. BMC Res Notes 2012;5:577. [TO VERIFY: this
+      is the reference the v0.18 draft cited as "Arnold et al. 2012"; the exact
+      citation needs to be re-verified at primary source once the paper is in hand.]
+    method: >-
+      Mouse germline substitutions catalogued across 587 ENU-induced phenovariants.
+      Pyrimidine-referenced 6-class spectrum.
+    uncertainty: >-
+      MAJOR CAVEAT: Arnold 2012 spectrum is from mouse germline, not from Ba/F3
+      cell culture. ENU chemistry in a Ba/F3 overnight treatment at 100 μg/mL
+      (Zhang 2011 conditions) may differ. Sensitivity analysis required at Phase 3.
+    notes:
+      measurement_type: "mouse germline survey"
+      application_context: "Ba/F3 Zhang 2011 screen (used as nominal proxy)"
+      sensitivity_required: true
+
+  # -----------------------------------------------------------------------
+  # XL-1 Red (E. coli mutS/mutD/mutT triple-mutant mutator strain) — NOMINAL,
+  # pending primary numeric values from Rasila 2009.
+  #
+  # Secondary literature consistently reports:
+  #   - XL-1 Red generates a NARROW spectrum dominated by transitions
+  #     (Camps/Hunter et al. Nat Commun 2015 ncomms9425; Rasila 2009).
+  #   - Rasila TS, Pajunen MI, Savilahti H. "Critical evaluation of random
+  #     mutagenesis by error-prone polymerase chain reaction and mutator
+  #     strain, and introduction of two novel improvements." Anal Biochem
+  #     2009;388:71-80. PMID 19383485. This paper is the canonical primary
+  #     characterization of XL-1 Red on pUC19/lacZα and the one Camps 2015
+  #     cites for the narrow spectrum.
+  #   - Camps 2015 Fig 4 rpoB: "exclusively two types: C:G→T:A and T:A→C:G
+  #     transitions." (These are C>T and T>C in pyrimidine convention.)
+  #
+  # The entry below records a NOMINAL spectrum consistent with these qualitative
+  # findings — bulk mass on C>T and T>C, with a small transversion tail. Numeric
+  # values are placeholders drawn from the Camps 2015 narrative; THESE WILL BE
+  # REPLACED by the Rasila 2009 primary numbers before any T2 result is
+  # reported, with the change logged in preregistration.md §10.
+  # -----------------------------------------------------------------------
+  # ---- XL1-Red primary characterization A: Rasila 2009 ----
+  # Primary source numbers; small sample (10 total mutations, 7 SNVs after
+  # dropping 3 deletions) — reported here with Haldane-Anscombe pseudocount
+  # 0.5 added to each of the 6 classes before normalizing, exactly as the
+  # ratio-test code applies elsewhere. Preregistration locks this as the
+  # T2 primary XL-1R spectrum.
+  XL1Red_Rasila2009:
+    values:
+      "C>A": 0.050
+      "C>G": 0.050
+      "C>T": 0.650
+      "T>A": 0.150
+      "T>C": 0.050
+      "T>G": 0.050
+    source: >-
+      Rasila TS, Pajunen MI, Savilahti H. Critical evaluation of random
+      mutagenesis by error-prone polymerase chain reaction protocols,
+      Escherichia coli mutator strain, and hydroxylamine treatment.
+      Analytical Biochemistry 2009;388:71-80. DOI 10.1016/j.ab.2009.02.008.
+      Table 1 XL1-Red column: 10 total mutations across 22 clones (15,810 nt
+      sequenced), composed of 6 G:C→A:T transitions, 1 A:T→T:A transversion,
+      and 3 1-bp deletions. SNV total = 7 after dropping indels.
+    method: >-
+      Blue/white screen of lacZα reporter in pTLH2 plasmid propagated through
+      10 successive 24-h growth cycles at 26 °C in E. coli XL1-Red
+      (Cat. No. 200129, Stratagene). Sanger sequencing of selected white and
+      pale-blue colonies, 500-nt window per clone.
+      Raw SNV counts: 6 G:C→A:T + 1 A:T→T:A + 0 of all other classes.
+      Pyrimidine-referenced before pseudocount: C>T=6, T>A=1, all other=0,
+      sum=7. After Haldane-Anscombe pseudocount 0.5 per class, normalized to 1:
+      C>T=(6+0.5)/(7+3)=0.65, T>A=(1+0.5)/10=0.15, others=0.5/10=0.05 each.
+    uncertainty: >-
+      Small-N (7 SNVs). Pseudocounts widen the four empirically-zero classes
+      from exact zero to 0.05 so log-ratio statistics remain well-defined,
+      but the four small classes are not independently supported. This
+      shape is strongly C>T-dominant (86% of raw SNVs), a hallmark of
+      mutS deficiency. Pre-registered sensitivity analysis to XL1Red_BadranLiu2015
+      (opposite directionality, T>G-dominant via mutT deficiency) is MANDATORY
+      for every T2 result.
+    notes:
+      measurement_type: "primary Sanger spectrum, Haldane-Anscombe pseudocounted"
+      raw_counts: "C>T=6, T>A=1, others=0; indels excluded"
+      sample_size_snv: 7
+      application_context: "Azam 2003 BCR-ABL plasmid in XL-1 Red"
+      sensitivity_required: true
+
+  # ---- XL1-Red primary characterization B: Badran & Liu 2015 ----
+  # Alternative primary; disagrees directionally with Rasila (transversion
+  # vs transition dominant). Pre-registered as mandatory sensitivity check.
+  XL1Red_BadranLiu2015_nominal:
+    values:
+      "C>A": 0.070
+      "C>G": 0.070
+      "C>T": 0.150
+      "T>A": 0.070
+      "T>C": 0.150
+      "T>G": 0.490
+    source: >-
+      Badran AH, Liu DR. Development of potent in vivo mutagenesis plasmids
+      with broad mutational spectra. Nature Communications 2015;6:8425
+      (ncomms9425). Panel Fig 4i: lacZ phage high-throughput sequencing of
+      SP063 phage propagated via XL1-Red mutagenesis. Verbatim: "Phage
+      sequences produced from XL1-Red revealed a much narrower mutational
+      spectrum, with a bias for A:T→C:G mutations."
+    method: >-
+      Nominal fractions placed to reflect Badran & Liu 2015 Fig 4i narrative:
+      A:T→C:G (= T>G in pyrimidine convention) dominant (~0.49), with the
+      transition classes C>T and T>C balanced at ~0.15 each and the remaining
+      three classes small (~0.07 each). Exact fractions from Fig 4i source
+      data (NCBI BioProject PRJNA294841) are the replace-before-publication
+      target for this entry.
+    uncertainty: >-
+      Numeric values are a nominal built from the Fig 4i narrative; exact
+      fractions require Fig 4i source data. Qualitatively, the shape is T>G-
+      transversion-dominant — opposite directionality to Rasila 2009. Role in
+      this project: PRE-REGISTERED SENSITIVITY SPECTRUM for T2; the primary
+      T2 result uses Rasila 2009, and every reported T2 statistic also
+      reports its Badran & Liu-equivalent as a sensitivity row.
+    notes:
+      measurement_type: "nominal on Fig 4i narrative"
+      application_context: "T2 sensitivity analysis vs Rasila 2009 primary"
+      replace_before_publication: true
+      figure_citation: "Fig 4i (lacZ phage HTS, XL1-Red arm)"
+      bioproject: "PRJNA294841"
+
+  # -----------------------------------------------------------------------
+  # LUAD never-smoker signature mix — PLACEHOLDER
+  # Will be FITTED from ALK-fusion-positive patient genomes in Phase 2,
+  # not asserted at a fixed 35/45/20 as the v0.18 draft did.
+  # -----------------------------------------------------------------------
+  # LUAD_neversmoker_fitted:
+  #   values: TBD
+  #   source: TBD
+  #   method: >-
+  #     NMF-based fit of COSMIC v3.3 signatures to the mutational catalogue of
+  #     ALK-fusion-positive LUAD patients in the pooled GENIE+MSK cohort,
+  #     restricted to kinase-domain-adjacent regions.
+  #   uncertainty: TBD

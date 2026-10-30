@@ -1,0 +1,82 @@
+{
+  "N": 10000000.0,
+  "mu_primary": 0.0001,
+  "rounds_primary": 20,
+  "routes": {
+    "R68L": 2,
+    "V8M": 1
+  },
+  "two_nt_detail": {
+    "R68L": {
+      "wt_codon": "AGG",
+      "target_aa": "L",
+      "one_nt_routes": [],
+      "two_nt_routes": [
+        {
+          "codon": "CTG",
+          "classes": [
+            "T>G",
+            "C>A"
+          ]
+        },
+        {
+          "codon": "TTG",
+          "classes": [
+            "T>A",
+            "C>A"
+          ]
+        }
+      ],
+      "n_two_nt_routes": 2
+    },
+    "V8M": {
+      "wt_codon": "GTA",
+      "target_aa": "M",
+      "one_nt_routes": [],
+      "two_nt_routes": [
+        {
+          "codon": "ATG",
+          "classes": [
+            "C>T",
+            "T>C"
+          ]
+        }
+      ],
+      "n_two_nt_routes": 1
+    }
+  },
+  "ENU": {
+    "R68L": {
+      "expected_carriers": 1.37592,
+      "p_at_least_one": 0.7473929096544832,
+      "fold_below_one_nt": 130.09477295191581
+    },
+    "V8M": {
+      "expected_carriers": 2.751588,
+      "p_at_least_one": 0.9361735756746884,
+      "fold_below_one_nt": 65.05334374186833
+    },
+    "_reference_one_nt": {
+      "class": "C>T",
+      "S": 0.179,
+      "expected_carriers": 179.0
+    }
+  },
+  "MutazymeII": {
+    "R68L": {
+      "expected_carriers": 1.06596,
+      "p_at_least_one": 0.6556029251735809,
+      "fold_below_one_nt": 168.86187098953056
+    },
+    "V8M": {
+      "expected_carriers": 3.5532000000000004,
+      "p_at_least_one": 0.9713671322792485,
+      "fold_below_one_nt": 50.65856129685916
+    },
+    "_reference_one_nt": {
+      "class": "C>A",
+      "S": 0.18,
+      "expected_carriers": 180.0
+    }
+  }
+}

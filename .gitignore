@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+
+# LaTeX build artefacts. paper.pdf is committed; everything that
+# regenerates from paper.tex on a `make paper` is not.
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# Working copies. The pipeline is the source of truth; snapshots taken
+# mid-revision do not belong in history.
+*.pre_*
+
+# Node, used only to drive the headless SVG export
+node_modules/
+package-lock.json
+
+# Vendored third-party GenomeSpy bundle, fetched from npm by the export
+# step. See paper/supplement/SUPPLEMENT.md for the two commands.
+paper/supplement/gs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Patient-level clinical records. Not distributed: they come in part from
+# AACR Project GENIE, GENIE BPC, MSK-IMPACT and MSK-CHORD, whose data use
+# agreements do not permit redistribution, and they carry demographics and
+# survival for 612 individuals. Nothing in this repository reads them: the
+# manuscript pipeline reproduces byte for byte without them, and
+# src/harmonized_cohort.py is imported only for its codon utilities.
+# See data/raw/harmonized_cohort/README.md for the schema.
+data/raw/harmonized_cohort/patients.csv
+data/raw/harmonized_cohort/mutations.csv
+data/raw/harmonized_cohort/treatment_lines.csv

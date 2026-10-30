@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or the derived tables, please cite the manuscript."
+title: "Chemical reachability limits mutagen-based TKI-resistance screens: analysis code and derived data"
+abstract: >-
+  Analysis code and derived data for a study separating a mutagenesis
+  screen's expected output into a supply term, from codon tables and each
+  mutagen's six-class substitution spectrum, and a selection term, from
+  chemistry-free deep mutational scans of KRAS G12C, ALK and MET. Every
+  number the manuscript quotes is computed by a named function, recorded in
+  a register, and checked against the manuscript by two audit scripts.
+type: software
+authors:
+  - family-names: Ronco
+    given-names: Michele
+    orcid: "https://orcid.org/0000-0002-2160-2452"
+    affiliation: "European Commission, Joint Research Centre (JRC), Ispra, Italy"
+repository-code: "https://github.com/allkure/mutagen-reachability"
+license: MIT
+version: 1.0.0
+keywords:
+  - preclinical resistance screens
+  - mutational signatures
+  - deep mutational scanning
+  - base editing
+  - prime editing
+  - KRAS G12C
+  - ALK
+  - MET
+  - chemistry bias
+  - reproducibility
+# Fill in once the preprint is posted and the release is archived:
+#   doi: 10.5281/zenodo.XXXXXXX        # this software record
+#   date-released: YYYY-MM-DD
+#   preferred-citation:                # the manuscript, once it has a DOI
+#     type: article
+#     doi: 10.1101/XXXX.XX.XX.XXXXXX

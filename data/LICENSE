@@ -1,0 +1,42 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Michele Ronco
+
+The derived tables in this directory are licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt them for any purpose, provided you give
+appropriate credit and indicate if changes were made.
+
+SCOPE AND UPSTREAM RIGHTS
+-------------------------
+This licence covers the *derived* tables produced by the analysis code in
+this repository (data/derived/, data/processed/, data/reference/).
+
+It does not and cannot relicense the primary data they are derived from.
+Those remain under the terms of their original publications:
+
+  data/raw/feng2022/        KRAS G12C saturation mutagenesis atlas
+                            Feng et al. 2022
+  data/raw/oh2026/          ALK prime-editing resistance atlas
+                            Oh et al. 2026
+  data/raw/met_estevam2024/ MET kinase-domain deep mutational scan
+                            Estevam et al. 2024, doi:10.1101/2024.07.16.603579
+  MET screen hit lists      Transcribed from Supplementary Tables S1 and S2
+                            of Tiedt et al. 2011
+  Mutagen spectra           Arnold et al. 2012 (germline ENU compilation);
+                            Doi et al. 2022 supplementary NGS (Mutazyme II)
+
+Anyone reusing data/raw/ should consult and cite those sources directly.
+Each derived table carries back-references to the record it came from, and
+data/derived/CHECKSUMS.sha256 fixes the version used for the manuscript.
+
+NOT DISTRIBUTED
+---------------
+Patient-level clinical records (data/raw/harmonized_cohort/patients.csv,
+mutations.csv, treatment_lines.csv) are not included in this repository.
+They derive in part from AACR Project GENIE, GENIE BPC, MSK-IMPACT and
+MSK-CHORD, whose data use agreements do not permit redistribution, and they
+carry demographics and survival for 612 individuals. Nothing in the analysis
+reads them; the manuscript's derived tables reproduce byte for byte without
+them. Their schema is documented in data/raw/harmonized_cohort/README.md.

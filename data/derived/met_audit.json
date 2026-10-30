@@ -1,0 +1,369 @@
+{
+  "background_primary": "exon14del",
+  "beta": 1.0,
+  "germline_enu": {
+    "C>A": 0.09,
+    "C>G": 0.002,
+    "C>T": 0.179,
+    "T>A": 0.314,
+    "T>C": 0.366,
+    "T>G": 0.05
+  },
+  "screens": {
+    "NVP-BVU972": {
+      "n_clones": 85,
+      "n_distinct_base_changes": 10,
+      "n_distinct_aa_changes": 10,
+      "observed_class_clones": {
+        "C>A": 3,
+        "C>G": 0,
+        "C>T": 5,
+        "T>A": 20,
+        "T>C": 51,
+        "T>G": 6
+      },
+      "observed_class_fraction": {
+        "C>A": 0.03529411764705882,
+        "C>G": 0.0,
+        "C>T": 0.058823529411764705,
+        "T>A": 0.23529411764705882,
+        "T>C": 0.6,
+        "T>G": 0.07058823529411765
+      },
+      "germline_expected_clones": {
+        "C>A": 7.6499999999999995,
+        "C>G": 0.17,
+        "C>T": 15.215,
+        "T>A": 26.69,
+        "T>C": 31.11,
+        "T>G": 4.25
+      },
+      "chi2_vs_germline": 24.968618021610887,
+      "p_chi2": 0.0001412912822222589,
+      "classes_observed": [
+        "C>A",
+        "C>T",
+        "T>A",
+        "T>C",
+        "T>G"
+      ],
+      "classes_absent": [
+        "C>G"
+      ],
+      "atlas_n": 5458,
+      "hit_ranks": [
+        {
+          "aa_change": "Y1230N",
+          "rank": 49
+        },
+        {
+          "aa_change": "Y1230H",
+          "rank": 78
+        },
+        {
+          "aa_change": "Y1230D",
+          "rank": 135
+        },
+        {
+          "aa_change": "D1228E",
+          "rank": 159
+        },
+        {
+          "aa_change": "Y1230C",
+          "rank": 170
+        },
+        {
+          "aa_change": "Y1230S",
+          "rank": 173
+        },
+        {
+          "aa_change": "D1228N",
+          "rank": 473
+        },
+        {
+          "aa_change": "F1200I",
+          "rank": 810
+        },
+        {
+          "aa_change": "D1228A",
+          "rank": 2110
+        },
+        {
+          "aa_change": "V1155L",
+          "rank": 2403
+        }
+      ],
+      "hits_found_in_atlas": 10,
+      "hits_total": 10,
+      "median_hit_rank": 171,
+      "top100_reachability": {
+        "two-step": 72,
+        "class-forced": 26,
+        "multi-class SNV": 2
+      }
+    },
+    "AMG 458": {
+      "n_clones": 60,
+      "n_distinct_base_changes": 15,
+      "n_distinct_aa_changes": 13,
+      "observed_class_clones": {
+        "C>A": 5,
+        "C>G": 2,
+        "C>T": 1,
+        "T>A": 20,
+        "T>C": 23,
+        "T>G": 9
+      },
+      "observed_class_fraction": {
+        "C>A": 0.08333333333333333,
+        "C>G": 0.03333333333333333,
+        "C>T": 0.016666666666666666,
+        "T>A": 0.3333333333333333,
+        "T>C": 0.38333333333333336,
+        "T>G": 0.15
+      },
+      "germline_expected_clones": {
+        "C>A": 5.3999999999999995,
+        "C>G": 0.12,
+        "C>T": 10.74,
+        "T>A": 18.84,
+        "T>C": 21.96,
+        "T>G": 3.0
+      },
+      "chi2_vs_germline": 50.436748525530845,
+      "p_chi2": 1.12799111106201e-09,
+      "classes_observed": [
+        "C>A",
+        "C>G",
+        "C>T",
+        "T>A",
+        "T>C",
+        "T>G"
+      ],
+      "classes_absent": [],
+      "atlas_n": 5458,
+      "hit_ranks": [
+        {
+          "aa_change": "D1228A",
+          "rank": 5
+        },
+        {
+          "aa_change": "L1195V",
+          "rank": 11
+        },
+        {
+          "aa_change": "G1163E",
+          "rank": 53
+        },
+        {
+          "aa_change": "L1195I",
+          "rank": 73
+        },
+        {
+          "aa_change": "F1200L",
+          "rank": 102
+        },
+        {
+          "aa_change": "Y1159N",
+          "rank": 113
+        },
+        {
+          "aa_change": "K1193I",
+          "rank": 229
+        },
+        {
+          "aa_change": "F1200I",
+          "rank": 249
+        },
+        {
+          "aa_change": "M1211L",
+          "rank": 403
+        },
+        {
+          "aa_change": "M1250T",
+          "rank": 936
+        },
+        {
+          "aa_change": "V1155L",
+          "rank": 2213
+        },
+        {
+          "aa_change": "G1163V",
+          "rank": 2297
+        },
+        {
+          "aa_change": "Q1258L",
+          "rank": 2362
+        }
+      ],
+      "hits_found_in_atlas": 13,
+      "hits_total": 13,
+      "median_hit_rank": 229,
+      "top100_reachability": {
+        "class-forced": 23,
+        "two-step": 75,
+        "multi-class SNV": 2
+      }
+    }
+  },
+  "y1230": {
+    "wt_codon": "TAT",
+    "n_single_nt_missense_routes": 6,
+    "n_recovered": 5,
+    "n_clones_at_codon": 75,
+    "per_variant": {
+      "Y1230C": {
+        "routes": [
+          {
+            "change": "a3689g",
+            "class": "T>C"
+          }
+        ],
+        "summed_route_supply": 0.366,
+        "clones_observed": 31,
+        "recovered": true,
+        "atlas_rank": 170
+      },
+      "Y1230D": {
+        "routes": [
+          {
+            "change": "t3688g",
+            "class": "T>G"
+          }
+        ],
+        "summed_route_supply": 0.05,
+        "clones_observed": 1,
+        "recovered": true,
+        "atlas_rank": 135
+      },
+      "Y1230F": {
+        "routes": [
+          {
+            "change": "a3689t",
+            "class": "T>A"
+          }
+        ],
+        "summed_route_supply": 0.314,
+        "clones_observed": 0,
+        "recovered": false,
+        "atlas_rank": 54
+      },
+      "Y1230H": {
+        "routes": [
+          {
+            "change": "t3688c",
+            "class": "T>C"
+          }
+        ],
+        "summed_route_supply": 0.366,
+        "clones_observed": 20,
+        "recovered": true,
+        "atlas_rank": 78
+      },
+      "Y1230N": {
+        "routes": [
+          {
+            "change": "t3688a",
+            "class": "T>A"
+          }
+        ],
+        "summed_route_supply": 0.314,
+        "clones_observed": 19,
+        "recovered": true,
+        "atlas_rank": 49
+      },
+      "Y1230S": {
+        "routes": [
+          {
+            "change": "a3689c",
+            "class": "T>G"
+          }
+        ],
+        "summed_route_supply": 0.05,
+        "clones_observed": 4,
+        "recovered": true,
+        "atlas_rank": 173
+      }
+    },
+    "classes_spanned": [
+      "T>A",
+      "T>C",
+      "T>G"
+    ],
+    "supply_range_of_those_classes": [
+      0.05,
+      0.366
+    ],
+    "expected_clones_under_supply": {
+      "Y1230C": 18.801369863013697,
+      "Y1230D": 2.568493150684932,
+      "Y1230F": 16.13013698630137,
+      "Y1230H": 18.801369863013697,
+      "Y1230N": 16.13013698630137,
+      "Y1230S": 2.568493150684932
+    },
+    "observed_clones": {
+      "Y1230C": 31,
+      "Y1230D": 1,
+      "Y1230F": 0,
+      "Y1230H": 20,
+      "Y1230N": 19,
+      "Y1230S": 4
+    },
+    "chi2_within_codon": 26.387476198763245,
+    "p_chi2_within_codon": 7.504676199303642e-05,
+    "missing_variant_atlas_rank": {
+      "Y1230F": 54
+    }
+  },
+  "sensitivity": {
+    "NVP-BVU972_WT_background": {
+      "n_found": 7,
+      "n_total": 10,
+      "median_rank": 495,
+      "atlas_n": 4419
+    },
+    "AMG 458_WT_background": {
+      "n_found": 11,
+      "n_total": 13,
+      "median_rank": 2472,
+      "atlas_n": 4463
+    }
+  },
+  "two_screen_homogeneity": {
+    "screens": [
+      "NVP-BVU972",
+      "AMG 458"
+    ],
+    "table": {
+      "NVP-BVU972": {
+        "C>A": 3,
+        "C>G": 0,
+        "C>T": 5,
+        "T>A": 20,
+        "T>C": 51,
+        "T>G": 6
+      },
+      "AMG 458": {
+        "C>A": 5,
+        "C>G": 2,
+        "C>T": 1,
+        "T>A": 20,
+        "T>C": 23,
+        "T>G": 9
+      }
+    },
+    "classes_tested": [
+      "C>A",
+      "C>G",
+      "C>T",
+      "T>A",
+      "T>C",
+      "T>G"
+    ],
+    "chi2": 12.420123432255783,
+    "dof": 5,
+    "p": 0.029463225369071463,
+    "interpretation": "Same ENU protocol, same Ba/F3 TPR-MET cells, same laboratory; the two drugs give different class compositions, so composition is set by selection."
+  }
+}

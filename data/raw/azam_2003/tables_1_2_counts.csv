@@ -1,0 +1,99 @@
+# Azam et al. 2003 Tables 1 and 2 — per-variant isolate counts.
+# Source: /root/.claude/uploads/.../b9c2ea19-image.png (Table 1, kinase domain)
+#         /root/.claude/uploads/.../a44bbb5d-image.png (Table 2, outside kinase domain)
+# Convention: each "+" in the original table = one independent isolate at that STI-571 concentration.
+# counts_5uM and counts_10uM are the integer isolate counts at 5 and 10 μM STI-571 respectively.
+# "ND" IC50 in the original is recorded here as empty.
+# Variant names recorded with Ia equivalents to match modern clinical BCR-ABL literature.
+# For compound variant notations (A/B/C), each sub-variant inherits the row's isolate count;
+# we expand them in a secondary pass if needed. Primary records keep the row-level aggregate.
+sn,table,domain,variant_ib,variant_ia,counts_5uM,counts_10uM,ic50_uM_note
+1,1,P-loop,M263V/I,M244V/I,3,0,3.1 V; 1.4 I
+2,1,P-loop,L267R/V,L248R/V,8,10,>20.0 R
+3,1,P-loop,G269E/R,G250E/R,5,1,>20.0 E
+4,1,P-loop,Q271H,Q252H,5,0,2.9
+5,1,P-loop,Y272H/C/F,Y253H/C/F,5,8,17.7 H
+6,1,P-loop,E274K,E255K,8,8,12.1
+7,1,C-helix,Y276C,Y257C,1,0,
+8,1,C-helix,E277D,E258D,1,0,
+9,1,C-helix,S284T/I,S265T/I,2,0,
+10,1,C-helix,L285M/V,L266M/V,2,0,
+11,1,C-helix,V287/289A,V268/270A,1,0,0.8
+12,1,C-helix,A288V,A269V,2,1,1.1
+13,1,C-helix,E294K,E275K,1,0,
+14,1,C-helix,D295V,D276V,1,1,1.2
+15,1,C-helix,M297L,M278L,0,1,2.2
+16,1,C-helix,E298K,E279K,9,3,9.9
+17,1,C-helix,E300K,E281K,3,2,2.8
+18,1,C-helix,E301D,E282D,3,0,1.3
+19,1,C-helix,F302L,F283L,1,0,
+20,1,C-helix,L303F,L284F,2,0,
+21,1,C-helix,V308S,V289S,4,0,1.4
+22,1,C-helix,M309L/T,M290L/T,2,0,
+23,1,C-helix,K310E/R,K291E/R,2,0,
+24,1,C-helix,E311Q,E292Q,2,0,2.5
+25,1,SH3-contact,K313R,K294R,1,1,
+26,1,SH3-contact,Q319H,Q300H,3,0,1.6
+27,1,SH3-contact,L320F,L301F,1,0,
+28,1,drug-contact,F330L/V,F311L/V,4,0,1.3 L
+29,1,drug-contact,T334I/S/G,T315I/S/G,5,10,>20.0 I; 3.8 S
+30,1,drug-contact,E335D,E316D,4,0,1.7
+31,1,drug-contact,F336L,F317L,2,0,2.3
+32,1,SH2-contact,G340W,G321W,3,0,1.5
+33,1,SH2-contact,N350S,N331S,1,1,1.3
+34,1,SH2-contact,V357G,V338G,1,0,
+35,1,SH2-contact,V358A/G,V339A/G,2,1,1.3
+36,1,SH2-contact,M362T,M343T,3,1,
+37,1,SH2-contact,A363V,A344V,2,0,
+38,1,SH2-contact,Q365H,Q346H,2,0,1.39
+39,1,SH2-contact,M370T/I,M351T/I,4,0,4.9 T; 1.6 I
+40,1,SH2-contact,E371K,E352K,2,0,1.3
+41,1,SH2-contact,F378C,F359C,0,2,
+42,1,SH2-contact,I379F,I360F,2,1,0.6
+43,1,SH2-contact,A385D,A366D,1,0,
+44,1,SH2-contact,G391R,G372R,1,0,
+45,1,SH2-contact,E392K,E373K,0,1,
+46,1,activation-loop,V398E/A,V379E/A,2,0,
+47,1,activation-loop,L403M,L384M,4,0,2.8
+48,1,activation-loop,M407I,M388I,1,0,
+49,1,activation-loop,H415R/P,H396R/P,5,2,1.1
+50,1,activation-loop,G417R,G398R,0,3,1.1
+51,1,SH2-contact,Y459C,Y440C,2,0,
+52,1,SH2-contact,E469K,E450K,3,0,2.3
+53,1,SH2-contact,L470M,L451M,3,0,1.5
+54,1,SH2-contact,G482D,G463D,1,0,0.6
+55,1,SH2-contact,M491I,M472I,2,0,1.4
+56,1,SH2-contact,R492C,R473L,0,1,
+57,1,SH2-contact,F505S,F486S,4,2,9.1
+58,1,SH2-contact,E513A,E494A,2,0,1.2
+59,1,SH2-contact,E518K/I,E499K/I,2,0,1.9 K
+60,1,SH2-contact,I521M,I502M,2,0,
+61,1,SH2-contact,E528D,E509D,2,0,1.1
+1,2,Cap,E57K,E38K,1,,2.2
+2,2,Cap,A64G/V,A45G/V,2,,1.1 G
+3,2,Cap,K70Q,K51Q,3,,
+4,2,Cap,E71K,E52K,1,,
+5,2,Cap,N72D/T,N53D/T,1,,1.2 D
+6,2,Cap,A75V,A56V,1,,
+7,2,Cap,G76E,G57E,1,,
+8,2,Cap,P77R,P58R,1,,1.1
+9,2,Cap,E79K,E60K,1,,1.1
+10,2,SH3,N83Y,N64Y,1,,1.6
+11,2,SH3,V86G,V67G,2,,0.9
+12,2,SH3,A87E/V,A68E/V,3,,1.0
+13,2,SH3,Y89D/H/N,Y70D/H/N,4,,1.1
+14,2,SH3,D90N,D71N,1,,1.1
+15,2,SH3,W129C,W110C,2,,1.9
+16,2,SH3,V130L,V111L,1,1,
+17,2,SH3,P131Q,P112Q,1,,
+18,2,SH3,S132N,S113N,1,,
+19,2,SH3-SH2-connector,V138G,V119G,1,,1.2
+20,2,SH3-SH2-connector,S140R,S121R,2,,
+21,2,SH2,S167C,S148C,1,,0.6
+22,2,SH2,S176T,S157T,1,1,0.6
+23,2,SH2,S206F/P,S187F/P,2,,1.5 P
+24,2,SH2,V224E,V205E,1,,0.6
+25,2,CD-linker,A236G,A217G,3,0,0.6
+26,2,CD-linker,K238E,K219E,3,1,1.2
+27,2,CD-linker,T243A,T224A,3,0,2.8
+28,2,CD-linker,P249L,P230L,1,4,

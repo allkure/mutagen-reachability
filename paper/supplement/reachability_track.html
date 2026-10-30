@@ -1,0 +1,314 @@
+<title>Mutagen Reachability Inventory</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Instrument readout: one wide scrolling panel, lanes stacked under a
+     shared residue axis, everything else kept quiet around it. */
+  :root{
+    --bg:#FFFFFF;
+    --surface:#FAFAFB;
+    --fg:#171A1F;
+    --muted:#5E646D;
+    --rule:#E3E6EA;
+    --accent:#3B6FA8;
+    --blocked:#D98985;
+    --note:#F4EFE3;
+    --font-ui:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#111418; --surface:#171B21; --fg:#E7EAEE; --muted:#9AA2AC;
+      --rule:#252B33; --accent:#7FA8D1; --blocked:#C9807C; --note:#20242A;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#111418; --surface:#171B21; --fg:#E7EAEE; --muted:#9AA2AC;
+    --rule:#252B33; --accent:#7FA8D1; --blocked:#C9807C; --note:#20242A;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:var(--font-ui); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:1200px; margin:0 auto;
+    padding-left:max(16px, env(safe-area-inset-left, 0px));
+    padding-right:max(16px, env(safe-area-inset-right, 0px));
+    padding-block:36px 72px;
+  }
+  header{display:flex; flex-direction:column; gap:6px; margin-bottom:22px}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:.74rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent);
+  }
+  h1{
+    font-size:1.6rem; font-weight:600; line-height:1.2; margin:0;
+    letter-spacing:-.015em; text-wrap:balance;
+  }
+  .lede{color:var(--muted); font-size:.95rem; margin:0; max-width:62ch}
+  .note{
+    background:var(--note); border:1px solid var(--rule); border-radius:8px;
+    padding:14px 16px; font-size:.9rem; margin:0 0 24px; max-width:78ch;
+  }
+  .note strong{font-weight:600}
+  .controls{
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+    margin-bottom:14px; padding-bottom:16px; border-bottom:1px solid var(--rule);
+  }
+  .controls .lbl{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted); margin-right:4px;
+  }
+  button{
+    font:inherit; font-size:.88rem; font-family:var(--font-mono);
+    padding:6px 13px; border-radius:6px; border:1px solid var(--rule);
+    background:var(--surface); color:var(--fg); cursor:pointer;
+    transition:border-color .12s, background .12s;
+  }
+  button:hover{border-color:var(--accent)}
+  button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#fff}
+  #view{
+    height:520px; min-width:0; border:1px solid var(--rule);
+    border-radius:8px; background:var(--surface); overflow:hidden;
+  }
+  #status{
+    font-family:var(--font-mono); font-size:.8rem; color:var(--muted);
+    margin:10px 0 0; min-height:1.4em;
+  }
+  .tablewrap{overflow-x:auto; margin-top:26px}
+  table{border-collapse:collapse; width:100%; min-width:460px; font-size:.88rem}
+  th,td{text-align:left; padding:8px 12px; border-bottom:1px solid var(--rule)}
+  th{
+    font-family:var(--font-mono); font-weight:500; font-size:.72rem;
+    letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
+  }
+  td.num{text-align:right; font-variant-numeric:tabular-nums; font-family:var(--font-mono)}
+  td.blocked{color:var(--blocked); font-weight:500}
+  .foot{
+    margin-top:28px; padding-top:18px; border-top:1px solid var(--rule);
+    font-size:.84rem; color:var(--muted); max-width:78ch;
+  }
+  .foot code{
+    font-family:var(--font-mono); font-size:.86em; background:var(--surface);
+    padding:1px 5px; border-radius:4px; border:1px solid var(--rule);
+  }
+  @media (max-width:640px){
+    h1{font-size:1.3rem}
+    #view{height:420px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow" id="eyebrow">&nbsp;</span>
+    <h1>What each mutagen chemistry can reach</h1>
+    <p class="lede">
+      Residue by residue, the one-step supply each chemistry gives the
+      substitution the chemistry-free atlas ranks highest at that position.
+    </p>
+  </header>
+
+  <p class="note">
+    <strong>A lookup view, not a test.</strong> Nothing here is a p-value, and
+    we have not tested whether reachability clusters along the gene. ENU and
+    Mutazyme II supply all six substitution classes at a non-zero rate, so
+    their lanes vary in degree. CBE+ABE makes only C&gt;T and T&gt;C, so four
+    classes have a supply of zero and its lane has true gaps.
+  </p>
+
+  <div class="controls">
+    <span class="lbl">Gene</span>
+    <span id="genes"></span>
+    <span class="lbl" style="margin-left:14px">Drug</span>
+    <span id="drugs"></span>
+  </div>
+
+  <div id="view"></div>
+  <p id="status">Loading the atlas&hellip;</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>Chemistry</th>
+        <th>Classes supplied</th>
+        <th class="num">Residues out of reach</th>
+        <th class="num">Share</th>
+      </tr></thead>
+      <tbody id="tally"></tbody>
+    </table>
+  </div>
+
+  <p class="foot">
+    Drag to pan, scroll to zoom, hover a mark for the substitution, its forced
+    class, &sigma; and <i>S</i>. Built from
+    <code>reachability_track.json</code> by
+    <code>scripts/build_reachability_track.py</code>; the four supply spectra
+    are the ones the top-<i>K</i> benchmark uses. Rendered with GenomeSpy Core.
+    Print-resolution SVG for each drug is produced by
+    <code>scripts/export_reachability_svg.mjs</code>, not from this page.
+  </p>
+</div>
+
+<script type="module">
+// GenomeSpy Core from jsDelivr. A relative override lets the export script
+// render this same file offline; a query string never reaches a published
+// artifact, so there it always resolves to the CDN.
+const CDN = "https://cdn.jsdelivr.net/npm/@genome-spy/core@1.0.0/dist/bundle/index.es.js";
+const q = new URLSearchParams(location.search).get("gs");
+const { embed } = await import((q && /^\.\/[\w./-]+$/.test(q)) ? q : CDN);
+
+// Substitution-class colors, matching Figures 2 and 5 of the manuscript.
+const CLASS_COLORS = {
+  "C>A":"#9ECCE4", "C>G":"#9FA3A8", "C>T":"#E89C9B",
+  "T>A":"#DDDAD6", "T>C":"#AED188", "T>G":"#D7B7BD"
+};
+const status  = document.getElementById("status");
+const eyebrow = document.getElementById("eyebrow");
+const D = await (await fetch("reachability_track.json")).json();
+
+let api = null;
+let gene = D.genes[0];
+let drug = D.by_gene[gene].drugs[0];
+
+function lane(G, name, isLast){
+  return {
+    name: "lane_" + name,
+    height: 58,
+    data: { values: G.track.filter(r => r.mutagen === name) },
+    transform: [{ type:"filter", expr:"datum.drug === drug" }],
+    title: { text:name, orient:"left", angle:0, align:"right", baseline:"middle" },
+    encoding: {
+      // One shared x scale, so only the bottom lane carries the axis.
+      x:  { field:"residue", type:"quantitative",
+            axis: isLast ? { title:`${G.gene} residue (${G.transcript})`, grid:false } : null },
+      x2: { expr:"datum.residue + 1" }
+    },
+    layer: [
+      // Residues this chemistry cannot reach in one step.
+      { transform: [{ type:"filter", expr:"datum.S <= 0" }],
+        mark: { type:"rect", minWidth:1.2, stroke:null, color:"#EDA19F" } },
+      // Reachable residues, shaded by how much supply the chemistry gives.
+      { transform: [{ type:"filter", expr:"datum.S > 0" }],
+        mark: { type:"rect", minWidth:1.2, stroke:null },
+        encoding: {
+          color: { field:"S", type:"quantitative",
+                   scale:{ domain:[0, 0.5], scheme:"blues", clamp:true },
+                   legend: isLast ? { title:"S, one-step supply" } : null }
+        } }
+    ]
+  };
+}
+
+function buildSpec(G){
+  return {
+    description: `${G.gene} per-residue reachability inventory`,
+    params: [{ name:"drug", value:drug }],
+    padding: { left:118, right:18, top:10, bottom:10 },
+    spacing: 10,
+    vconcat: [
+      {
+        name: "sigma",
+        height: 180,
+        data: { values: G.sigma },
+        transform: [{ type:"filter", expr:"datum.drug === drug" }],
+        title: { text:"highest selection score", orient:"left", align:"center" },
+        mark: { type:"rule", strokeWidth:2.4, minOpacity:1 },
+        encoding: {
+          x: { field:"residue", type:"quantitative",
+               scale:{ domain:[G.residue_min - 1, G.residue_max + 1], zoom:true },
+               axis:null },
+          y: { field:"sigma", type:"quantitative", axis:{ title:null, grid:true } },
+          y2:{ datum:0 },
+          color: { field:"forced_class", type:"nominal",
+                   scale:{ domain:D.classes, range:D.classes.map(c => CLASS_COLORS[c]) },
+                   title:"forced class" }
+        }
+      },
+      ...D.lane_order.map((m, i) => lane(G, m, i === D.lane_order.length - 1))
+    ],
+    resolve: { scale: { x:"shared", color:"independent" } }
+  };
+}
+
+function chips(host, items, current, onPick){
+  host.textContent = "";
+  for (const it of items){
+    const b = document.createElement("button");
+    b.textContent = it;
+    b.setAttribute("aria-pressed", String(it === current));
+    b.addEventListener("click", () => onPick(it));
+    host.appendChild(b);
+    host.appendChild(document.createTextNode(" "));
+  }
+}
+
+function tally(){
+  const G = D.by_gene[gene];
+  const tb = document.getElementById("tally");
+  tb.textContent = "";
+  for (const m of D.lane_order){
+    const rows = G.track.filter(r => r.mutagen === m && r.drug === drug);
+    const out = rows.filter(r => !r.reachable).length;
+    const supplied = D.classes.filter(c => D.spectra[m][c] > 0).length;
+    const tr = document.createElement("tr");
+    tr.innerHTML =
+      `<td>${m}</td><td>${supplied} of 6</td>`
+      + `<td class="num${out ? " blocked" : ""}">${out} / ${rows.length}</td>`
+      + `<td class="num${out ? " blocked" : ""}">${Math.round(100*out/rows.length)}%</td>`;
+    tb.appendChild(tr);
+  }
+}
+
+function describe(){
+  const G = D.by_gene[gene];
+  eyebrow.textContent = `${G.gene} ${G.transcript} \u00B7 residues ${G.residue_min}\u2013${G.residue_max}`;
+  status.textContent = `${G.n_residues} residues \u00B7 `
+    + `${G.n_class_forced_variants.toLocaleString()} class-forced variants \u00B7 ${drug}`;
+}
+
+async function render(){
+  const G = D.by_gene[gene];
+  if (api) { try { api.finalize(); } catch (e) { console.error(e); } api = null; }
+  try {
+    api = await embed(document.getElementById("view"), buildSpec(G), { bare:false });
+    window.__api = api;
+    window.__data = D;
+  } catch (e) {
+    status.textContent = "The track could not be rendered: " + e.message;
+    console.error(e);
+    return;
+  }
+  describe();
+  tally();
+}
+
+function pickGene(g){
+  if (g === gene) return;
+  gene = g;
+  drug = D.by_gene[gene].drugs[0];
+  chips(document.getElementById("genes"), D.genes, gene, pickGene);
+  chips(document.getElementById("drugs"), D.by_gene[gene].drugs, drug, pickDrug);
+  render();
+}
+
+function pickDrug(d){
+  if (d === drug) return;
+  drug = d;
+  chips(document.getElementById("drugs"), D.by_gene[gene].drugs, drug, pickDrug);
+  try { api.getParam("drug").setValue(drug); } catch (e) { console.error(e); }
+  describe();
+  tally();
+}
+
+chips(document.getElementById("genes"), D.genes, gene, pickGene);
+chips(document.getElementById("drugs"), D.by_gene[gene].drugs, drug, pickDrug);
+await render();
+</script>

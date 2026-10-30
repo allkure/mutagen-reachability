@@ -1,0 +1,482 @@
+kras_4a_nm_033360_4:
+  description: KRAS-4A WT codons (NM_033360.4 CDS 191..760, 189 codons).
+  reference: https://www.ncbi.nlm.nih.gov/nuccore/NM_033360.4
+  cds_span: 191..760 in NM_033360.4 (570 nt)
+  kinase_domain_residues:
+  - 1
+  - 189
+  codons:
+    1:
+      codon: ATG
+    2:
+      codon: ACT
+    3:
+      codon: GAA
+    4:
+      codon: TAT
+    5:
+      codon: AAA
+    6:
+      codon: CTT
+    7:
+      codon: GTG
+    8:
+      codon: GTA
+      verified_by:
+      - ClinVar p.Val8Leu c.22G>T confirms codon GTA pos 1 = G
+    9:
+      codon: GTT
+    10:
+      codon: GGA
+    11:
+      codon: GCT
+    12:
+      codon: GGT
+      verified_by:
+      - ClinVar p.Gly12Cys c.34G>T confirms codon GGT pos 1 = G
+      - ClinVar p.Gly12Val c.35G>T confirms codon GGT pos 2 = G
+    13:
+      codon: GGC
+      verified_by:
+      - ClinVar p.Gly13Asp c.38G>A confirms codon GGC pos 2 = G
+    14:
+      codon: GTA
+    15:
+      codon: GGC
+    16:
+      codon: AAG
+    17:
+      codon: AGT
+      verified_by:
+      - ClinVar p.Ser17Gly c.49A>G confirms codon AGT pos 1 = A
+    18:
+      codon: GCC
+    19:
+      codon: TTG
+    20:
+      codon: ACG
+    21:
+      codon: ATA
+    22:
+      codon: CAG
+    23:
+      codon: CTA
+    24:
+      codon: ATT
+    25:
+      codon: CAG
+    26:
+      codon: AAT
+    27:
+      codon: CAC
+    28:
+      codon: TTT
+    29:
+      codon: GTG
+    30:
+      codon: GAT
+    31:
+      codon: GAA
+    32:
+      codon: TAT
+    33:
+      codon: GAT
+    34:
+      codon: CCA
+    35:
+      codon: ACA
+    36:
+      codon: ATA
+    37:
+      codon: GAG
+    38:
+      codon: GAT
+    39:
+      codon: TCC
+    40:
+      codon: TAC
+    41:
+      codon: AGG
+    42:
+      codon: AAG
+    43:
+      codon: CAA
+    44:
+      codon: GTA
+    45:
+      codon: GTA
+    46:
+      codon: ATT
+    47:
+      codon: GAT
+    48:
+      codon: GGA
+    49:
+      codon: GAA
+    50:
+      codon: ACC
+    51:
+      codon: TGT
+    52:
+      codon: CTC
+    53:
+      codon: TTG
+    54:
+      codon: GAT
+    55:
+      codon: ATT
+    56:
+      codon: CTC
+    57:
+      codon: GAC
+    58:
+      codon: ACA
+    59:
+      codon: GCA
+    60:
+      codon: GGT
+    61:
+      codon: CAA
+      verified_by:
+      - ClinVar p.Gln61His c.183A>C confirms codon CAA pos 3 = A
+    62:
+      codon: GAG
+    63:
+      codon: GAG
+    64:
+      codon: TAC
+    65:
+      codon: AGT
+    66:
+      codon: GCA
+    67:
+      codon: ATG
+    68:
+      codon: AGG
+      verified_by:
+      - ClinVar p.Arg68Ser c.204G>C confirms codon AGG pos 3 = G
+    69:
+      codon: GAC
+    70:
+      codon: CAG
+    71:
+      codon: TAC
+    72:
+      codon: ATG
+    73:
+      codon: AGG
+    74:
+      codon: ACT
+    75:
+      codon: GGG
+    76:
+      codon: GAG
+    77:
+      codon: GGC
+    78:
+      codon: TTT
+    79:
+      codon: CTT
+    80:
+      codon: TGT
+    81:
+      codon: GTA
+    82:
+      codon: TTT
+    83:
+      codon: GCC
+    84:
+      codon: ATA
+    85:
+      codon: AAT
+    86:
+      codon: AAT
+    87:
+      codon: ACT
+    88:
+      codon: AAA
+    89:
+      codon: TCA
+    90:
+      codon: TTT
+    91:
+      codon: GAA
+    92:
+      codon: GAT
+    93:
+      codon: ATT
+    94:
+      codon: CAC
+    95:
+      codon: CAT
+      verified_by:
+      - ClinVar p.His95Gln c.285T>G confirms codon CAT pos 3 = T
+    96:
+      codon: TAT
+      verified_by:
+      - ClinVar p.Tyr96Asp c.286T>G confirms codon TAT pos 1 = T
+      - ClinVar p.Tyr96Cys c.287A>G confirms codon TAT pos 2 = A
+    97:
+      codon: AGA
+    98:
+      codon: GAA
+    99:
+      codon: CAA
+    100:
+      codon: ATT
+    101:
+      codon: AAA
+    102:
+      codon: AGA
+    103:
+      codon: GTT
+    104:
+      codon: AAG
+    105:
+      codon: GAC
+    106:
+      codon: TCT
+    107:
+      codon: GAA
+    108:
+      codon: GAT
+    109:
+      codon: GTA
+    110:
+      codon: CCT
+    111:
+      codon: ATG
+    112:
+      codon: GTC
+    113:
+      codon: CTA
+    114:
+      codon: GTA
+    115:
+      codon: GGA
+    116:
+      codon: AAT
+    117:
+      codon: AAA
+    118:
+      codon: TGT
+    119:
+      codon: GAT
+    120:
+      codon: TTG
+    121:
+      codon: CCT
+    122:
+      codon: TCT
+    123:
+      codon: AGA
+    124:
+      codon: ACA
+    125:
+      codon: GTA
+    126:
+      codon: GAC
+    127:
+      codon: ACA
+    128:
+      codon: AAA
+    129:
+      codon: CAG
+    130:
+      codon: GCT
+    131:
+      codon: CAG
+    132:
+      codon: GAC
+    133:
+      codon: TTA
+    134:
+      codon: GCA
+    135:
+      codon: AGA
+    136:
+      codon: AGT
+    137:
+      codon: TAT
+    138:
+      codon: GGA
+    139:
+      codon: ATT
+    140:
+      codon: CCT
+    141:
+      codon: TTT
+    142:
+      codon: ATT
+    143:
+      codon: GAA
+    144:
+      codon: ACA
+    145:
+      codon: TCA
+    146:
+      codon: GCA
+    147:
+      codon: AAG
+    148:
+      codon: ACA
+    149:
+      codon: AGA
+    150:
+      codon: CAG
+    151:
+      codon: AGA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    152:
+      codon: GTA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    153:
+      codon: GAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    154:
+      codon: GAT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    155:
+      codon: GCA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    156:
+      codon: TTT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    157:
+      codon: TAT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    158:
+      codon: ACT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    159:
+      codon: TTG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    160:
+      codon: GTC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    161:
+      codon: AGG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    162:
+      codon: GAA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    163:
+      codon: ATC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    164:
+      codon: CGT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    165:
+      codon: CAA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    166:
+      codon: TAT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    167:
+      codon: AGA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    168:
+      codon: CTC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    169:
+      codon: AAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    170:
+      codon: AAA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    171:
+      codon: ATA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    172:
+      codon: TCA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    173:
+      codon: AAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    174:
+      codon: GAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    175:
+      codon: GAA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    176:
+      codon: AAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    177:
+      codon: ACT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    178:
+      codon: CCT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    179:
+      codon: GGC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    180:
+      codon: TGT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    181:
+      codon: GTA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    182:
+      codon: AAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    183:
+      codon: ATC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    184:
+      codon: AAG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    185:
+      codon: AAA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    186:
+      codon: TGT
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    187:
+      codon: ATA
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    188:
+      codon: ATC
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"
+    189:
+      codon: ATG
+      verified_by:
+      - "4A-specific HVR consensus \u2014 not individually verified by ClinVar"

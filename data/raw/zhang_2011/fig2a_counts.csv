@@ -1,0 +1,63 @@
+## Zhang 2011 Figure 2A — per-residue clone counts and amino-acid letters at each crizotinib concentration.
+## Audit record. Source: Fig 2A of Zhang et al. 2011 (Chem Biol Drug Des 10.1111/j.1747-0285.2011.01239.x).
+## Read from the figure bars at ~±2 percentage points precision. The "letters" column records the amino-acid
+## substitutions visible as stacked labels within each bar; order follows the figure's visual stacking.
+## The within-residue breakdown by amino acid is NOT resolvable at variant-count precision from Fig 2A alone;
+## only the aggregated per-residue frequency is read directly from the bar height. The authors' Table 2 names
+## the single most frequent variant at 10 of the 16 residues; those are recorded under "table2_variant".
+## WT = outgrowth wells with no kinase-domain mutation (not a mutation per se).
+##
+## N_WELLS_WITH_OUTGROWTH column = approximate number of outgrowth wells at each concentration,
+## reported in the paper as "~700" (500 nM), 163 (720 nM), 58 (1000 nM), 4 (1440 nM). These are TOTAL
+## wells with outgrowth. The number of MUTATION-POSITIVE clones among them is approximately
+## N_wells * (1 - WT_frac).
+##
+## Columns:
+##   crizotinib_nM           — selection concentration (nM)
+##   n_outgrowth_wells       — approx total outgrowth wells at that concentration (paper-reported)
+##   residue                 — ALK residue number
+##   wt_aa                   — one-letter WT amino acid
+##   bar_pct_approx          — approximate height of residue bar as % of recovered clones (±2pp)
+##   letters_visible         — amino-acid letters stacked within the bar (uppercase, order as drawn)
+##   table2_variant          — single variant called out in Zhang 2011 Table 2 (if any)
+##   notes
+crizotinib_nM,n_outgrowth_wells,residue,wt_aa,bar_pct_approx,letters_visible,table2_variant,notes
+500,700,1151,T,2,K,T1151K,
+500,700,1152,L,2,V,L1152V,
+500,700,1156,C,2,Y,C1156Y,
+500,700,1171,I,18,"S;T;G",I1171T,"stacked letters; G is tentative at precision limit"
+500,700,1174,F,17,"I;C;V;L",F1174C,"L letter present but share within stack not resolvable; F1174L is mixed-origin from TTC"
+500,700,1180,V,4,L,,"Discussion names V1180 as crizotinib contact-stabilising"
+500,700,1181,R,1,,,"small bar; letter not resolvable"
+500,700,1196,L,6,M,L1196M,"ONLY M observed at codon 1196 across all four concentrations"
+500,700,1198,L,2,,,
+500,700,1210,E,5,K,E1210K,
+500,700,1241,E,2,,,
+500,700,1245,F,6,C,F1245C,
+500,700,1268,I,2,,,
+500,700,1269,G,10,"S;A",G1269S,
+500,700,1278,Y,2,,,
+500,700,WT,,40,,,"outgrowth wells with no kinase-domain mutation"
+720,163,1151,T,3,K,T1151K,
+720,163,1152,L,2,V,L1152V,
+720,163,1156,C,3,Y,C1156Y,
+720,163,1171,I,20,"T;S",I1171T,
+720,163,1174,F,15,"C;L;I",F1174C,
+720,163,1180,V,2,M,,"'M' tentative"
+720,163,1196,L,5,M,L1196M,
+720,163,1198,L,0,,,"disappears at 720 nM"
+720,163,1210,E,0,,,
+720,163,1245,F,0,,,
+720,163,1268,I,0,,,
+720,163,1269,G,27,"C;A;S",G1269S,"largest residue at 720 nM"
+720,163,WT,,23,,,
+1000,58,1156,C,5,Y,C1156Y,
+1000,58,1171,I,5,T,I1171T,
+1000,58,1174,F,7,C,F1174C,
+1000,58,1196,L,5,M,L1196M,
+1000,58,1206,S,10,R,S1206R,"S1206R emerges at 1000 nM"
+1000,58,1269,G,45,"A;C;S",G1269S,
+1000,58,WT,,25,,,
+1440,4,1196,L,25,M,L1196M,"1 of 4 clones"
+1440,4,1269,G,75,S,G1269S,"3 of 4 clones"
+1440,4,WT,,0,,,"no WT at 1440 nM"

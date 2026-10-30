@@ -1,0 +1,259 @@
+# ALK and ABL1 wild-type codons — RefSeq-sourced, ClinVar-verified.
+#
+# "codon" values are the three-base DNA codon on the SENSE strand of the
+# RefSeq CDS. The resulting amino acid is computed by src.codon_tools.translate()
+# and verified at load time.
+#
+# This file is a working slice during Phase 1. The FULL kinase-domain codon
+# tables (ALK F1116-G1392; ABL1 roughly 240-500) are to be assembled from the
+# complete RefSeq CDS once we have it in hand (either via Michele or by reading
+# Oh 2026 Supplementary Table S11, which contains the EML4-ALK v1 WT CDS).
+#
+# Each entry includes a "verified_by" field that names the specific primary
+# source confirming the codon. For residues named in Zhang 2011, Doi 2022,
+# Takei 2025, or the Oh 2026 atlas, we cross-check against ClinVar when a
+# nucleotide-level variant record exists.
+
+alk_nm_004304_5:
+  description: "ALK transcript variant 1, RefSeq NM_004304.5 (CDS)."
+  reference: "https://www.ncbi.nlm.nih.gov/nuccore/NM_004304.5"
+  kinase_domain_residues: [1116, 1392]  # approximate span used in Doi 2022
+  codons:
+    # F1174 — critical: v0.18 draft had TTT (wrong); correct is TTC.
+    1174:
+      codon: "TTC"
+      verified_by:
+        - "ClinVar NM_004304.5:c.3522C>A -> p.Phe1174Leu (rs863225281) fixes pos3 as C"
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS (offset 561)"
+
+    # L1196 — gatekeeper, codon-verified by multiple sources.
+    1196:
+      codon: "CTG"
+      verified_by:
+        - "ClinVar NM_004304.5:c.3586C>A -> p.Leu1196Met fixes pos1 as C"
+        - "Villa 2024 L1196P (c.3587T>C) fixes pos2 as T"
+
+    # I1171 — v0.18 draft had ATT (wrong); correct is ATC.
+    1171:
+      codon: "ATC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+        - "ClinVar NM_004304.5:c.3512T>A -> p.Ile1171Asn (pos2 T>A)"
+
+    # E1129 — v0.18 draft had GAA (wrong); correct is GAG.
+    1129:
+      codon: "GAG"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # G1202 — solvent-front residue, cross-check from ClinVar.
+    1202:
+      codon: "GGA"
+      verified_by:
+        - "ClinVar NM_004304.5:c.3604G>A -> p.Gly1202Arg fixes pos1 as G"
+
+    # G1269 — DFG-adjacent, Zhang 2011 reports G1269S.
+    1269:
+      codon: "GGA"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+        - "G1269S recovered in Zhang 2011; GGA->AGA via pos1 G>A"
+
+    # L1198 — hinge, Doi 2022 reports L1198F.
+    1198:
+      codon: "CTC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+        - "L1198F from CTC->TTC via pos1 C>T"
+
+    # L1256 — DFG-adjacent, Takei 2025 reports L1256F.
+    1256:
+      codon: "CTC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+        - "L1256F from CTC->TTC via pos1 C>T"
+
+    # D1203 — solvent-front, D1203N in Doi 2022.
+    1203:
+      codon: "GAC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # E1210 — Zhang 2011 and Doi 2022 report E1210K.
+    1210:
+      codon: "GAG"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # C1156 — Zhang 2011 reports C1156Y.
+    1156:
+      codon: "TGC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # P1153 — Takei 2025 reports P1153H/R.
+    1153:
+      codon: "CCT"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # F1245 — Zhang 2011 reports F1245C.
+    1245:
+      codon: "TTC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # V1180 — Zhang 2011 Discussion mentions V1180.
+    1180:
+      codon: "GTT"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # S1206 — Zhang 2011 reports S1206R.
+    1206:
+      codon: "TCC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # T1151 — Zhang 2011 reports T1151K.
+    1151:
+      codon: "ACG"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # L1152 — Zhang 2011 reports L1152V.
+    1152:
+      codon: "CTG"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # H1124 — Takei 2025 reports H1124R.
+    1124:
+      codon: "CAT"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS"
+
+    # R1181 — Zhang 2011 Discussion mentions R1181.
+    1181:
+      codon: "CGC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT construct, read directly (scripts/build_alk_codons.py)"
+      correction: >-
+        Previously recorded as CGG while flagged TO RE-VERIFY. Resolved to CGC against the
+        Table S11 construct, whose reading frame reproduces the atlas wild-type residue at
+        all 331 assayed positions. Same residue (Arg); the third base differs, which changes
+        which substitutions are single-nucleotide reachable from this codon.
+
+    # I1268 — the Oh atlas and the Table S11 construct both give Ile here.
+    1268:
+      codon: "ATT"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT construct, read directly (scripts/build_alk_codons.py)"
+        - "Oh 2026 Table S2 lists I1268L/F/V/N/T/S/M, fixing the wild-type residue as Ile"
+      correction: >-
+        Previously recorded as GAC (Asp) while flagged TO RE-VERIFY, which is the wrong
+        residue: a comment in this file attributed it to a "D1268" mentioned in Zhang 2011,
+        but the atlas assays I1268 substitutions. Resolved to ATT.
+
+    # Y1278 — Zhang 2011 Discussion mentions Y1278.
+    1278:
+      codon: "TAC"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS; TO RE-VERIFY"
+
+    # E1241 — Zhang 2011 Discussion mentions E1241.
+    1241:
+      codon: "GAG"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS; TO RE-VERIFY"
+
+    # R1275 — Zhang 2011 did NOT recover (unlike neuroblastoma). Codon noted for completeness.
+    1275:
+      codon: "CGA"
+      verified_by:
+        - "Oh 2026 atlas Table S11 EML4-ALK v1 WT CDS; TO RE-VERIFY"
+
+# -------------------------------------------------------------------------
+# ABL1 — Bradeen 2006 + Azam 2003 on BCR-ABL1 + imatinib (T2).
+# -------------------------------------------------------------------------
+# Scientifically important note on completeness. For the T2 ratio test, the
+# analytical primitive is NOT the WT codon identity per se but the SET OF
+# PYRIMIDINE-REFERENCED SUBSTITUTION CLASSES reachable in one nucleotide step
+# from a WT codon encoding the WT amino acid to a codon encoding the mutant
+# amino acid. For "class-forced" variants (18/20 Bradeen imatinib; 50/76 Azam
+# Table 1), that set has size 1 under every synonymous WT codon encoding the
+# WT residue — the class is thus determined by the amino-acid grammar alone
+# and is RefSeq-independent. See:
+#   data/raw/bradeen_2006/derive_substitution_classes.py
+#   data/raw/azam_2003/derive_substitution_classes.py
+#
+# For "class-ambiguous" variants (Bradeen: Q252H, F317L; Azam: 26 variants),
+# the exact WT codon identity determines which class the route lies in; those
+# variants are excluded from the primary T2 test by §5 of preregistration.md
+# and reported with a sensitivity bracket.
+#
+# The anchor codons recorded here are the 4 Bradeen/Azam residues confirmed
+# via ClinVar HGVS c. notation (independent of the derivation above), plus
+# a cascade-locked WT codon for L248 inferred from the L248R one-nt route
+# constraint.
+# -------------------------------------------------------------------------
+abl1_nm_005157_6:
+  description: "ABL1 transcript variant a (isoform 1a), RefSeq NM_005157.6 (CDS)."
+  reference: "https://www.ncbi.nlm.nih.gov/nuccore/NM_005157.6"
+  kinase_domain_residues: [240, 500]  # roughly, SH1 domain
+  status: "Partial. ClinVar-anchored residues locked; full CDS verification pending."
+  key_residues:
+    244:  # M244V/I — only ATG encodes Met.
+      codon: "ATG"
+      verified_by: "Genetic code (Met=ATG only)"
+    248:  # L248R forces WT = CTN (one-nt route genetic-code constraint).
+      candidate_codons: ["CTA", "CTC", "CTG", "CTT"]
+      verified_by: >-
+        Cascade from L248R: only Leu codons in the CTN family admit a single-nt
+        route to any Arg codon (pos2 T>G). This then forces L248V to class C>G
+        (pos1 C>G, under any of the 4 CTN options).
+    250:  # G250E — pos2 G>A forced; WT GGG or GGA (literature consensus GGA).
+      candidate_codons: ["GGA", "GGG"]
+      verified_by: "Genetic code (Gly G250E only via pos2 G>A from GGN with G|A at pos3)"
+    252:  # Q252H — CLASS AMBIGUOUS: CAG vs CAA give different route classes.
+      candidate_codons: ["CAA", "CAG"]
+      verified_by: "Unresolved; class-ambiguous — excluded from primary"
+    253:  # Y253H — ClinVar c.757T>C anchor.
+      codon: "TAC"
+      verified_by: "ClinVar NM_005157.6:c.757T>C -> Y253H (pos1 T)"
+    255:  # E255K/V — pos1 G>A (K) and pos2 A>T (V) both A/G codon-independent.
+      candidate_codons: ["GAA", "GAG"]
+      verified_by: >-
+        ClinVar NM_005157.6:c.764A>T -> E255V fixes pos2 as A (both GAA and GAG
+        satisfy this). Pos3 ambiguity does not affect substitution class for
+        K or V routes (both class-forced to C>T and T>A respectively).
+    276:  # D276G — pos2 A>G forced regardless of pos3.
+      candidate_codons: ["GAC", "GAT"]
+      verified_by: "Genetic code (Asp->Gly only via pos2 A>G in GAC/GAT; class T>C either way)"
+    311:  # F311I/V — pos1 T>A (I) or pos1 T>G (V) both independent of pos3.
+      candidate_codons: ["TTC", "TTT"]
+      verified_by: "Genetic code (Phe->Ile/Val only via pos1; both class-forced)"
+    315:  # T315I — ClinVar c.944C>T anchor.
+      codon: "ACT"
+      verified_by: "ClinVar NM_005157.6:c.944C>T -> T315I (pos2 C)"
+    317:  # F317L — CLASS AMBIGUOUS: TTC vs TTT give different route classes.
+      candidate_codons: ["TTC", "TTT"]
+      verified_by: "Unresolved; class-ambiguous — excluded from primary"
+    351:  # M351T — pos2 T>C forced; Met only ATG.
+      codon: "ATG"
+      verified_by: "Genetic code (Met=ATG only)"
+    355:  # E355G — pos2 A>G forced regardless of pos3.
+      candidate_codons: ["GAA", "GAG"]
+      verified_by: "Genetic code (Glu->Gly only via pos2 A>G; class T>C either way)"
+    359:  # F359C/V — pos2 T>G (C) or pos1 T>G (V) both independent of pos3.
+      candidate_codons: ["TTC", "TTT"]
+      verified_by: "Genetic code (Phe->Cys/Val only via pos1/2 single step; both forced)"
+    379:  # V379I — pos1 G>A forced; WT must be GTC/GTT/GTA (not GTG).
+      candidate_codons: ["GTA", "GTC", "GTT"]
+      verified_by: "Genetic code (Val->Ile only from GTC/GTT/GTA via pos1 G>A; GTG unreachable in 1 nt)"
+    384:  # L384M — only CTG->ATG is a one-nt Leu->Met route.
+      codon: "CTG"
+      verified_by: "Genetic code (Leu->Met in 1 nt only from CTG via pos1 C>A)"
+    396:  # H396R/P — ClinVar c.1187A>G anchor fixes pos2 as A.
+      candidate_codons: ["CAC", "CAT"]
+      verified_by: "ClinVar NM_005157.6:c.1187A>G -> H396R (pos2 A; class T>C either way)"

@@ -1,0 +1,43 @@
+# Doi et al. 2022 Target Oncol — Figure 3a (alectinib-resistant mutations).
+# Source: Doi Y, Tagaya H, Noge A, Semba K. Prediction of resistance mutations
+# against upcoming ALK inhibitors. Target Oncol 2022;17:695-707.
+# DOI: 10.1007/s11523-022-00919-5.
+#
+# Fig 3a is a bar chart of per-nucleotide-position mutant-allele frequency in
+# the NGS sequencing of the Ba/F3 EML4-ALK v1 library AFTER 50 nM alectinib
+# selection for 1 week. Position axis spans the targeted ALK amplicon
+# (GenBank AB663645 pos 3344-3834 which corresponds to ALK c. positions
+# covering residues ~1116-1280). The paper does NOT publish exact numeric
+# per-variant counts for Fig 3a — only the figure itself. These values are
+# read from the published Fig 3a bars at approximately ±2 percentage points
+# precision, same methodology as Zhang 2011 Fig 2A.
+#
+# Each row = one resistance variant called out in Fig 3a with its peak height
+# (as per-position mutant-allele frequency, in [0,1]) and the dominant X>Y
+# substitution class visible in the stacked bar at that position.
+#
+# IMPORTANT: Fig 3a also shows silent passenger mutations (L1152 silent,
+# L1165 silent, R1192 silent) that survived alectinib selection but are not
+# resistance mutations. Those rows are included for completeness with
+# `is_resistance_mutation = False` and are DROPPED by the T3 analysis.
+#
+# Compound label I1171N/T/S means NGS can't distinguish the three sub-variants
+# at the position-level readout (3 of the 4 substitutions at codon 1171 pos2
+# give a 1-nt route to N, T, or S). Equal-split across the 3 sub-variants is
+# the pre-registered primary (§5), matching the Azam 2003 compound-row rule.
+#
+# Position offset note: Doi 2022 uses GenBank AB663645 numbering for the
+# amplicon; residue number is approximately (position - 3344)/3 + 1116. For
+# T3 analysis the ALK Ia residue number is what matters.
+#
+variant,peak_freq_approx,visible_class_hint,is_resistance_mutation,notes
+I1171N,0.067,X>C,True,"compound I1171N/T/S total ~0.20 at position 3514; equal-split primary (0.20/3=0.067)"
+I1171T,0.067,X>C,True,"compound I1171N/T/S"
+I1171S,0.067,X>C,True,"compound I1171N/T/S"
+V1180L,0.21,X>C,True,"single tall bar at position 3534; dominant class X>C"
+L1196M,0.03,X>A,True,"small bar at position 3584; dominant class X>A"
+L1198F,0.02,X>T,True,"small bar at position 3594"
+G1202R,0.02,X>A,True,"small bar at position 3604; dominant class X>A (G>A pos1)"
+L1152_silent,0.02,unknown,False,"silent passenger; dropped from T3"
+L1165_silent,0.02,unknown,False,"silent passenger; dropped from T3"
+R1192_silent,0.03,X>A,False,"silent passenger (R1192 same AA under some nt change); dropped from T3"

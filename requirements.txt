@@ -1,0 +1,17 @@
+# Pinned to the versions the manuscript's figures and numbers were produced
+# with. data/derived/env_versions.json records the same set, emitted from the
+# running interpreter rather than written by hand, and §2.14 of the paper
+# quotes it. Python 3.13.16.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+matplotlib==3.11.2
+pyyaml==6.0.3
+
+# Parsing the supplementary PDFs of the primary atlases
+pdfplumber==0.11.10
+
+# Test suite and the reproduction notebook
+pytest==8.3.4
+jupyter==1.1.1
+nbformat==5.10.4

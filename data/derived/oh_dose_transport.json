@@ -1,0 +1,226 @@
+{
+  "top_k": 25,
+  "window": [
+    1172,
+    1215
+  ],
+  "series": {
+    "S5 alectinib": {
+      "n_variants": 253,
+      "doses": [
+        20.0,
+        40.0,
+        80.0
+      ],
+      "fold_span": 4.0,
+      "rho_low_vs_high": 0.3590554145158733,
+      "rho_adjacent_steps": [
+        0.6433936370601897,
+        0.7247406821182927
+      ],
+      "topk_overlap": 10,
+      "sd_by_dose": [
+        0.3269724481467811,
+        0.5123341747852117,
+        0.6101945704334515
+      ]
+    },
+    "S5 lorlatinib": {
+      "n_variants": 253,
+      "doses": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "fold_span": 4.0,
+      "rho_low_vs_high": 0.6040531988837364,
+      "rho_adjacent_steps": [
+        0.7119544839503759,
+        0.8873295482333483
+      ],
+      "topk_overlap": 11,
+      "sd_by_dose": [
+        0.4468400909187385,
+        0.5690165725675698,
+        0.6390720981568963
+      ]
+    },
+    "S5 zotizalkib": {
+      "n_variants": 253,
+      "doses": [
+        0.3,
+        0.9,
+        2.7
+      ],
+      "fold_span": 9.000000000000002,
+      "rho_low_vs_high": 0.3386575195887076,
+      "rho_adjacent_steps": [
+        0.6442235728439084,
+        0.6815232582093247
+      ],
+      "topk_overlap": 6,
+      "sd_by_dose": [
+        0.26692536290800195,
+        0.4188532496591005,
+        0.47144761749739084
+      ]
+    },
+    "S3 lorlatinib": {
+      "n_variants": 250,
+      "doses": [
+        2.0,
+        5.0,
+        10.0
+      ],
+      "fold_span": 5.0,
+      "rho_low_vs_high": 0.3017885086161378,
+      "rho_adjacent_steps": [
+        0.4521745307924927,
+        0.6417238035808572
+      ],
+      "topk_overlap": 15,
+      "sd_by_dose": [
+        1.0371193157035807,
+        1.2798845336336826,
+        1.2714042943742816
+      ]
+    },
+    "S9 alectinib": {
+      "n_variants": 384,
+      "doses": [
+        3.0,
+        6.0
+      ],
+      "fold_span": 2.0,
+      "rho_low_vs_high": 0.38887414804516635,
+      "rho_adjacent_steps": [
+        0.38887414804516635
+      ],
+      "topk_overlap": 8,
+      "sd_by_dose": [
+        0.1396907335236911,
+        0.15014091121411635
+      ]
+    },
+    "S9 lorlatinib": {
+      "n_variants": 384,
+      "doses": [
+        20.0,
+        40.0
+      ],
+      "fold_span": 2.0,
+      "rho_low_vs_high": 0.6314935064935066,
+      "rho_adjacent_steps": [
+        0.6314935064935066
+      ],
+      "topk_overlap": 10,
+      "sd_by_dose": [
+        0.12403484281100742,
+        0.13674011795299226
+      ]
+    },
+    "S9 zotizalkib": {
+      "n_variants": 384,
+      "doses": [
+        0.3,
+        1.0
+      ],
+      "fold_span": 3.3333333333333335,
+      "rho_low_vs_high": 0.41782026720016274,
+      "rho_adjacent_steps": [
+        0.41782026720016274
+      ],
+      "topk_overlap": 5,
+      "sd_by_dose": [
+        0.11971878788836901,
+        0.18021856028880764
+      ]
+    }
+  },
+  "controls": {
+    "A_atlas_vs_dose": {
+      "alectinib": {
+        "rho_by_dose": {
+          "20.0": 0.5503357540460461,
+          "40.0": 0.3957011658590745,
+          "80.0": 0.14199043828869473
+        },
+        "best_match_dose": "20.0",
+        "n": 279
+      },
+      "lorlatinib": {
+        "rho_by_dose": {
+          "5.0": 0.5698194480356078,
+          "10.0": 0.44317902872056736,
+          "20.0": 0.3227918910730879
+        },
+        "best_match_dose": "5.0",
+        "n": 279
+      },
+      "zotizalkib": {
+        "rho_by_dose": {
+          "0.3": 0.4502799320261984,
+          "0.9": 0.6169574886628025,
+          "2.7": 0.44446648531554983
+        },
+        "best_match_dose": "0.9",
+        "n": 279
+      }
+    },
+    "B_cross_drug": {
+      "matched_dose_rank": {
+        "n_pairs": 9,
+        "median_rho": 0.7506117071334464
+      },
+      "unmatched_dose_rank": {
+        "n_pairs": 18,
+        "median_rho": 0.5668906011254523
+      }
+    },
+    "C_sd_monotone_increasing": {
+      "S5 alectinib": true,
+      "S5 lorlatinib": true,
+      "S5 zotizalkib": true,
+      "S3 lorlatinib": false,
+      "S9 alectinib": true,
+      "S9 lorlatinib": true,
+      "S9 zotizalkib": true
+    },
+    "D_range_restriction": {
+      "n_full_missense": 2173,
+      "n_window_missense": 284,
+      "by_drug": {
+        "alectinib": {
+          "full_sd": 1.1681540723328248,
+          "window_sd": 1.78619209471071,
+          "sd_ratio_window_over_full": 1.5290723518547962
+        },
+        "lorlatinib": {
+          "full_sd": 1.3869106150985233,
+          "window_sd": 2.1284810254913564,
+          "sd_ratio_window_over_full": 1.5346922882554717
+        },
+        "zotizalkib": {
+          "full_sd": 1.1719963297171558,
+          "window_sd": 1.2666899220690209,
+          "sd_ratio_window_over_full": 1.0807968335316527
+        }
+      },
+      "range_restricted": false
+    }
+  },
+  "headline": {
+    "n_series": 7,
+    "rho_low_vs_high_range": [
+      0.3017885086161378,
+      0.6314935064935066
+    ],
+    "rho_low_vs_high_median": 0.38887414804516635,
+    "rho_adjacent_median": 0.6433936370601897,
+    "topk_overlap_range": [
+      5,
+      15
+    ],
+    "cross_drug_matched_median_rho": 0.7506117071334464
+  }
+}

@@ -1,0 +1,466 @@
+Homo sapiens MET proto-oncogene, receptor tyrosine kinase (MET), transcript variant 2, mRNA
+NCBI Reference Sequence: NM_000245.2
+This sequence has been updated. See current version.
+FASTA Graphics 
+Go to:
+LOCUS       NM_000245               6641 bp    mRNA    linear   PRI 21-MAY-2015
+DEFINITION  Homo sapiens MET proto-oncogene, receptor tyrosine kinase (MET),
+            transcript variant 2, mRNA.
+ACCESSION   NM_000245
+VERSION     NM_000245.2
+KEYWORDS    RefSeq.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 6641)
+  AUTHORS   Mujtaba G, Schultz JM, Imtiaz A, Morell RJ, Friedman TB and Naz S.
+  TITLE     A mutation of MET, encoding hepatocyte growth factor receptor, is
+            associated with human DFNB97 hearing loss
+  JOURNAL   J. Med. Genet. (2015) In press
+   PUBMED   25941349
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 6641)
+  AUTHORS   Zhu M, Tang R, Doshi S, Oliner KS, Dubey S, Jiang Y, Donehower RC,
+            Iveson T, Loh EY and Zhang Y.
+  TITLE     Exposure-response analysis of rilotumumab in gastric cancer: the
+            role of tumour MET expression
+  JOURNAL   Br. J. Cancer 112 (3), 429-437 (2015)
+   PUBMED   25584489
+  REMARK    GeneRIF: Rilotumumab had an exposure-dependent treatment effect in
+            patients with MET-positive gastric or oesophagogastric junction
+            cancer.
+REFERENCE   3  (bases 1 to 6641)
+  AUTHORS   Park M, Lee BS, Jeon SH, Nam HJ, Lee G, Kim CH, Cho H and Lee JH.
+  TITLE     A novel isoform of met receptor tyrosine kinase blocks hepatocyte
+            growth factor/Met signaling and stimulates skeletal muscle cell
+            differentiation
+  JOURNAL   J. Biol. Chem. 290 (3), 1804-1817 (2015)
+   PUBMED   25471370
+  REMARK    GeneRIF: a novel alternatively spliced inhibitory isoform of Met
+            stimulates muscle cell differentiation, which confers a new means
+            to control muscle differentiation and/or regeneration
+REFERENCE   4  (bases 1 to 6641)
+  AUTHORS   Chen ZH, Yu YP, Michalopoulos G, Nelson J and Luo JH.
+  TITLE     The DNA replication licensing factor miniature chromosome
+            maintenance 7 is essential for RNA splicing of epidermal growth
+            factor receptor, c-Met, and platelet-derived growth factor receptor
+  JOURNAL   J. Biol. Chem. 290 (3), 1404-1411 (2015)
+   PUBMED   25425645
+  REMARK    GeneRIF: MCM7 is essential for RNA splicing of epidermal growth
+            factor receptor, c-Met, and platelet-derived growth factor receptor
+REFERENCE   5  (bases 1 to 6641)
+  AUTHORS   Chaudhary SC, Cho MG, Nguyen TT, Park KS, Kwon MH and Lee JH.
+  TITLE     A putative pH-dependent nuclear localization signal in the
+            juxtamembrane region of c-Met
+  JOURNAL   Exp. Mol. Med. 46, E119 (2014)
+   PUBMED   25341359
+  REMARK    GeneRIF: The study reports that two histidine residues separated by
+            a 10-amino-acid spacer (H1068-H1079) located in the juxtamembrane
+            region of c-Met function as a putative novel nuclear localization
+            signal.
+REFERENCE   6  (bases 1 to 6641)
+  AUTHORS   Galland F, Stefanova M, Lafage M and Birnbaum D.
+  TITLE     Localization of the 5' end of the MCF2 oncogene to human chromosome
+            15q15----q23
+  JOURNAL   Cytogenet. Cell Genet. 60 (2), 114-116 (1992)
+   PUBMED   1611909
+REFERENCE   7  (bases 1 to 6641)
+  AUTHORS   Ferracini R, Longati P, Naldini L, Vigna E and Comoglio PM.
+  TITLE     Identification of the major autophosphorylation site of the
+            Met/hepatocyte growth factor receptor tyrosine kinase
+  JOURNAL   J. Biol. Chem. 266 (29), 19558-19564 (1991)
+   PUBMED   1655790
+REFERENCE   8  (bases 1 to 6641)
+  AUTHORS   Naldini L, Weidner KM, Vigna E, Gaudino G, Bardelli A, Ponzetto C,
+            Narsimhan RP, Hartmann G, Zarnegar R, Michalopoulos GK et al.
+  TITLE     Scatter factor and hepatocyte growth factor are indistinguishable
+            ligands for the MET receptor
+  JOURNAL   EMBO J. 10 (10), 2867-2878 (1991)
+   PUBMED   1655405
+REFERENCE   9  (bases 1 to 6641)
+  AUTHORS   Naldini L, Vigna E, Narsimhan RP, Gaudino G, Zarnegar R,
+            Michalopoulos GK and Comoglio PM.
+  TITLE     Hepatocyte growth factor (HGF) stimulates the tyrosine kinase
+            activity of the receptor encoded by the proto-oncogene c-MET
+  JOURNAL   Oncogene 6 (4), 501-504 (1991)
+   PUBMED   1827664
+REFERENCE   10 (bases 1 to 6641)
+  AUTHORS   Bottaro DP, Rubin JS, Faletto DL, Chan AM, Kmiecik TE, Vande Woude
+            GF and Aaronson SA.
+  TITLE     Identification of the hepatocyte growth factor receptor as the
+            c-met proto-oncogene product
+  JOURNAL   Science 251 (4995), 802-804 (1991)
+   PUBMED   1846706
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from X54559.1, BX648782.1,
+            AA278232.1 and AI630755.1.
+            
+            [WARNING] On May 3, 2016 this sequence was replaced by NM_000245.3.
+            
+            On Feb 23, 2004 this sequence version replaced NM_000245.1.
+            
+            Summary: The proto-oncogene MET product is the hepatocyte growth
+            factor receptor and encodes tyrosine-kinase activity. The primary
+            single chain precursor protein is post-translationally cleaved to
+            produce the alpha and beta subunits, which are disulfide linked to
+            form the mature receptor. Various mutations in the MET gene are
+            associated with papillary renal carcinoma. Two transcript variants
+            encoding different isoforms have been found for this gene.
+            [provided by RefSeq, Jul 2008].
+            
+            Transcript Variant: This variant (2) uses an alternate in-frame
+            splice junction at the end of an exon compared to variant 1. The
+            resulting isoform (b) has the same N- and C-termini but is shorter
+            compared to isoform a.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: X54559.1, BC130420.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMEA1968189, SAMEA1968540
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-3999              X54559.1           8-4006
+            4000-5787           BX648782.1         1042-2829
+            5788-6151           AA278232.1         70-433
+            6152-6613           BX648782.1         3194-3655
+            6614-6641           AI630755.1         1-28                c
+FEATURES             Location/Qualifiers
+     source          1..6641
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="7"
+                     /map="7q31"
+     gene            1..6641
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /note="MET proto-oncogene, receptor tyrosine kinase"
+                     /db_xref="GeneID:4233"
+                     /db_xref="HGNC:HGNC:7029"
+                     /db_xref="MIM:164860"
+     misc_feature    86..88
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /note="upstream in-frame stop codon"
+     CDS             188..4360
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /EC_number="2.7.10.1"
+                     /note="isoform b precursor is encoded by transcript
+                     variant 2; HGF receptor; scatter factor receptor; SF
+                     receptor; met proto-oncogene tyrosine kinase; hepatocyte
+                     growth factor receptor; soluble MET variant 12; HGF/SF
+                     receptor; proto-oncogene c-Met; tyrosine-protein kinase
+                     Met"
+                     /codon_start=1
+                     /product="hepatocyte growth factor receptor isoform b
+                     precursor"
+                     /protein_id="NP_000236.2"
+                     /db_xref="CCDS:CCDS43636.1"
+                     /db_xref="GeneID:4233"
+                     /db_xref="HGNC:HGNC:7029"
+                     /db_xref="MIM:164860"
+                     /translation="MKAPAVLAPGILVLLFTLVQRSNGECKEALAKSEMNVNMKYQLP
+                     NFTAETPIQNVILHEHHIFLGATNYIYVLNEEDLQKVAEYKTGPVLEHPDCFPCQDCS
+                     SKANLSGGVWKDNINMALVVDTYYDDQLISCGSVNRGTCQRHVFPHNHTADIQSEVHC
+                     IFSPQIEEPSQCPDCVVSALGAKVLSSVKDRFINFFVGNTINSSYFPDHPLHSISVRR
+                     LKETKDGFMFLTDQSYIDVLPEFRDSYPIKYVHAFESNNFIYFLTVQRETLDAQTFHT
+                     RIIRFCSINSGLHSYMEMPLECILTEKRKKRSTKKEVFNILQAAYVSKPGAQLARQIG
+                     ASLNDDILFGVFAQSKPDSAEPMDRSAMCAFPIKYVNDFFNKIVNKNNVRCLQHFYGP
+                     NHEHCFNRTLLRNSSGCEARRDEYRTEFTTALQRVDLFMGQFSEVLLTSISTFIKGDL
+                     TIANLGTSEGRFMQVVVSRSGPSTPHVNFLLDSHPVSPEVIVEHTLNQNGYTLVITGK
+                     KITKIPLNGLGCRHFQSCSQCLSAPPFVQCGWCHDKCVRSEECLSGTWTQQICLPAIY
+                     KVFPNSAPLEGGTRLTICGWDFGFRRNNKFDLKKTRVLLGNESCTLTLSESTMNTLKC
+                     TVGPAMNKHFNMSIIISNGHGTTQYSTFSYVDPVITSISPKYGPMAGGTLLTLTGNYL
+                     NSGNSRHISIGGKTCTLKSVSNSILECYTPAQTISTEFAVKLKIDLANRETSIFSYRE
+                     DPIVYEIHPTKSFISGGSTITGVGKNLNSVSVPRMVINVHEAGRNFTVACQHRSNSEI
+                     ICCTTPSLQQLNLQLPLKTKAFFMLDGILSKYFDLIYVHNPVFKPFEKPVMISMGNEN
+                     VLEIKGNDIDPEAVKGEVLKVGNKSCENIHLHSEAVLCTVPNDLLKLNSELNIEWKQA
+                     ISSTVLGKVIVQPDQNFTGLIAGVVSISTALLLLLGFFLWLKKRKQIKDLGSELVRYD
+                     ARVHTPHLDRLVSARSVSPTTEMVSNESVDYRATFPEDQFPNSSQNGSCRQVQYPLTD
+                     MSPILTSGDSDISSPLLQNTVHIDLSALNPELVQAVQHVVIGPSSLIVHFNEVIGRGH
+                     FGCVYHGTLLDNDGKKIHCAVKSLNRITDIGEVSQFLTEGIIMKDFSHPNVLSLLGIC
+                     LRSEGSPLVVLPYMKHGDLRNFIRNETHNPTVKDLIGFGLQVAKGMKYLASKKFVHRD
+                     LAARNCMLDEKFTVKVADFGLARDMYDKEYYSVHNKTGAKLPVKWMALESLQTQKFTT
+                     KSDVWSFGVLLWELMTRGAPPYPDVNTFDITVYLLQGRRLLQPEYCPDPLYEVMLKCW
+                     HPKAEMRPSFSELVSRISAIFSTFIGEHYVHVNATYVNVKCVAPYPSLLSSEDNADDE
+                     VDTRPASFWETS"
+     sig_peptide     188..259
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /inference="COORDINATES: ab initio prediction:SignalP:4.0"
+     mat_peptide     260..4357
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /product="hepatocyte growth factor receptor isoform b"
+     misc_feature    1106..1111
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Cleavage. {ECO:0000255}; propagated from
+                     UniProtKB/Swiss-Prot (P08581.4); cleavage site"
+     misc_feature    2984..3052
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     transmembrane region"
+     misc_feature    3083..3085
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine. {ECO:0000269|PubMed:24275569};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3116..3118
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphothreonine. {ECO:0000269|PubMed:18691976};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3155..3157
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine. {ECO:0000269|PubMed:18669648};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3176..3178
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine. {ECO:0000269|PubMed:18669648};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3185..3187
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine. {ECO:0000269|PubMed:18669648};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3194..3196
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine. {ECO:0000269|PubMed:18691976,
+                     ECO:0000269|PubMed:19369195}; propagated from
+                     UniProtKB/Swiss-Prot (P08581.4); phosphorylation site"
+     misc_feature    3212..3217
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Breakpoint for translocation to form TPR-MET
+                     oncogene; propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     other site"
+     misc_feature    3821..4357
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     Region: Interaction with RANBP9"
+     misc_feature    3875..3877
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine. {ECO:0000269|PubMed:12475979};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    3887..3889
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine, by autocatalysis.
+                     {ECO:0000269|PubMed:12475979}; propagated from
+                     UniProtKB/Swiss-Prot (P08581.4); phosphorylation site"
+     misc_feature    3890..3892
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine, by autocatalysis.
+                     {ECO:0000269|PubMed:12475979, ECO:0000269|PubMed:1655790};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    4052..4054
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphothreonine. {ECO:0000269|PubMed:19369195};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    4145..4264
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     Region: Interaction with MUC20"
+     misc_feature    4232..4234
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine, by autocatalysis.
+                     {ECO:0000269|PubMed:12475979, ECO:0000269|PubMed:7513258};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    4253..4255
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine, by autocatalysis.
+                     {ECO:0000269|PubMed:15735664, ECO:0000269|PubMed:7513258};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     misc_feature    4280..4282
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphotyrosine. {ECO:0000269|PubMed:12475979};
+                     propagated from UniProtKB/Swiss-Prot (P08581.4);
+                     phosphorylation site"
+     regulatory      6594..6599
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+     polyA_site      6623
+                     /gene="MET"
+                     /gene_synonym="AUTS9; c-Met; DFNB97; HGFR; RCCP2"
+ORIGIN      
+        1 gccctcgccg cccgcggcgc cccgagcgct ttgtgagcag atgcggagcc gagtggaggg
+       61 cgcgagccag atgcggggcg acagctgact tgctgagagg aggcggggag gcgcggagcg
+      121 cgcgtgtggt ccttgcgccg ctgacttctc cactggttcc tgggcaccga aagataaacc
+      181 tctcataatg aaggcccccg ctgtgcttgc acctggcatc ctcgtgctcc tgtttacctt
+      241 ggtgcagagg agcaatgggg agtgtaaaga ggcactagca aagtccgaga tgaatgtgaa
+      301 tatgaagtat cagcttccca acttcaccgc ggaaacaccc atccagaatg tcattctaca
+      361 tgagcatcac attttccttg gtgccactaa ctacatttat gttttaaatg aggaagacct
+      421 tcagaaggtt gctgagtaca agactgggcc tgtgctggaa cacccagatt gtttcccatg
+      481 tcaggactgc agcagcaaag ccaatttatc aggaggtgtt tggaaagata acatcaacat
+      541 ggctctagtt gtcgacacct actatgatga tcaactcatt agctgtggca gcgtcaacag
+      601 agggacctgc cagcgacatg tctttcccca caatcatact gctgacatac agtcggaggt
+      661 tcactgcata ttctccccac agatagaaga gcccagccag tgtcctgact gtgtggtgag
+      721 cgccctggga gccaaagtcc tttcatctgt aaaggaccgg ttcatcaact tctttgtagg
+      781 caataccata aattcttctt atttcccaga tcatccattg cattcgatat cagtgagaag
+      841 gctaaaggaa acgaaagatg gttttatgtt tttgacggac cagtcctaca ttgatgtttt
+      901 acctgagttc agagattctt accccattaa gtatgtccat gcctttgaaa gcaacaattt
+      961 tatttacttc ttgacggtcc aaagggaaac tctagatgct cagacttttc acacaagaat
+     1021 aatcaggttc tgttccataa actctggatt gcattcctac atggaaatgc ctctggagtg
+     1081 tattctcaca gaaaagagaa aaaagagatc cacaaagaag gaagtgttta atatacttca
+     1141 ggctgcgtat gtcagcaagc ctggggccca gcttgctaga caaataggag ccagcctgaa
+     1201 tgatgacatt cttttcgggg tgttcgcaca aagcaagcca gattctgccg aaccaatgga
+     1261 tcgatctgcc atgtgtgcat tccctatcaa atatgtcaac gacttcttca acaagatcgt
+     1321 caacaaaaac aatgtgagat gtctccagca tttttacgga cccaatcatg agcactgctt
+     1381 taataggaca cttctgagaa attcatcagg ctgtgaagcg cgccgtgatg aatatcgaac
+     1441 agagtttacc acagctttgc agcgcgttga cttattcatg ggtcaattca gcgaagtcct
+     1501 cttaacatct atatccacct tcattaaagg agacctcacc atagctaatc ttgggacatc
+     1561 agagggtcgc ttcatgcagg ttgtggtttc tcgatcagga ccatcaaccc ctcatgtgaa
+     1621 ttttctcctg gactcccatc cagtgtctcc agaagtgatt gtggagcata cattaaacca
+     1681 aaatggctac acactggtta tcactgggaa gaagatcacg aagatcccat tgaatggctt
+     1741 gggctgcaga catttccagt cctgcagtca atgcctctct gccccaccct ttgttcagtg
+     1801 tggctggtgc cacgacaaat gtgtgcgatc ggaggaatgc ctgagcggga catggactca
+     1861 acagatctgt ctgcctgcaa tctacaaggt tttcccaaat agtgcacccc ttgaaggagg
+     1921 gacaaggctg accatatgtg gctgggactt tggatttcgg aggaataata aatttgattt
+     1981 aaagaaaact agagttctcc ttggaaatga gagctgcacc ttgactttaa gtgagagcac
+     2041 gatgaataca ttgaaatgca cagttggtcc tgccatgaat aagcatttca atatgtccat
+     2101 aattatttca aatggccacg ggacaacaca atacagtaca ttctcctatg tggatcctgt
+     2161 aataacaagt atttcgccga aatacggtcc tatggctggt ggcactttac ttactttaac
+     2221 tggaaattac ctaaacagtg ggaattctag acacatttca attggtggaa aaacatgtac
+     2281 tttaaaaagt gtgtcaaaca gtattcttga atgttatacc ccagcccaaa ccatttcaac
+     2341 tgagtttgct gttaaattga aaattgactt agccaaccga gagacaagca tcttcagtta
+     2401 ccgtgaagat cccattgtct atgaaattca tccaaccaaa tcttttatta gtggtgggag
+     2461 cacaataaca ggtgttggga aaaacctgaa ttcagttagt gtcccgagaa tggtcataaa
+     2521 tgtgcatgaa gcaggaagga actttacagt ggcatgtcaa catcgctcta attcagagat
+     2581 aatctgttgt accactcctt ccctgcaaca gctgaatctg caactccccc tgaaaaccaa
+     2641 agcctttttc atgttagatg ggatcctttc caaatacttt gatctcattt atgtacataa
+     2701 tcctgtgttt aagccttttg aaaagccagt gatgatctca atgggcaatg aaaatgtact
+     2761 ggaaattaag ggaaatgata ttgaccctga agcagttaaa ggtgaagtgt taaaagttgg
+     2821 aaataagagc tgtgagaata tacacttaca ttctgaagcc gttttatgca cggtccccaa
+     2881 tgacctgctg aaattgaaca gcgagctaaa tatagagtgg aagcaagcaa tttcttcaac
+     2941 cgtccttgga aaagtaatag ttcaaccaga tcagaatttc acaggattga ttgctggtgt
+     3001 tgtctcaata tcaacagcac tgttattact acttgggttt ttcctgtggc tgaaaaagag
+     3061 aaagcaaatt aaagatctgg gcagtgaatt agttcgctac gatgcaagag tacacactcc
+     3121 tcatttggat aggcttgtaa gtgcccgaag tgtaagccca actacagaaa tggtttcaaa
+     3181 tgaatctgta gactaccgag ctacttttcc agaagatcag tttcctaatt catctcagaa
+     3241 cggttcatgc cgacaagtgc agtatcctct gacagacatg tcccccatcc taactagtgg
+     3301 ggactctgat atatccagtc cattactgca aaatactgtc cacattgacc tcagtgctct
+     3361 aaatccagag ctggtccagg cagtgcagca tgtagtgatt gggcccagta gcctgattgt
+     3421 gcatttcaat gaagtcatag gaagagggca ttttggttgt gtatatcatg ggactttgtt
+     3481 ggacaatgat ggcaagaaaa ttcactgtgc tgtgaaatcc ttgaacagaa tcactgacat
+     3541 aggagaagtt tcccaatttc tgaccgaggg aatcatcatg aaagatttta gtcatcccaa
+     3601 tgtcctctcg ctcctgggaa tctgcctgcg aagtgaaggg tctccgctgg tggtcctacc
+     3661 atacatgaaa catggagatc ttcgaaattt cattcgaaat gagactcata atccaactgt
+     3721 aaaagatctt attggctttg gtcttcaagt agccaaaggc atgaaatatc ttgcaagcaa
+     3781 aaagtttgtc cacagagact tggctgcaag aaactgtatg ctggatgaaa aattcacagt
+     3841 caaggttgct gattttggtc ttgccagaga catgtatgat aaagaatact atagtgtaca
+     3901 caacaaaaca ggtgcaaagc tgccagtgaa gtggatggct ttggaaagtc tgcaaactca
+     3961 aaagtttacc accaagtcag atgtgtggtc ctttggcgtg ctcctctggg agctgatgac
+     4021 aagaggagcc ccaccttatc ctgacgtaaa cacctttgat ataactgttt acttgttgca
+     4081 agggagaaga ctcctacaac ccgaatactg cccagacccc ttatatgaag taatgctaaa
+     4141 atgctggcac cctaaagccg aaatgcgccc atccttttct gaactggtgt cccggatatc
+     4201 agcgatcttc tctactttca ttggggagca ctatgtccat gtgaacgcta cttatgtgaa
+     4261 cgtaaaatgt gtcgctccgt atccttctct gttgtcatca gaagataacg ctgatgatga
+     4321 ggtggacaca cgaccagcct ccttctggga gacatcatag tgctagtact atgtcaaagc
+     4381 aacagtccac actttgtcca atggtttttt cactgcctga cctttaaaag gccatcgata
+     4441 ttctttgctc ttgccaaaat tgcactatta taggacttgt attgttattt aaattactgg
+     4501 attctaagga atttcttatc tgacagagca tcagaaccag aggcttggtc ccacaggcca
+     4561 cggaccaatg gcctgcagcc gtgacaacac tcctgtcata ttggagtcca aaacttgaat
+     4621 tctgggttga attttttaaa aatcaggtac cacttgattt catatgggaa attgaagcag
+     4681 gaaatattga gggcttcttg atcacagaaa actcagaaga gatagtaatg ctcaggacag
+     4741 gagcggcagc cccagaacag gccactcatt tagaattcta gtgtttcaaa acacttttgt
+     4801 gtgttgtatg gtcaataaca tttttcatta ctgatggtgt cattcaccca ttaggtaaac
+     4861 attccctttt aaatgtttgt ttgttttttg agacaggatc tcactctgtt gccagggctg
+     4921 tagtgcagtg gtgtgatcat agctcactgc aacctccacc tcccaggctc aagcctcccg
+     4981 aatagctggg actacaggcg cacaccacca tccccggcta atttttgtat tttttgtaga
+     5041 gacggggttt tgccatgttg ccaaggctgg tttcaaactc ctggactcaa gaaatccacc
+     5101 cacctcagcc tcccaaagtg ctaggattac aggcatgagc cactgcgccc agcccttata
+     5161 aatttttgta tagacattcc tttggttgga agaatattta taggcaatac agtcaaagtt
+     5221 tcaaaatagc atcacacaaa acatgtttat aaatgaacag gatgtaatgt acatagatga
+     5281 cattaagaaa atttgtatga aataatttag tcatcatgaa atatttagtt gtcatataaa
+     5341 aacccactgt ttgagaatga tgctactctg atctaatgaa tgtgaacatg tagatgtttt
+     5401 gtgtgtattt ttttaaatga aaactcaaaa taagacaagt aatttgttga taaatatttt
+     5461 taaagataac tcagcatgtt tgtaaagcag gatacatttt actaaaaggt tcattggttc
+     5521 caatcacagc tcataggtag agcaaagaaa gggtggatgg attgaaaaga ttagcctctg
+     5581 tctcggtggc aggttcccac ctcgcaagca attggaaaca aaacttttgg ggagttttat
+     5641 tttgcattag ggtgtgtttt atgttaagca aaacatactt tagaaacaaa tgaaaaaggc
+     5701 aattgaaaat cccagctatt tcacctagat ggaatagcca ccctgagcag aactttgtga
+     5761 tgcttcattc tgtggaattt tgtgcttgct actgtatagt gcatgtggtg taggttactc
+     5821 taactggttt tgtcgacgta aacatttaaa gtgttatatt ttttataaaa atgtttattt
+     5881 ttaatgatat gagaaaaatt ttgttaggcc acaaaaacac tgcactgtga acattttaga
+     5941 aaaggtatgt cagactggga ttaatgacag catgattttc aatgactgta aattgcgata
+     6001 aggaaatgta ctgattgcca atacacccca ccctcattac atcatcagga cttgaagcca
+     6061 agggttaacc cagcaagcta caaagagggt gtgtcacact gaaactcaat agttgagttt
+     6121 ggctgttgtt gcaggaaaat gattataact aaaagctctc tgatagtgca gagacttacc
+     6181 agaagacaca aggaattgta ctgaagagct attacaatcc aaatattgcc gtttcataaa
+     6241 tgtaataagt aatactaatt cacagagtat tgtaaatggt ggatgacaaa agaaaatctg
+     6301 ctctgtggaa agaaagaact gtctctacca gggtcaagag catgaacgca tcaatagaaa
+     6361 gaactcgggg aaacatccca tcaacaggac tacacacttg tatatacatt cttgagaaca
+     6421 ctgcaatgtg aaaatcacgt ttgctattta taaacttgtc cttagattaa tgtgtctgga
+     6481 cagattgtgg gagtaagtga ttcttctaag aattagatac ttgtcactgc ctatacctgc
+     6541 agctgaactg aatggtactt cgtatgttaa tagttgttct gataaatcat gcaattaaag
+     6601 taaagtgatg caacatcttg taaaaaaaaa aaaaaaaaaa a
+//

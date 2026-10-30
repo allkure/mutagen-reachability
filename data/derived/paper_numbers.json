@@ -1,0 +1,3776 @@
+{
+  "kras_panel_total": {
+    "key": "kras_panel_total",
+    "value": 12,
+    "formatted": "12",
+    "where": [
+      "Abstract",
+      "\u00a72.2",
+      "Fig 1B",
+      "Fig 3A caption",
+      "Table S1"
+    ],
+    "computed_from": "union of KRAS G12C clinical cohort + case report + accompanying in vitro DMS",
+    "formula": "|clinical \u222a case \u222a DMS|",
+    "inputs": {
+      "clinical": [
+        "H95D",
+        "H95Q",
+        "H95R",
+        "R68S",
+        "Y96C"
+      ],
+      "case": [
+        "Y96D"
+      ],
+      "dms": [
+        "C12F",
+        "R68L",
+        "R68M",
+        "V8L",
+        "V8M",
+        "Y96H"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_clinical_cohort": {
+    "key": "kras_panel_clinical_cohort",
+    "value": 5,
+    "formatted": "five",
+    "where": [
+      "Methods \u00a7Resistance panels",
+      "Table S1"
+    ],
+    "computed_from": "patient-observed variants from Awad 2021 clinical cohort",
+    "formula": "|clinical|",
+    "inputs": {
+      "members": [
+        "H95D",
+        "H95Q",
+        "H95R",
+        "R68S",
+        "Y96C"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_case_report": {
+    "key": "kras_panel_case_report",
+    "value": 1,
+    "formatted": "one",
+    "where": [
+      "Methods \u00a7Resistance panels"
+    ],
+    "computed_from": "patient-observed Y96D from Tanaka 2021 case report",
+    "formula": "|case|",
+    "inputs": {
+      "members": [
+        "Y96D"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_dms": {
+    "key": "kras_panel_dms",
+    "value": 6,
+    "formatted": "six",
+    "where": [
+      "Abstract",
+      "\u00a72.2",
+      "Methods \u00a7Resistance panels",
+      "Table S1"
+    ],
+    "computed_from": "variants from Awad 2021 accompanying in vitro deep mutational scan",
+    "formula": "|DMS|",
+    "inputs": {
+      "members": [
+        "C12F",
+        "R68L",
+        "R68M",
+        "V8L",
+        "V8M",
+        "Y96H"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_clinical_total": {
+    "key": "kras_panel_clinical_total",
+    "value": 6,
+    "formatted": "six",
+    "where": [
+      "Abstract"
+    ],
+    "computed_from": "patient-observed KRAS G12C variants (clinical cohort + case report)",
+    "formula": "|clinical \u222a case|",
+    "inputs": {
+      "members": [
+        "H95D",
+        "H95Q",
+        "H95R",
+        "R68S",
+        "Y96C",
+        "Y96D"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_snv_unreachable": {
+    "key": "kras_panel_snv_unreachable",
+    "value": 2,
+    "formatted": "two",
+    "where": [
+      "Abstract",
+      "\u00a72.2",
+      "\u00a72.5"
+    ],
+    "computed_from": "codon reachability analysis in the G12C-mutant background",
+    "formula": "count of panel variants whose Hamming distance from WT codon is \u2265 2 to all target codons",
+    "inputs": {
+      "members": [
+        "R68L",
+        "V8M"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_multi_class": {
+    "key": "kras_panel_multi_class",
+    "value": 3,
+    "formatted": "three",
+    "where": [
+      "\u00a72.2"
+    ],
+    "computed_from": "codon reachability: variants reachable via multiple pyrimidine classes",
+    "formula": "count of panel variants with \u2265 2 distinct single-nt pyrimidine routes",
+    "inputs": {
+      "members": [
+        "H95Q",
+        "R68S",
+        "V8L"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "kras_panel_class_forced": {
+    "key": "kras_panel_class_forced",
+    "value": 7,
+    "formatted": "seven",
+    "where": [
+      "\u00a72.2",
+      "\u00a72.3"
+    ],
+    "computed_from": "codon reachability: variants reachable via exactly one pyrimidine class",
+    "formula": "count of panel variants with exactly 1 single-nt pyrimidine route",
+    "inputs": {
+      "members": [
+        "C12F",
+        "H95D",
+        "H95R",
+        "R68M",
+        "Y96C",
+        "Y96D",
+        "Y96H"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "alk_panel_total": {
+    "key": "alk_panel_total",
+    "value": 12,
+    "formatted": "12",
+    "where": [
+      "\u00a72.4",
+      "Fig 3A caption",
+      "Table S1"
+    ],
+    "computed_from": "union of alectinib Mutazyme II screen hits + next-gen ALK TKI screen hits",
+    "formula": "|Doi hits \u222a Takei hits|",
+    "inputs": {
+      "doi": [
+        "G1202R",
+        "I1171N",
+        "I1171T",
+        "L1196M",
+        "L1198F",
+        "V1180L"
+      ],
+      "takei": [
+        "C1156Y",
+        "F1174C",
+        "F1174L",
+        "G1269A",
+        "L1152R",
+        "L1196Q"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "alk_panel_class_forced": {
+    "key": "alk_panel_class_forced",
+    "value": 10,
+    "formatted": "10",
+    "where": [
+      "Table S1 summary"
+    ],
+    "computed_from": "codon reachability of ALK panel",
+    "formula": "count of ALK panel variants reachable via exactly one pyrimidine class",
+    "inputs": {
+      "members": [
+        "C1156Y",
+        "F1174C",
+        "G1269A",
+        "I1171N",
+        "I1171T",
+        "L1152R",
+        "L1196M",
+        "L1196Q",
+        "L1198F",
+        "V1180L"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "alk_panel_multi_class": {
+    "key": "alk_panel_multi_class",
+    "value": 2,
+    "formatted": "two",
+    "where": [
+      "Table S1 summary"
+    ],
+    "computed_from": "codon reachability of ALK panel",
+    "formula": "count of ALK panel variants with multi-class single-nt reachability",
+    "inputs": {
+      "members": [
+        "F1174L",
+        "G1202R"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "doi2022_hits_count": {
+    "key": "doi2022_hits_count",
+    "value": 6,
+    "formatted": "six",
+    "where": [
+      "Abstract",
+      "\u00a72.4",
+      "\u00a72.5",
+      "Fig 4A caption"
+    ],
+    "computed_from": "single-amino-acid resistance mutations in Doi 2022 Fig 3a, excluding silent passengers (L1152, L1165, R1192) and the I1171S sub-variant of the I1171N/T/S compound call",
+    "formula": "|Doi Fig 3a resistance mutations|",
+    "inputs": {
+      "members": [
+        "G1202R",
+        "I1171N",
+        "I1171T",
+        "L1196M",
+        "L1198F",
+        "V1180L"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "doi2022_hits_class_forced": {
+    "key": "doi2022_hits_class_forced",
+    "value": 5,
+    "formatted": "five",
+    "where": [
+      "\u00a72.5",
+      "Fig 4A caption"
+    ],
+    "computed_from": "Doi 2022 hits that are class-forced (G1202R is multi-class)",
+    "formula": "|Doi hits \u2229 class-forced|",
+    "inputs": {
+      "members": [
+        "I1171N",
+        "I1171T",
+        "L1196M",
+        "L1198F",
+        "V1180L"
+      ]
+    },
+    "code_fn": "compute_resistance_panels"
+  },
+  "enu_class_C_A": {
+    "key": "enu_class_C_A",
+    "value": 0.09,
+    "formatted": "9.0%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['C>A']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "C>A"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_class_C_G": {
+    "key": "enu_class_C_G",
+    "value": 0.002,
+    "formatted": "0.20%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['C>G']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "C>G"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_class_C_T": {
+    "key": "enu_class_C_T",
+    "value": 0.179,
+    "formatted": "17.9%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['C>T']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "C>T"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_class_T_A": {
+    "key": "enu_class_T_A",
+    "value": 0.314,
+    "formatted": "31.4%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['T>A']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "T>A"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_class_T_C": {
+    "key": "enu_class_T_C",
+    "value": 0.366,
+    "formatted": "36.6%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['T>C']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "T>C"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_class_T_G": {
+    "key": "enu_class_T_G",
+    "value": 0.05,
+    "formatted": "5.0%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "Arnold et al. 2012 germline-ENU compilation of DNA-adduct conversion frequencies",
+    "formula": "spectra.yaml:ENU_Arnold2012_nominal.values['T>G']",
+    "inputs": {
+      "source": "arnold2012",
+      "class": "T>G"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_C_A": {
+    "key": "mut_class_C_A",
+    "value": 0.18,
+    "formatted": "18.0%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['C>A']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "C>A"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_C_G": {
+    "key": "mut_class_C_G",
+    "value": 0.05,
+    "formatted": "5.0%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['C>G']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "C>G"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_C_T": {
+    "key": "mut_class_C_T",
+    "value": 0.47,
+    "formatted": "47.0%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['C>T']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "C>T"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_T_A": {
+    "key": "mut_class_T_A",
+    "value": 0.105,
+    "formatted": "10.5%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['T>A']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "T>A"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_T_C": {
+    "key": "mut_class_T_C",
+    "value": 0.18,
+    "formatted": "18.0%",
+    "where": [
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['T>C']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "T>C"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_T_G": {
+    "key": "mut_class_T_G",
+    "value": 0.036,
+    "formatted": "3.6%",
+    "where": [
+      "\u00a72.1",
+      "Fig 2A"
+    ],
+    "computed_from": "NGS of untreated Mutazyme II library in Doi 2022 Suppl Fig 2b",
+    "formula": "spectra.yaml:MutazymeII_DoiSupp2022.values['T>G']",
+    "inputs": {
+      "source": "doi2022",
+      "class": "T>G"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_classes_at_1pct": {
+    "key": "enu_classes_at_1pct",
+    "value": 5,
+    "formatted": "five of six",
+    "where": [
+      "\u00a72.1",
+      "Table 1 ENU row",
+      "Fig 2B"
+    ],
+    "computed_from": "count of ENU classes supplied at \u2265 1 %; C>G is at 0.2 % and falls below",
+    "formula": "|{c: ENU[c] \u2265 0.01}|",
+    "inputs": {
+      "ENU": {
+        "C>A": 0.09,
+        "C>G": 0.002,
+        "C>T": 0.179,
+        "T>A": 0.314,
+        "T>C": 0.366,
+        "T>G": 0.05
+      },
+      "threshold": 0.01
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_classes_at_1pct": {
+    "key": "mut_classes_at_1pct",
+    "value": 6,
+    "formatted": "6 of 6",
+    "where": [
+      "Table 1 Mutazyme row",
+      "Fig 2B"
+    ],
+    "computed_from": "count of Mutazyme II classes supplied at \u2265 1 %; minimum class is T>G at 3.6 %",
+    "formula": "|{c: MutII[c] \u2265 0.01}|",
+    "inputs": {
+      "MutII": {
+        "C>A": 0.18,
+        "C>G": 0.05,
+        "C>T": 0.47,
+        "T>A": 0.105,
+        "T>C": 0.18,
+        "T>G": 0.036
+      },
+      "threshold": 0.01
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "be_classes_supplied": {
+    "key": "be_classes_supplied",
+    "value": 2,
+    "formatted": "two of six",
+    "where": [
+      "\u00a72.1",
+      "Table 1 CBE+ABE row",
+      "Fig 2B"
+    ],
+    "computed_from": "CBE supplies C>T, ABE supplies T>C by design; the other 4 classes are 0",
+    "formula": "deterministic by base-editor chemistry",
+    "inputs": {
+      "supplied": [
+        "C>T",
+        "T>C"
+      ]
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "twist_pe_classes_supplied": {
+    "key": "twist_pe_classes_supplied",
+    "value": 6,
+    "formatted": "6 of 6",
+    "where": [
+      "Table 1 Twist row",
+      "Table 1 PE row",
+      "Fig 2B"
+    ],
+    "computed_from": "Twist synthesis and prime editing produce all six classes approximately uniformly",
+    "formula": "deterministic (chemistry-free library construction)",
+    "inputs": {
+      "baseline_per_class": 0.16666666666666666
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "mut_class_rate_ratio": {
+    "key": "mut_class_rate_ratio",
+    "value": 13.055555555555555,
+    "formatted": "13-fold",
+    "where": [
+      "\u00a72.1"
+    ],
+    "computed_from": "ratio of Mutazyme II's most abundant class to its rarest",
+    "formula": "max(MutII) / min(MutII) = max{MutII[c]} / min{MutII[c]}",
+    "inputs": {
+      "max": 0.47,
+      "max_class": "C>T",
+      "min": 0.036,
+      "min_class": "T>G"
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "enu_well_supplied_well_vs_total": {
+    "key": "enu_well_supplied_well_vs_total",
+    "value": "9 of 12",
+    "formatted": "nine of twelve",
+    "where": [
+      "\u00a72.5",
+      "Fig 4C caption"
+    ],
+    "computed_from": "count of Nuvalent class-forced hits whose forced class ENU supplies at \u2265 1 %",
+    "formula": "|{hit: ENU[hit.class] \u2265 0.01, hit in Nuvalent class-forced pool}|",
+    "inputs": {
+      "nuvalent_class_forced_total": 12,
+      "threshold": 0.01
+    },
+    "code_fn": "compute_mutagen_spectra"
+  },
+  "oh_atlas_total_snvs": {
+    "key": "oh_atlas_total_snvs",
+    "value": 3208,
+    "formatted": "3,208",
+    "where": [
+      "\u00a7Background",
+      "Methods"
+    ],
+    "computed_from": "total rows in Oh 2026 Table S2 resistance scores",
+    "formula": "len(data/raw/oh_2026/table_s2_resistance_scores.csv)",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_coding_snvs": {
+    "key": "oh_atlas_coding_snvs",
+    "value": 2953,
+    "formatted": "2,953",
+    "where": [
+      "\u00a7Background",
+      "Methods"
+    ],
+    "computed_from": "sum of coding categories in Oh 2026 Table S2",
+    "formula": "sum(Missense + Synonymous + Nonsense) in table_s2_resistance_scores.csv",
+    "inputs": {
+      "by_type": {
+        "Missense": 2173,
+        "Synonymous": 665,
+        "Intron": 149,
+        "Nonsense": 115,
+        "Splice Acceptor/Donor": 106
+      },
+      "coding_types": [
+        "Missense",
+        "Nonsense",
+        "Synonymous"
+      ]
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_missense": {
+    "key": "oh_atlas_missense",
+    "value": 2173,
+    "formatted": "2,173",
+    "where": [
+      "Methods"
+    ],
+    "computed_from": "Missense rows in Oh 2026 Table S2",
+    "formula": "count of rows where type == 'Missense'",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_synonymous": {
+    "key": "oh_atlas_synonymous",
+    "value": 665,
+    "formatted": "665",
+    "where": [
+      "Methods"
+    ],
+    "computed_from": "Synonymous rows in Oh 2026 Table S2",
+    "formula": "count of rows where type == 'Synonymous'",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_nonsense": {
+    "key": "oh_atlas_nonsense",
+    "value": 115,
+    "formatted": "115",
+    "where": [
+      "Methods"
+    ],
+    "computed_from": "Nonsense rows in Oh 2026 Table S2",
+    "formula": "count of rows where type == 'Nonsense'",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_noncoding": {
+    "key": "oh_atlas_noncoding",
+    "value": 255,
+    "formatted": "255",
+    "where": [
+      "\u00a7Background",
+      "Methods"
+    ],
+    "computed_from": "sum of intron and splice-site rows in Oh 2026 Table S2",
+    "formula": "count(type == 'Intron') + count(type == 'Splice Acceptor/Donor')",
+    "inputs": {
+      "intron": 149,
+      "splice": 106
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_residue_min": {
+    "key": "oh_atlas_residue_min",
+    "value": 1058,
+    "formatted": "1058",
+    "where": [
+      "Methods"
+    ],
+    "computed_from": "minimum residue index in Oh 2026 Table S2 coding rows",
+    "formula": "min(residue) over rows with type != 'Intron'",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_atlas_residue_max": {
+    "key": "oh_atlas_residue_max",
+    "value": 1388,
+    "formatted": "1388",
+    "where": [
+      "Methods"
+    ],
+    "computed_from": "maximum residue index in Oh 2026 Table S2 coding rows",
+    "formula": "max(residue) over rows with type != 'Intron'",
+    "inputs": {
+      "path": "data/raw/oh_2026/table_s2_resistance_scores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "feng_atlas_total_variants": {
+    "key": "feng_atlas_total_variants",
+    "value": 3567,
+    "formatted": "3,567",
+    "where": [
+      "\u00a7Background"
+    ],
+    "computed_from": "rows in Feng 2022 KRAS G12C Twist atlas Table S1",
+    "formula": "len(data/raw/feng_2022/table_s1_zscores.csv)",
+    "inputs": {
+      "path": "data/raw/feng_2022/table_s1_zscores.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "feng_class_forced_count": {
+    "key": "feng_class_forced_count",
+    "value": 981,
+    "formatted": "981",
+    "where": [
+      "\u00a72.3",
+      "Methods"
+    ],
+    "computed_from": "class-forced KRAS G12C variants in the Feng atlas (unique amino-acid changes)",
+    "formula": "|{v in Feng: v is class-forced single-nt reachable}|",
+    "inputs": {
+      "source": "data/derived/feng_decomposition.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "oh_class_forced_count": {
+    "key": "oh_class_forced_count",
+    "value": 1427,
+    "formatted": "1,427",
+    "where": [
+      "\u00a72.4",
+      "Methods",
+      "Fig 3B caption"
+    ],
+    "computed_from": "class-forced ALK kinase-domain variants used in the ranking",
+    "formula": "|unique aa_change in Oh class-forced decomposition|",
+    "inputs": {
+      "source": "data/derived/oh_decomposition_all_drugs.csv"
+    },
+    "code_fn": "compute_atlas_sizes"
+  },
+  "h95d_ada_chemfree_rank": {
+    "key": "h95d_ada_chemfree_rank",
+    "value": 9,
+    "formatted": "9",
+    "where": [
+      "\u00a72.3"
+    ],
+    "computed_from": "H95D chemistry-free rank in the KRAS G12C class-forced atlas under adagrasib",
+    "formula": "rank(\u03c3_adagrasib) descending over the class-forced KRAS G12C atlas, position of H95D",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_germline_rank_sim": {
+    "key": "h95d_ada_enu_germline_rank_sim",
+    "value": 839,
+    "formatted": "839",
+    "where": [
+      "supporting: \u00a72.3 quotes the beta-range, not this point value"
+    ],
+    "computed_from": "H95D simulated rank under adagrasib + ENU with C>G = 0.2% (Arnold 2012 germline-ENU compilation)",
+    "formula": "rank of log P(v) = log S(v) + log \u03c3_adagrasib(v), descending, over 1,205 class-forced variants",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib",
+      "mutagen": "ENU",
+      "CG_rate": 0.002,
+      "spec": {
+        "C>A": 0.08990990990990991,
+        "C>T": 0.17882082082082082,
+        "T>A": 0.31368568568568567,
+        "T>C": 0.36563363363363366,
+        "T>G": 0.04994994994994995,
+        "C>G": 0.002
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_germline_shift": {
+    "key": "h95d_ada_enu_germline_shift",
+    "value": 830,
+    "formatted": "+830",
+    "where": [
+      "supporting: \u00a72.3 quotes the beta-range, not this point value"
+    ],
+    "computed_from": "H95D rank shift under adagrasib + ENU (Arnold 2012 germline-ENU compilation)",
+    "formula": "rank_sim(ENU, p_CG) - rank_chemfree",
+    "inputs": {
+      "rank_sim": 839,
+      "rank_cf": 9,
+      "p_CG": 0.002
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_lower_rank_sim": {
+    "key": "h95d_ada_enu_empirical_lower_rank_sim",
+    "value": 26,
+    "formatted": "26",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D simulated rank under adagrasib + ENU with C>G = 7.0% (Jeffreys 95% lower bound from 3-of-13 anomaly)",
+    "formula": "rank of log P(v) = log S(v) + log \u03c3_adagrasib(v), descending, over 1,205 class-forced variants",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib",
+      "mutagen": "ENU",
+      "CG_rate": 0.07,
+      "spec": {
+        "C>A": 0.08378378378378377,
+        "C>T": 0.1666366366366366,
+        "T>A": 0.2923123123123123,
+        "T>C": 0.3407207207207207,
+        "T>G": 0.046546546546546545,
+        "C>G": 0.07
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_lower_shift": {
+    "key": "h95d_ada_enu_empirical_lower_shift",
+    "value": 17,
+    "formatted": "+17",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D rank shift under adagrasib + ENU (Jeffreys 95% lower bound from 3-of-13 anomaly)",
+    "formula": "rank_sim(ENU, p_CG) - rank_chemfree",
+    "inputs": {
+      "rank_sim": 26,
+      "rank_cf": 9,
+      "p_CG": 0.07
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_mean_rank_sim": {
+    "key": "h95d_ada_enu_empirical_mean_rank_sim",
+    "value": 5,
+    "formatted": "5",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D simulated rank under adagrasib + ENU with C>G = 25.0% (Jeffreys posterior mean from 3-of-13 anomaly)",
+    "formula": "rank of log P(v) = log S(v) + log \u03c3_adagrasib(v), descending, over 1,205 class-forced variants",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib",
+      "mutagen": "ENU",
+      "CG_rate": 0.25,
+      "spec": {
+        "C>A": 0.06756756756756756,
+        "C>T": 0.13438438438438438,
+        "T>A": 0.23573573573573572,
+        "T>C": 0.27477477477477474,
+        "T>G": 0.03753753753753754,
+        "C>G": 0.25
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_mean_shift": {
+    "key": "h95d_ada_enu_empirical_mean_shift",
+    "value": -4,
+    "formatted": "-4",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D rank shift under adagrasib + ENU (Jeffreys posterior mean from 3-of-13 anomaly)",
+    "formula": "rank_sim(ENU, p_CG) - rank_chemfree",
+    "inputs": {
+      "rank_sim": 5,
+      "rank_cf": 9,
+      "p_CG": 0.25
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_upper_rank_sim": {
+    "key": "h95d_ada_enu_empirical_upper_rank_sim",
+    "value": 2,
+    "formatted": "2",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D simulated rank under adagrasib + ENU with C>G = 49.7% (Jeffreys 95% upper bound from 3-of-13 anomaly)",
+    "formula": "rank of log P(v) = log S(v) + log \u03c3_adagrasib(v), descending, over 1,205 class-forced variants",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib",
+      "mutagen": "ENU",
+      "CG_rate": 0.497,
+      "spec": {
+        "C>A": 0.04531531531531531,
+        "C>T": 0.09012712712712712,
+        "T>A": 0.1581001001001001,
+        "T>C": 0.18428228228228227,
+        "T>G": 0.025175175175175174,
+        "C>G": 0.497
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_enu_empirical_upper_shift": {
+    "key": "h95d_ada_enu_empirical_upper_shift",
+    "value": -7,
+    "formatted": "-7",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3 because \u00a72.5 shows the inversion is not identified"
+    ],
+    "computed_from": "H95D rank shift under adagrasib + ENU (Jeffreys 95% upper bound from 3-of-13 anomaly)",
+    "formula": "rank_sim(ENU, p_CG) - rank_chemfree",
+    "inputs": {
+      "rank_sim": 2,
+      "rank_cf": 9,
+      "p_CG": 0.497
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_mut_rank_sim": {
+    "key": "h95d_ada_mut_rank_sim",
+    "value": 56,
+    "formatted": "56",
+    "where": [
+      "\u00a72.3",
+      "Discussion Limitation 4"
+    ],
+    "computed_from": "H95D simulated rank under adagrasib + Mutazyme II (NGS-measured spectrum)",
+    "formula": "rank of log P(v) = log S(v) + log \u03c3_adagrasib(v) under Mutazyme II spectrum",
+    "inputs": {
+      "variant": "H95D",
+      "drug": "adagrasib",
+      "mutagen": "MutazymeII"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_mut_shift": {
+    "key": "h95d_ada_mut_shift",
+    "value": 47,
+    "formatted": "+47",
+    "where": [
+      "\u00a72.3",
+      "\u00a72.5"
+    ],
+    "computed_from": "H95D rank shift under adagrasib + Mutazyme II (NGS-measured)",
+    "formula": "rank_sim(Mutazyme) - rank_chemfree",
+    "inputs": {
+      "rank_sim": 56,
+      "rank_cf": 9,
+      "mut_CG": 0.05
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_germline_shift_beta_min": {
+    "key": "h95d_ada_germline_shift_beta_min",
+    "value": 15,
+    "formatted": "+15",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "minimum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU germline (C>G = 0.2%)",
+    "formula": "min_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.08990990990990991,
+        "C>T": 0.17882082082082082,
+        "T>A": 0.31368568568568567,
+        "T>C": 0.36563363363363366,
+        "T>G": 0.04994994994994995,
+        "C>G": 0.002
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_germline_shift_beta_max": {
+    "key": "h95d_ada_germline_shift_beta_max",
+    "value": 848,
+    "formatted": "+848",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "maximum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU germline (C>G = 0.2%)",
+    "formula": "max_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.08990990990990991,
+        "C>T": 0.17882082082082082,
+        "T>A": 0.31368568568568567,
+        "T>C": 0.36563363363363366,
+        "T>G": 0.04994994994994995,
+        "C>G": 0.002
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_germline_shift_beta_range": {
+    "key": "h95d_ada_germline_shift_beta_range",
+    "value": "+15 to +848",
+    "formatted": "+15 to +848",
+    "where": [
+      "\u00a72.3"
+    ],
+    "computed_from": "H95D shift interval across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU germline (C>G = 0.2%)",
+    "formula": "[min_\u03b2 shift, max_\u03b2 shift]",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "per_beta": {
+        "0.25": 848,
+        "0.5": 848,
+        "1.0": 830,
+        "2.0": 250,
+        "4.0": 15
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_lower_shift_beta_min": {
+    "key": "h95d_ada_empirical_lower_shift_beta_min",
+    "value": 2,
+    "formatted": "+2",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "minimum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical lower (C>G = 7%)",
+    "formula": "min_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.08378378378378377,
+        "C>T": 0.1666366366366366,
+        "T>A": 0.2923123123123123,
+        "T>C": 0.3407207207207207,
+        "T>G": 0.046546546546546545,
+        "C>G": 0.07
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_lower_shift_beta_max": {
+    "key": "h95d_ada_empirical_lower_shift_beta_max",
+    "value": 518,
+    "formatted": "+518",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "maximum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical lower (C>G = 7%)",
+    "formula": "max_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.08378378378378377,
+        "C>T": 0.1666366366366366,
+        "T>A": 0.2923123123123123,
+        "T>C": 0.3407207207207207,
+        "T>G": 0.046546546546546545,
+        "C>G": 0.07
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_lower_shift_beta_range": {
+    "key": "h95d_ada_empirical_lower_shift_beta_range",
+    "value": "+2 to +518",
+    "formatted": "+2 to +518",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3"
+    ],
+    "computed_from": "H95D shift interval across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical lower (C>G = 7%)",
+    "formula": "[min_\u03b2 shift, max_\u03b2 shift]",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "per_beta": {
+        "0.25": 518,
+        "0.5": 326,
+        "1.0": 17,
+        "2.0": 5,
+        "4.0": 2
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_mean_shift_beta_min": {
+    "key": "h95d_ada_empirical_mean_shift_beta_min",
+    "value": -4,
+    "formatted": "-4",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "minimum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical mean (C>G = 25%)",
+    "formula": "min_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.06756756756756756,
+        "C>T": 0.13438438438438438,
+        "T>A": 0.23573573573573572,
+        "T>C": 0.27477477477477474,
+        "T>G": 0.03753753753753754,
+        "C>G": 0.25
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_mean_shift_beta_max": {
+    "key": "h95d_ada_empirical_mean_shift_beta_max",
+    "value": -3,
+    "formatted": "-3",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "maximum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical mean (C>G = 25%)",
+    "formula": "max_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.06756756756756756,
+        "C>T": 0.13438438438438438,
+        "T>A": 0.23573573573573572,
+        "T>C": 0.27477477477477474,
+        "T>G": 0.03753753753753754,
+        "C>G": 0.25
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_empirical_mean_shift_beta_range": {
+    "key": "h95d_ada_empirical_mean_shift_beta_range",
+    "value": "-4 to -3",
+    "formatted": "-4 to -3",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3"
+    ],
+    "computed_from": "H95D shift interval across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for ENU empirical mean (C>G = 25%)",
+    "formula": "[min_\u03b2 shift, max_\u03b2 shift]",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "per_beta": {
+        "0.25": -4,
+        "0.5": -4,
+        "1.0": -4,
+        "2.0": -3,
+        "4.0": -3
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_mutazyme_shift_beta_min": {
+    "key": "h95d_ada_mutazyme_shift_beta_min",
+    "value": 1,
+    "formatted": "+1",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "minimum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for Mutazyme II (NGS; C>G = 5%)",
+    "formula": "min_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.18,
+        "C>G": 0.05,
+        "C>T": 0.47,
+        "T>A": 0.105,
+        "T>C": 0.18,
+        "T>G": 0.036
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_mutazyme_shift_beta_max": {
+    "key": "h95d_ada_mutazyme_shift_beta_max",
+    "value": 606,
+    "formatted": "+606",
+    "where": [
+      "supporting: \u00a72.3 quotes the interval, not its endpoints"
+    ],
+    "computed_from": "maximum H95D shift across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for Mutazyme II (NGS; C>G = 5%)",
+    "formula": "max_\u03b2 rank_sim(\u03b2) \u2212 rank_chemfree, with log P = log S + \u03b2\u00b7\u03c3",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "spec": {
+        "C>A": 0.18,
+        "C>G": 0.05,
+        "C>T": 0.47,
+        "T>A": 0.105,
+        "T>C": 0.18,
+        "T>G": 0.036
+      },
+      "variant": "H95D",
+      "drug": "adagrasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "h95d_ada_mutazyme_shift_beta_range": {
+    "key": "h95d_ada_mutazyme_shift_beta_range",
+    "value": "+1 to +606",
+    "formatted": "+1 to +606",
+    "where": [
+      "not reported: calibrated ENU rows were removed from \u00a72.3"
+    ],
+    "computed_from": "H95D shift interval across \u03b2 \u2208 [0.25, 0.5, 1.0, 2.0, 4.0] for Mutazyme II (NGS; C>G = 5%)",
+    "formula": "[min_\u03b2 shift, max_\u03b2 shift]",
+    "inputs": {
+      "beta_grid": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "per_beta": {
+        "0.25": 606,
+        "0.5": 314,
+        "1.0": 47,
+        "2.0": 7,
+        "4.0": 1
+      }
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "y96d_sot_chemfree_rank": {
+    "key": "y96d_sot_chemfree_rank",
+    "value": 7,
+    "formatted": "7",
+    "where": [
+      "\u00a72.3"
+    ],
+    "computed_from": "Y96D chemistry-free rank under sotorasib",
+    "formula": "rank(\u03c3_sotorasib) descending, position of Y96D",
+    "inputs": {
+      "variant": "Y96D",
+      "drug": "sotorasib"
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "y96d_sot_mut_rank_sim": {
+    "key": "y96d_sot_mut_rank_sim",
+    "value": 139,
+    "formatted": "139",
+    "where": [
+      "\u00a72.3"
+    ],
+    "computed_from": "Y96D simulated rank under sotorasib + Mutazyme II",
+    "formula": "rank of log P(v) under Mutazyme spectrum, Y96D forced class T>G at 3.6 %",
+    "inputs": {
+      "variant": "Y96D",
+      "drug": "sotorasib",
+      "mutagen": "MutazymeII",
+      "mut_TG": 0.036
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "y96d_sot_mut_shift": {
+    "key": "y96d_sot_mut_shift",
+    "value": 132,
+    "formatted": "+132",
+    "where": [
+      "\u00a72.3"
+    ],
+    "computed_from": "Y96D rank shift under sotorasib + Mutazyme II",
+    "formula": "rank_sim - rank_chemfree for Y96D under Mutazyme sotorasib",
+    "inputs": {
+      "rank_sim": 139,
+      "rank_cf": 7
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "y96d_sot_mutazyme_shift_beta_range": {
+    "key": "y96d_sot_mutazyme_shift_beta_range",
+    "value": [
+      5,
+      643
+    ],
+    "formatted": "+5 to +643",
+    "where": [
+      "\u00a73.3"
+    ],
+    "computed_from": "range of the Y96D rank shift under Mutazyme II with sotorasib across beta in [0.25, 4]",
+    "formula": "min and max over beta of rank(log S + beta*sigma) - rank(sigma)",
+    "inputs": {
+      "betas": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "shifts": [
+        643,
+        508,
+        132,
+        19,
+        5
+      ]
+    },
+    "code_fn": "compute_h95d_ranks"
+  },
+  "nuvalent_cg_binom_p_raw": {
+    "key": "nuvalent_cg_binom_p_raw",
+    "value": 2.253926009047811e-06,
+    "formatted": "2.3e-06",
+    "where": [
+      "\u00a72.5",
+      "Table 3 (N0 row)"
+    ],
+    "computed_from": "exact binomial tail against the raw germline spectrum; retained only as the confounded comparison",
+    "formula": "binom.sf(k-1, n, S_ENU('C>G'))",
+    "inputs": {
+      "k": 3,
+      "n": 13,
+      "p": 0.002
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "nuvalent_cg_pi_model": {
+    "key": "nuvalent_cg_pi_model",
+    "value": 0.00556039021953432,
+    "formatted": "0.56%",
+    "where": [
+      "\u00a72.5",
+      "Table 3 (N3 row)"
+    ],
+    "computed_from": "model-implied probability that a hit is C>G, with germline supply and pooled sigma at beta=1",
+    "formula": "sum_{v in C>G} S(c)exp(beta*sigma_v) / sum_v S(c)exp(beta*sigma_v)",
+    "inputs": {
+      "beta": 1.0,
+      "sigma": "max over alec/lor/zot",
+      "S": "ENU germline"
+    },
+    "code_fn": "recompute_enu_class_test.py::pi_model"
+  },
+  "nuvalent_cg_binom_p_model": {
+    "key": "nuvalent_cg_binom_p_model",
+    "value": 4.715801648246043e-05,
+    "formatted": "4.7e-05",
+    "where": [
+      "\u00a72.5",
+      "Table 3 (N3 row)"
+    ],
+    "computed_from": "binomial tail of 3-of-13 C>G against the model-implied null; the germline spectrum is rejected",
+    "formula": "binom.sf(k-1, n, pi_N3)",
+    "inputs": {
+      "k": 3,
+      "n": 13,
+      "pi": 0.00556039021953432
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "nuvalent_cg_binom_p_model_beta_range": {
+    "key": "nuvalent_cg_binom_p_model_beta_range",
+    "value": [
+      4.1106573099923305e-10,
+      4.715801648246043e-05
+    ],
+    "formatted": "4.1e-10 to 4.7e-05",
+    "where": [
+      "supporting: \u00a72.5 quotes the beta = 4 endpoint only"
+    ],
+    "computed_from": "range of the model-implied binomial tail across beta in [0.25, 4]",
+    "formula": "min/max over beta of binom.sf(k-1, n, pi_N3(beta))",
+    "inputs": {
+      "betas": [
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "nuvalent_cg_top100_sigma": {
+    "key": "nuvalent_cg_top100_sigma",
+    "value": 24,
+    "formatted": "24 of the",
+    "where": [
+      "\u00a72.5 (as 24 of the top-100 sigma-ranked class-forced variants)",
+      "Table 3 (N2 row)"
+    ],
+    "computed_from": "C>G count among the top-100 sigma-ranked class-forced ALK variants, pooled across drug arms",
+    "formula": "count(forced_class == 'C>G') over nlargest(100, pooled sigma)",
+    "inputs": {
+      "N_top": 100
+    },
+    "code_fn": "recompute_enu_class_test.py::pi_sigma_topn"
+  },
+  "nuvalent_cg_binom_p_selection": {
+    "key": "nuvalent_cg_binom_p_selection",
+    "value": 0.636406728920353,
+    "formatted": "0.64",
+    "where": [
+      "\u00a72.5",
+      "Table 3 (N2 row)"
+    ],
+    "computed_from": "binomial tail of 3-of-13 C>G against a selection-only null; the count is unremarkable once supply is removed",
+    "formula": "binom.sf(k-1, n, pi_N2)",
+    "inputs": {
+      "k": 3,
+      "n": 13,
+      "pi": 0.24
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "nuvalent_cg_binom_p_composition": {
+    "key": "nuvalent_cg_binom_p_composition",
+    "value": 0.38585678830594816,
+    "formatted": "0.39",
+    "where": [
+      "\u00a72.5",
+      "Table 3 (N4 row)"
+    ],
+    "computed_from": "binomial tail against atlas class composition alone",
+    "formula": "binom.sf(k-1, n, n_CG / n_classforced)",
+    "inputs": {
+      "n_CG": 243,
+      "n": 1427
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "atlas_cg_share": {
+    "key": "atlas_cg_share",
+    "value": 0.1702873160476524,
+    "formatted": "17.0%",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "share of class-forced ALK atlas variants whose forced class is C>G",
+    "formula": "n_CG / n_classforced",
+    "inputs": {
+      "n_CG": 243,
+      "n": 1427
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "implied_enu_cg_supply_interval": {
+    "key": "implied_enu_cg_supply_interval",
+    "value": [
+      0.026107666101764928,
+      0.2616117716315627
+    ],
+    "formatted": "2.6%--26.2%",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "Jeffreys interval on the hit proportion mapped back through the model-implied null to an implied C>G supply rate; reported only to show it is narrower than the uncorrected inversion, and NOT adopted, because the inversion presumes supply controls hit composition",
+    "formula": "solve pi_N3(C>G; s) = p for s, at p = Jeffreys lo/hi",
+    "inputs": {
+      "jeffreys": {
+        "lo": 0.06965666863961643,
+        "mean": 0.25,
+        "hi": 0.49737212197534625
+      },
+      "beta": 1.0
+    },
+    "code_fn": "recompute_enu_class_test.py::solve_s"
+  },
+  "cg_detect_prob_germline": {
+    "key": "cg_detect_prob_germline",
+    "value": 0.8646647167633873,
+    "formatted": "0.86",
+    "where": [
+      "\u00a72.1",
+      "\u00a72.5",
+      "Methods library depth"
+    ],
+    "computed_from": "detection probability of a C>G variant at the germline ENU rate in a 1e7 Ba/F3 library; shows a rare class is still supplied",
+    "formula": "1 - exp(-N*mu*S*r)",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "S": 0.002,
+      "routes": 1
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "cg_expected_carriers_germline": {
+    "key": "cg_expected_carriers_germline",
+    "value": 2.0,
+    "formatted": "2.0",
+    "where": [
+      "\u00a72.1",
+      "\u00a72.5"
+    ],
+    "computed_from": "expected carriers of a given C>G variant at the germline ENU rate",
+    "formula": "N*mu*S*r",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "S": 0.002,
+      "routes": 1
+    },
+    "code_fn": "recompute_enu_class_test.py::main"
+  },
+  "two_hit_carriers_one_round": {
+    "key": "two_hit_carriers_one_round",
+    "value": [
+      0.005076,
+      0.01692
+    ],
+    "formatted": "0.005--0.017",
+    "where": [
+      "\u00a72.2"
+    ],
+    "computed_from": "expected carriers of R68L or V8M after a single mutagenesis round in a 1e7 library, across ENU and Mutazyme II",
+    "formula": "sum over routes of N*mu^2*S(c1)*S(c2)*2",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "rounds": 1
+    },
+    "code_fn": "two_hit_reachability.py::main"
+  },
+  "two_hit_presence_one_round": {
+    "key": "two_hit_presence_one_round",
+    "value": 0.0167776607241758,
+    "formatted": "1.7%",
+    "where": [
+      "supporting: \u00a72.2 states this as a presence probability below 2%"
+    ],
+    "computed_from": "largest presence probability for R68L or V8M after one round",
+    "formula": "1 - exp(-lambda)",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "rounds": 1
+    },
+    "code_fn": "two_hit_reachability.py::main"
+  },
+  "two_hit_carriers_twenty_rounds": {
+    "key": "two_hit_carriers_twenty_rounds",
+    "value": [
+      1.06596,
+      3.5532000000000004
+    ],
+    "formatted": "1.1--3.6",
+    "where": [
+      "\u00a72.2"
+    ],
+    "computed_from": "expected carriers of R68L or V8M after twenty rounds",
+    "formula": "lambda_simultaneous * R(R+1)/2",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "rounds": 20
+    },
+    "code_fn": "two_hit_reachability.py::main"
+  },
+  "two_hit_fold_suppression": {
+    "key": "two_hit_fold_suppression",
+    "value": [
+      50.65856129685916,
+      168.86187098953056
+    ],
+    "formatted": "51- to 169-fold",
+    "where": [
+      "\u00a72.2",
+      "Methods multi-nucleotide reachability",
+      "Discussion"
+    ],
+    "computed_from": "suppression of R68L and V8M relative to a one-step variant of median class supply in the same library, ENU and Mutazyme II",
+    "formula": "lambda_1nt(median class) / lambda_2nt",
+    "inputs": {
+      "N": 10000000.0,
+      "mu": 0.0001,
+      "rounds": 20
+    },
+    "code_fn": "two_hit_reachability.py::main"
+  },
+  "r68l_two_nt_routes": {
+    "key": "r68l_two_nt_routes",
+    "value": 2,
+    "formatted": "2",
+    "where": [
+      "\u00a72.2"
+    ],
+    "computed_from": "two-substitution routes from AGG to a leucine codon",
+    "formula": "enumerate codons at Hamming distance 2 translating to Leu",
+    "inputs": {
+      "wt_codon": "AGG",
+      "target_aa": "L"
+    },
+    "code_fn": "two_hit_reachability.py::two_nt_routes"
+  },
+  "v8m_two_nt_routes": {
+    "key": "v8m_two_nt_routes",
+    "value": 1,
+    "formatted": "1",
+    "where": [
+      "\u00a72.2"
+    ],
+    "computed_from": "two-substitution routes from GTA to the methionine codon",
+    "formula": "enumerate codons at Hamming distance 2 translating to Met",
+    "inputs": {
+      "wt_codon": "GTA",
+      "target_aa": "M"
+    },
+    "code_fn": "two_hit_reachability.py::two_nt_routes"
+  },
+  "perm_mdg_range": {
+    "key": "perm_mdg_range",
+    "value": [
+      0.0909090909090909,
+      0.5
+    ],
+    "formatted": "9--50 pp",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "97.5th percentile of the permutation null's absolute top-100 recall gain, across all six anchor-proxy combinations",
+    "formula": "quantile(|null gain|, 0.975) per anchor",
+    "inputs": {
+      "n_iter": 5000,
+      "anchors": 6
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_gain_quantum_range": {
+    "key": "perm_gain_quantum_range",
+    "value": [
+      0.0909090909090909,
+      0.3333333333333333
+    ],
+    "formatted": "9--33 pp",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "smallest observable recall change, 1/n_hits, across anchors",
+    "formula": "1 / n_hits",
+    "inputs": {
+      "n_hits": [
+        3,
+        4,
+        5,
+        11
+      ]
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_observed_gain_range": {
+    "key": "perm_observed_gain_range",
+    "value": [
+      -0.3333333333333333,
+      0.0
+    ],
+    "formatted": "-33 to 0 pp",
+    "where": [
+      "supporting: \u00a72.5 states the bound, perm_max_abs_gain, rather than the signed range"
+    ],
+    "computed_from": "observed framework-minus-sigma top-100 recall gains across anchors",
+    "formula": "recall@100(logS + sigma) - recall@100(sigma)",
+    "inputs": {
+      "K": 100
+    },
+    "code_fn": "recompute_benchmark_r3.py::run_anchor"
+  },
+  "perm_max_abs_gain": {
+    "key": "perm_max_abs_gain",
+    "value": 0.3333333333333333,
+    "formatted": "33 pp",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "largest absolute framework-minus-sigma top-100 recall gain over all six anchor-proxy combinations",
+    "formula": "max |recall@100(logS + sigma) - recall@100(sigma)|",
+    "inputs": {
+      "K": 100,
+      "anchors": 6
+    },
+    "code_fn": "recompute_benchmark_r3.py::run_anchor"
+  },
+  "perm_p_doi_alec": {
+    "key": "perm_p_doi_alec",
+    "value": 1.0,
+    "formatted": "1.00",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Doi 2022 (ALK Mutazyme \u00d7 alec) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 5
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_p_nuvalent_alec": {
+    "key": "perm_p_nuvalent_alec",
+    "value": 1.0,
+    "formatted": "1.00",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Nuvalent (ALK ENU \u00d7 alec proxy) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 11
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_p_nuvalent_lor": {
+    "key": "perm_p_nuvalent_lor",
+    "value": 1.0,
+    "formatted": "1.00",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Nuvalent (ALK ENU \u00d7 lor proxy) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 11
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_p_nuvalent_zot": {
+    "key": "perm_p_nuvalent_zot",
+    "value": 1.0,
+    "formatted": "1.00",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Nuvalent (ALK ENU \u00d7 zot proxy) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 11
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_p_awad_sot": {
+    "key": "perm_p_awad_sot",
+    "value": 0.2999400119976004,
+    "formatted": "0.30",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Awad clinical (KRAS Mut \u00d7 sot) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 3
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_p_awad_ada": {
+    "key": "perm_p_awad_ada",
+    "value": 0.6012797440511898,
+    "formatted": "0.60",
+    "where": [
+      "\u00a72.5",
+      "Table 2"
+    ],
+    "computed_from": "class-label permutation on the Awad clinical (KRAS Mut \u00d7 ada) anchor",
+    "formula": "(#{|null gain| >= |observed gain|} + 1) / (n_iter + 1)",
+    "inputs": {
+      "n_iter": 5000,
+      "K": 100,
+      "n_hits": 4
+    },
+    "code_fn": "recompute_benchmark_r3.py::permutation_p"
+  },
+  "perm_n_hits_range": {
+    "key": "perm_n_hits_range",
+    "value": [
+      3,
+      11
+    ],
+    "formatted": "3 to 11",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "class-forced observed hits per anchor",
+    "formula": "count of named anchor hits present in the class-forced universe",
+    "inputs": {
+      "anchors": 6
+    },
+    "code_fn": "recompute_benchmark_r3.py::run_anchor"
+  },
+  "transport_rho_alectinib": {
+    "key": "transport_rho_alectinib",
+    "value": 0.5149638802889577,
+    "formatted": "0.51",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for alectinib, over 18 shared variants",
+    "formula": "spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)",
+    "inputs": {
+      "n": 18,
+      "boot95": [
+        -0.04275959677304641,
+        0.855497382198953
+      ],
+      "p": 0.028748754882630345,
+      "median_inter_study_spread_log10": 0.12928740120303056
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "transport_rho_lorlatinib": {
+    "key": "transport_rho_lorlatinib",
+    "value": 0.16615067079463364,
+    "formatted": "0.17",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for lorlatinib, over 18 shared variants",
+    "formula": "spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)",
+    "inputs": {
+      "n": 18,
+      "boot95": [
+        -0.42618532491530653,
+        0.7229182515739769
+      ],
+      "p": 0.5099504603438955,
+      "median_inter_study_spread_log10": 0.3219465077435653
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "transport_rho_zotizalkib": {
+    "key": "transport_rho_zotizalkib",
+    "value": 0.8241758241758241,
+    "formatted": "0.82",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "Spearman rank correlation between atlas sigma and measured Ba/F3 log10 fold resistance for zotizalkib, over 13 shared variants",
+    "formula": "spearmanr(sigma_atlas, median log10(IC50_variant / IC50_WT) within study)",
+    "inputs": {
+      "n": 13,
+      "boot95": [
+        0.4871720116618075,
+        0.9602272727272727
+      ],
+      "p": 0.0005302228375973589,
+      "median_inter_study_spread_log10": 0.0
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "proxy_rho_alectinib": {
+    "key": "proxy_rho_alectinib",
+    "value": 0.2087912087912088,
+    "formatted": "0.21",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "Spearman correlation between alectinib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices",
+    "formula": "spearmanr(sigma_atlas[drug], log10 FC under neladalkib)",
+    "inputs": {
+      "n": 13,
+      "boot95": [
+        -0.43016759776536306,
+        0.726501937984496
+      ],
+      "p": 0.493621819356885
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "proxy_rho_lorlatinib": {
+    "key": "proxy_rho_lorlatinib",
+    "value": 0.5714285714285714,
+    "formatted": "0.57",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "Spearman correlation between lorlatinib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices",
+    "formula": "spearmanr(sigma_atlas[drug], log10 FC under neladalkib)",
+    "inputs": {
+      "n": 13,
+      "boot95": [
+        0.0,
+        0.898883485978661
+      ],
+      "p": 0.0413422673717235
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "proxy_rho_zotizalkib": {
+    "key": "proxy_rho_zotizalkib",
+    "value": 0.5659340659340659,
+    "formatted": "0.57",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "Spearman correlation between zotizalkib atlas sigma and measured Ba/F3 neladalkib fold resistance; ranks the proxy choices",
+    "formula": "spearmanr(sigma_atlas[drug], log10 FC under neladalkib)",
+    "inputs": {
+      "n": 13,
+      "boot95": [
+        -0.05148088531187118,
+        0.9150201661305036
+      ],
+      "p": 0.04379259223545486
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "atlas_dose_ratio_alectinib": {
+    "key": "atlas_dose_ratio_alectinib",
+    "value": 1.7241379310344829,
+    "formatted": "1.7x",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "atlas assay concentration for alectinib divided by the measured Ba/F3 wild-type IC50",
+    "formula": "atlas_dose_nM / median(WT Ba/F3 IC50_nM)",
+    "inputs": {
+      "dose_nM": 20,
+      "wt_ic50_nM": 11.6
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "atlas_dose_ratio_lorlatinib": {
+    "key": "atlas_dose_ratio_lorlatinib",
+    "value": 3.7037037037037033,
+    "formatted": "3.7x",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "atlas assay concentration for lorlatinib divided by the measured Ba/F3 wild-type IC50",
+    "formula": "atlas_dose_nM / median(WT Ba/F3 IC50_nM)",
+    "inputs": {
+      "dose_nM": 5,
+      "wt_ic50_nM": 1.35
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "atlas_dose_ratio_zotizalkib": {
+    "key": "atlas_dose_ratio_zotizalkib",
+    "value": 30.612244897959187,
+    "formatted": "30.6x",
+    "where": [
+      "\u00a72.6",
+      "Table 4"
+    ],
+    "computed_from": "atlas assay concentration for zotizalkib divided by the measured Ba/F3 wild-type IC50",
+    "formula": "atlas_dose_nM / median(WT Ba/F3 IC50_nM)",
+    "inputs": {
+      "dose_nM": 300,
+      "wt_ic50_nM": 9.799999999999999
+    },
+    "code_fn": "sigma_transport_validation.py::main"
+  },
+  "transport_n_studies": {
+    "key": "transport_n_studies",
+    "value": 7,
+    "formatted": "7",
+    "where": [
+      "\u00a72.6",
+      "Methods external test of sigma transport"
+    ],
+    "computed_from": "independent published studies contributing Ba/F3 ALK potency measurements",
+    "formula": "nunique(paper_id)",
+    "inputs": {},
+    "code_fn": "sigma_transport_validation.py::load_potency"
+  },
+  "dose_rho_low_high_range": {
+    "key": "dose_rho_low_high_range",
+    "value": [
+      0.3017885086161378,
+      0.6314935064935066
+    ],
+    "formatted": "0.30 to 0.63",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "Spearman between a drug's lowest and highest assayed concentration, across the seven multi-dose series in Oh Tables S3, S5 and S9",
+    "formula": "spearmanr(score_lowest_dose, score_highest_dose) per series",
+    "inputs": {
+      "n_series": 7,
+      "median": 0.38887414804516635
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_rho_low_high_median": {
+    "key": "dose_rho_low_high_median",
+    "value": 0.38887414804516635,
+    "formatted": "0.39",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "median across the seven dose series of the lowest-to-highest rank correlation",
+    "formula": "median over series",
+    "inputs": {
+      "n_series": 7
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_topk_overlap_range": {
+    "key": "dose_topk_overlap_range",
+    "value": [
+      5,
+      15
+    ],
+    "formatted": "between 5 and 15 of the top 25",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "variants shared between the top 25 at a drug's lowest and highest dose",
+    "formula": "|top25(lowest) intersect top25(highest)|",
+    "inputs": {
+      "top_k": 25
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_rho_adjacent_median": {
+    "key": "dose_rho_adjacent_median",
+    "value": 0.6433936370601897,
+    "formatted": "0.64",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "median rank correlation between adjacent concentration steps",
+    "formula": "median over all adjacent dose pairs",
+    "inputs": {},
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_cross_drug_matched_rho": {
+    "key": "dose_cross_drug_matched_rho",
+    "value": 0.7506117071334464,
+    "formatted": "0.75",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "median rank correlation between DIFFERENT drugs assayed at matched dose rank; exceeds the same-drug across-dose figure, indicating shared batch structure",
+    "formula": "median spearmanr over cross-drug pairs with equal dose rank",
+    "inputs": {
+      "n_pairs": 9
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_cross_drug_unmatched_rho": {
+    "key": "dose_cross_drug_unmatched_rho",
+    "value": 0.5668906011254523,
+    "formatted": "0.57",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "same, for cross-drug pairs at unmatched dose rank",
+    "formula": "median spearmanr over cross-drug pairs with unequal dose rank",
+    "inputs": {
+      "n_pairs": 18
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "atlas_vs_own_repeat_rho": {
+    "key": "atlas_vs_own_repeat_rho",
+    "value": [
+      0.5503357540460461,
+      0.6169574886628025
+    ],
+    "formatted": "0.55--0.62",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "agreement between the main single-dose atlas and its best-matching sub-library condition: two runs of nominally the same assay",
+    "formula": "max over doses of spearmanr(S2 score, S5 score)",
+    "inputs": {
+      "alectinib": "20.0",
+      "lorlatinib": "5.0",
+      "zotizalkib": "0.9"
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "dose_window_sd_ratio": {
+    "key": "dose_window_sd_ratio",
+    "value": [
+      1.5290723518547962,
+      1.5346922882554717,
+      1.0807968335316527
+    ],
+    "formatted": "1.1 to 1.5",
+    "where": [
+      "\u00a72.6"
+    ],
+    "computed_from": "sigma dispersion in the exon-23 sub-library window relative to the full atlas; above 1 rules out attenuation by range restriction",
+    "formula": "sd(window) / sd(full atlas), per drug",
+    "inputs": {
+      "window": [
+        1172,
+        1215
+      ],
+      "n_window": 284,
+      "n_full": 2173
+    },
+    "code_fn": "oh_dose_transport.py::main"
+  },
+  "doi_l1196m_rank_sim": {
+    "key": "doi_l1196m_rank_sim",
+    "value": 1,
+    "formatted": "1",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "L1196M rank under the Mutazyme-simulated alectinib ranking",
+    "formula": "rank of log S + sigma, descending, over the class-forced ALK universe",
+    "inputs": {
+      "variant": "L1196M",
+      "mutagen": "MutazymeII",
+      "drug": "alectinib"
+    },
+    "code_fn": "notebook/05_prospective_predictions.py"
+  },
+  "doi_l1198f_rank_sim": {
+    "key": "doi_l1198f_rank_sim",
+    "value": 3,
+    "formatted": "3",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "L1198F rank under the Mutazyme-simulated alectinib ranking",
+    "formula": "rank of log S + sigma, descending, over the class-forced ALK universe",
+    "inputs": {
+      "variant": "L1198F",
+      "mutagen": "MutazymeII",
+      "drug": "alectinib"
+    },
+    "code_fn": "notebook/05_prospective_predictions.py"
+  },
+  "doi_i1171t_rank_sim": {
+    "key": "doi_i1171t_rank_sim",
+    "value": 10,
+    "formatted": "10",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "I1171T rank under the Mutazyme-simulated alectinib ranking",
+    "formula": "rank of log S + sigma, descending, over the class-forced ALK universe",
+    "inputs": {
+      "variant": "I1171T",
+      "mutagen": "MutazymeII",
+      "drug": "alectinib"
+    },
+    "code_fn": "notebook/05_prospective_predictions.py"
+  },
+  "doi_v1180l_rank_sim": {
+    "key": "doi_v1180l_rank_sim",
+    "value": 15,
+    "formatted": "15",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "V1180L rank under the Mutazyme-simulated alectinib ranking",
+    "formula": "rank of log S + sigma, descending, over the class-forced ALK universe",
+    "inputs": {
+      "variant": "V1180L",
+      "mutagen": "MutazymeII",
+      "drug": "alectinib"
+    },
+    "code_fn": "notebook/05_prospective_predictions.py"
+  },
+  "doi_i1171n_rank_sim": {
+    "key": "doi_i1171n_rank_sim",
+    "value": 118,
+    "formatted": "118",
+    "where": [
+      "\u00a72.5"
+    ],
+    "computed_from": "I1171N rank under the Mutazyme-simulated alectinib ranking",
+    "formula": "rank of log S + sigma, descending, over the class-forced ALK universe",
+    "inputs": {
+      "variant": "I1171N",
+      "mutagen": "MutazymeII",
+      "drug": "alectinib"
+    },
+    "code_fn": "notebook/05_prospective_predictions.py"
+  },
+  "doi_anchor_topN_bound": {
+    "key": "doi_anchor_topN_bound",
+    "value": 120,
+    "formatted": "top-120",
+    "where": [
+      "Background",
+      "\u00a72.4",
+      "\u00a72.5"
+    ],
+    "computed_from": "smallest round bound containing all five class-forced Doi hits in the Mutazyme-simulated ranking",
+    "formula": "ceil(max rank / 10) * 10",
+    "inputs": {
+      "max_rank": 118
+    },
+    "code_fn": "compute_doi_anchor_ranks"
+  },
+  "met_two_screen_chi2": {
+    "key": "met_two_screen_chi2",
+    "value": 12.420123432255783,
+    "formatted": "12.4",
+    "where": [
+      "\u00a72.7",
+      "Fig 5A"
+    ],
+    "computed_from": "chi-square homogeneity of the six-class clone composition between the NVP-BVU972 and AMG 458 screens, which used the same ENU protocol in the same cells",
+    "formula": "scipy.stats.chi2_contingency(2 x 6 clone counts)",
+    "inputs": {
+      "dof": 5,
+      "p": 0.029463225369071463,
+      "table": {
+        "NVP-BVU972": {
+          "C>A": 3,
+          "C>G": 0,
+          "C>T": 5,
+          "T>A": 20,
+          "T>C": 51,
+          "T>G": 6
+        },
+        "AMG 458": {
+          "C>A": 5,
+          "C>G": 2,
+          "C>T": 1,
+          "T>A": 20,
+          "T>C": 23,
+          "T>G": 9
+        }
+      }
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_two_screen_p": {
+    "key": "met_two_screen_p",
+    "value": 0.029463225369071463,
+    "formatted": "0.029",
+    "where": [
+      "Abstract",
+      "\u00a72.7",
+      "Fig 5A"
+    ],
+    "computed_from": "p-value of that homogeneity test; the two screens differ, so the class composition of a hit list is set by the drug, not the mutagen",
+    "formula": "scipy.stats.chi2_contingency",
+    "inputs": {
+      "dof": 5
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_recovered": {
+    "key": "met_y1230_recovered",
+    "value": 5,
+    "formatted": "5 of 6",
+    "where": [
+      "\u00a72.7",
+      "Fig 5B"
+    ],
+    "computed_from": "single-nucleotide missense routes out of the Y1230 wild-type codon that the NVP-BVU972 screen recovered",
+    "formula": "enumerate one-step routes from the codon; intersect with Tiedt Table S1",
+    "inputs": {
+      "wt_codon": "TAT",
+      "n_clones": 75
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_supply_fold": {
+    "key": "met_y1230_supply_fold",
+    "value": 7.319999999999999,
+    "formatted": "7.3-fold",
+    "where": [
+      "\u00a72.7",
+      "Fig 5B"
+    ],
+    "computed_from": "ratio of the largest to smallest germline ENU supply among the substitution classes those Y1230 routes span",
+    "formula": "max(S_ENU(c)) / min(S_ENU(c)) over the routes' classes",
+    "inputs": {
+      "classes": [
+        "T>A",
+        "T>C",
+        "T>G"
+      ],
+      "lo": 0.05,
+      "hi": 0.366
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_tg_expected_clones": {
+    "key": "met_y1230_tg_expected_clones",
+    "value": 5.136986301369864,
+    "formatted": "5.1",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "clones the two T>G routes out of Y1230 are predicted to carry under germline ENU supply alone",
+    "formula": "sum of expected_clones_under_supply over the T>G routes",
+    "inputs": {
+      "routes": [
+        "Y1230D",
+        "Y1230S"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_tg_observed_clones": {
+    "key": "met_y1230_tg_observed_clones",
+    "value": 5,
+    "formatted": "5",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "clones the two T>G routes out of Y1230 actually carried in the Tiedt NVP-BVU972 screen",
+    "formula": "sum of clones_observed over the T>G routes",
+    "inputs": {
+      "routes": [
+        "Y1230D",
+        "Y1230S"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_missing": {
+    "key": "met_y1230_missing",
+    "value": [
+      "Y1230F"
+    ],
+    "formatted": "Y1230F",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "one-step Y1230 variants the screen did not recover, with their rank in the chemistry-free atlas",
+    "formula": "routes minus recovered",
+    "inputs": {
+      "Y1230F": 54
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_nvp_bvu972_clones": {
+    "key": "met_nvp_bvu972_clones",
+    "value": 85,
+    "formatted": "85",
+    "where": [
+      "\u00a72.7",
+      "Fig 5A"
+    ],
+    "computed_from": "resistant clones reported for the NVP-BVU972 screen",
+    "formula": "sum of clone counts in Tiedt Supplementary Table",
+    "inputs": {
+      "n_base_changes": 10,
+      "n_aa_changes": 10
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_nvp_bvu972_median_rank": {
+    "key": "met_nvp_bvu972_median_rank",
+    "value": 171,
+    "formatted": "171",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "median chemistry-free atlas rank of the NVP-BVU972 hits",
+    "formula": "median(rank by delta sigma) over reported hits",
+    "inputs": {
+      "atlas_n": 5458,
+      "found": 10,
+      "total": 10
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_nvp_bvu972_twostep_top100": {
+    "key": "met_nvp_bvu972_twostep_top100",
+    "value": 72,
+    "formatted": "72",
+    "where": [
+      "\u00a72.7",
+      "Fig 5C"
+    ],
+    "computed_from": "variants in the chemistry-free top 100 for NVP-BVU972 that need two or more nucleotide changes and so lie outside one-step reach",
+    "formula": "classify each top-100 variant by one-step routes from its codon",
+    "inputs": {
+      "two-step": 72,
+      "class-forced": 26,
+      "multi-class SNV": 2
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_amg_clones": {
+    "key": "met_amg_clones",
+    "value": 60,
+    "formatted": "60",
+    "where": [
+      "\u00a72.7",
+      "Fig 5A"
+    ],
+    "computed_from": "resistant clones reported for the AMG 458 screen",
+    "formula": "sum of clone counts in Tiedt Supplementary Table",
+    "inputs": {
+      "n_base_changes": 15,
+      "n_aa_changes": 13
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_amg_median_rank": {
+    "key": "met_amg_median_rank",
+    "value": 229,
+    "formatted": "229",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "median chemistry-free atlas rank of the AMG 458 hits",
+    "formula": "median(rank by delta sigma) over reported hits",
+    "inputs": {
+      "atlas_n": 5458,
+      "found": 13,
+      "total": 13
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_amg_twostep_top100": {
+    "key": "met_amg_twostep_top100",
+    "value": 75,
+    "formatted": "75",
+    "where": [
+      "\u00a72.7",
+      "Fig 5C"
+    ],
+    "computed_from": "variants in the chemistry-free top 100 for AMG 458 that need two or more nucleotide changes and so lie outside one-step reach",
+    "formula": "classify each top-100 variant by one-step routes from its codon",
+    "inputs": {
+      "class-forced": 23,
+      "two-step": 75,
+      "multi-class SNV": 2
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_atlas_size": {
+    "key": "met_atlas_size",
+    "value": 5458,
+    "formatted": "5,458",
+    "where": [
+      "\u00a72.7"
+    ],
+    "computed_from": "MET kinase-domain missense variants scored in the Estevam atlas on the primary background",
+    "formula": "rows of the wide table for that background",
+    "inputs": {
+      "background": "exon14del"
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "software_versions": {
+    "key": "software_versions",
+    "value": {
+      "python": "3.13.16",
+      "implementation": "CPython",
+      "packages": {
+        "pandas": "3.0.5",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.2",
+        "pyyaml": "6.0.3"
+      }
+    },
+    "formatted": "Python 3.13.16 with pandas 3.0.5, numpy 2.5.3, scipy 1.18.1, matplotlib 3.11.2, pyyaml 6.0.3",
+    "where": [
+      "Methods software and reproducibility"
+    ],
+    "computed_from": "emitted from the running interpreter, not recorded by hand",
+    "formula": "platform.python_version() and each package __version__",
+    "inputs": {},
+    "code_fn": "env_versions.py::main"
+  },
+  "takei_v2_count": {
+    "key": "takei_v2_count",
+    "value": 5,
+    "formatted": "five",
+    "where": [
+      "\u00a72.5",
+      "Discussion \u00a7D7",
+      "Fig 4B caption",
+      "Methods"
+    ],
+    "computed_from": "V2 compound partners recovered at 500 nM neladalkib on I1171N fixed-V1 background",
+    "formula": "|Takei V2 hits at 500 nM neladalkib|",
+    "inputs": {
+      "members": [
+        "L1256F",
+        "E1129V",
+        "E1129K",
+        "C1156Y",
+        "T1151R"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "takei_v2_c_t_count": {
+    "key": "takei_v2_c_t_count",
+    "value": 3,
+    "formatted": "three",
+    "where": [
+      "Abstract",
+      "\u00a72.5",
+      "Fig 4B caption"
+    ],
+    "computed_from": "Takei V2 partners class-forced into C>T (Mutazyme II's dominant class)",
+    "formula": "|{v in Takei V2: forced_class(v) == 'C>T'}|",
+    "inputs": {
+      "members": [
+        "L1256F",
+        "E1129K",
+        "C1156Y"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "nuvalent_total": {
+    "key": "nuvalent_total",
+    "value": 13,
+    "formatted": "thirteen",
+    "where": [
+      "\u00a72.5",
+      "Fig 4C caption",
+      "Methods"
+    ],
+    "computed_from": "single-amino-acid variants reported in Nuvalent AACR 2025 poster aggregate across arms",
+    "formula": "|Nuvalent single-amino-acid hits (aggregate)|",
+    "inputs": {
+      "members": [
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "F1174C",
+        "F1174V",
+        "V1180L",
+        "T1151K",
+        "T1151R",
+        "E1129K",
+        "R1192P",
+        "L1196M",
+        "G1269A",
+        "G1202R"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "nuvalent_class_forced": {
+    "key": "nuvalent_class_forced",
+    "value": 11,
+    "formatted": "twelve",
+    "where": [
+      "\u00a72.5",
+      "Fig 4C caption"
+    ],
+    "computed_from": "Nuvalent hits that are class-forced single-nt reachable (R1192P outside atlas, G1202R multi-class)",
+    "formula": "|Nuvalent hits \u2229 class-forced|",
+    "inputs": {
+      "members": [
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "F1174C",
+        "F1174V",
+        "V1180L",
+        "T1151K",
+        "T1151R",
+        "E1129K",
+        "L1196M",
+        "G1269A"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "nuvalent_cg_count": {
+    "key": "nuvalent_cg_count",
+    "value": 3,
+    "formatted": "three",
+    "where": [
+      "Abstract",
+      "\u00a72.5",
+      "Fig 4C caption"
+    ],
+    "computed_from": "Nuvalent hits class-forced into C>G (ENU 0.2 % class per germline spectrum)",
+    "formula": "|{v in Nuvalent: forced_class(v) == 'C>G'}|",
+    "inputs": {
+      "members": [
+        "V1180L",
+        "T1151R",
+        "G1269A"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "nuvalent_well_supplied_count": {
+    "key": "nuvalent_well_supplied_count",
+    "value": 8,
+    "formatted": "nine",
+    "where": [
+      "\u00a72.5",
+      "Fig 4C caption"
+    ],
+    "computed_from": "Nuvalent class-forced hits whose forced class ENU supplies at \u2265 1 %",
+    "formula": "|Nuvalent class-forced| - |Nuvalent C>G|",
+    "inputs": {
+      "members": [
+        "I1171N",
+        "I1171S",
+        "I1171T",
+        "F1174C",
+        "F1174V",
+        "T1151K",
+        "E1129K",
+        "L1196M"
+      ]
+    },
+    "code_fn": "compute_retrospective_screens"
+  },
+  "alk_snv_top100_recovery_min": {
+    "key": "alk_snv_top100_recovery_min",
+    "value": 0.63,
+    "formatted": "63%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "min top-100 recovery across ALK drugs for ENU and Mutazyme II",
+    "formula": "min_{drug, mutagen in {ENU, MutII}} recovery(K=100, drug, mutagen)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "ALK",
+      "K": 100,
+      "per_row": {
+        "alectinib/ENU": 0.63,
+        "alectinib/MutII": 0.65,
+        "lorlatinib/ENU": 0.65,
+        "lorlatinib/MutII": 0.72,
+        "zotizalkib/ENU": 0.63,
+        "zotizalkib/MutII": 0.65
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_snv_top100_recovery_max": {
+    "key": "alk_snv_top100_recovery_max",
+    "value": 0.72,
+    "formatted": "72%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "max top-100 recovery across ALK drugs for ENU and Mutazyme II",
+    "formula": "max_{drug, mutagen in {ENU, MutII}} recovery(K=100, drug, mutagen)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "ALK",
+      "K": 100,
+      "per_row": {
+        "alectinib/ENU": 0.63,
+        "alectinib/MutII": 0.65,
+        "lorlatinib/ENU": 0.65,
+        "lorlatinib/MutII": 0.72,
+        "zotizalkib/ENU": 0.63,
+        "zotizalkib/MutII": 0.65
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_alec_mut_top100": {
+    "key": "alk_alec_mut_top100",
+    "value": 0.65,
+    "formatted": "65% [55\\%--74\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "Mutazyme-simulated top-100 recovery for ALK, alectinib",
+    "formula": "recovery(K=100, drug, MutII)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_alec_enu_top100": {
+    "key": "alk_alec_enu_top100",
+    "value": 0.63,
+    "formatted": "63% [53\\%--72\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "ENU-simulated top-100 recovery for ALK, alectinib",
+    "formula": "recovery(K=100, drug, ENU)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_lor_mut_top100": {
+    "key": "alk_lor_mut_top100",
+    "value": 0.72,
+    "formatted": "72% [63\\%--80\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "Mutazyme-simulated top-100 recovery for ALK, lorlatinib",
+    "formula": "recovery(K=100, drug, MutII)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_lor_enu_top100": {
+    "key": "alk_lor_enu_top100",
+    "value": 0.65,
+    "formatted": "65% [55\\%--74\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "ENU-simulated top-100 recovery for ALK, lorlatinib",
+    "formula": "recovery(K=100, drug, ENU)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_zot_mut_top100": {
+    "key": "alk_zot_mut_top100",
+    "value": 0.65,
+    "formatted": "65% [55\\%--74\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "Mutazyme-simulated top-100 recovery for ALK, zotizalkib",
+    "formula": "recovery(K=100, drug, MutII)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "alk_zot_enu_top100": {
+    "key": "alk_zot_enu_top100",
+    "value": 0.63,
+    "formatted": "63% [53\\%--72\\%]",
+    "where": [
+      "supporting: \u00a72.4 quotes the range across drugs and mutagens"
+    ],
+    "computed_from": "ENU-simulated top-100 recovery for ALK, zotizalkib",
+    "formula": "recovery(K=100, drug, ENU)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "kras_snv_top100_recovery_min": {
+    "key": "kras_snv_top100_recovery_min",
+    "value": 0.4,
+    "formatted": "40%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "min top-100 recovery across KRAS G12C drugs for ENU and Mutazyme II",
+    "formula": "min_{drug, mutagen in {ENU, MutII}} recovery(K=100, drug, mutagen)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "KRAS G12C",
+      "K": 100,
+      "per_row": {
+        "adagrasib/ENU": 0.54,
+        "adagrasib/MutII": 0.4,
+        "sotorasib/ENU": 0.51,
+        "sotorasib/MutII": 0.42
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "kras_snv_top100_recovery_max": {
+    "key": "kras_snv_top100_recovery_max",
+    "value": 0.54,
+    "formatted": "54%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "max top-100 recovery across KRAS G12C drugs for ENU and Mutazyme II",
+    "formula": "max_{drug, mutagen in {ENU, MutII}} recovery(K=100, drug, mutagen)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "KRAS G12C",
+      "K": 100,
+      "per_row": {
+        "adagrasib/ENU": 0.54,
+        "adagrasib/MutII": 0.4,
+        "sotorasib/ENU": 0.51,
+        "sotorasib/MutII": 0.42
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_alk_top10_min": {
+    "key": "be_alk_top10_min",
+    "value": 0.0,
+    "formatted": "0.00%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "min CBE+ABE top-10 recovery across ALK drugs (alectinib shows 0)",
+    "formula": "min_{drug in {alec, lor, zot}} recovery(K=10, drug, BE)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "per_drug": {
+        "alectinib": 0.0,
+        "lorlatinib": 0.1,
+        "zotizalkib": 0.1
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_alk_top10_max": {
+    "key": "be_alk_top10_max",
+    "value": 0.1,
+    "formatted": "10%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "max CBE+ABE top-10 recovery across ALK drugs",
+    "formula": "max_{drug in {alec, lor, zot}} recovery(K=10, drug, BE)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "per_drug": {
+        "alectinib": 0.0,
+        "lorlatinib": 0.1,
+        "zotizalkib": 0.1
+      }
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_alk_top10_outside_min": {
+    "key": "be_alk_top10_outside_min",
+    "value": 0.9,
+    "formatted": "90%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "1 - max(BE top-10 recovery across ALK drugs)",
+    "formula": "1 - max_{drug} recovery(K=10, drug, BE)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_alk_top10_outside_max": {
+    "key": "be_alk_top10_outside_max",
+    "value": 1.0,
+    "formatted": "100%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "1 - min(BE top-10 recovery across ALK drugs)",
+    "formula": "1 - min_{drug} recovery(K=10, drug, BE)",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv"
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_alk_peak_at_k_le_100": {
+    "key": "be_alk_peak_at_k_le_100",
+    "value": 0.3829787234042553,
+    "formatted": "38%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "max CBE+ABE recovery over K \u2264 100 across all ALK drugs",
+    "formula": "max_{K \u2264 100, drug} recovery(K, drug, BE) for gene=ALK",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "ALK",
+      "K_max": 100
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "be_kras_peak_at_k_le_100": {
+    "key": "be_kras_peak_at_k_le_100",
+    "value": 1.0,
+    "formatted": "100%",
+    "where": [
+      "\u00a72.4"
+    ],
+    "computed_from": "max CBE+ABE recovery over K \u2264 100 across all KRAS G12C drugs",
+    "formula": "max_{K \u2264 100, drug} recovery(K, drug, BE) for gene=KRAS G12C",
+    "inputs": {
+      "source": "data/derived/topk_recovery.csv",
+      "gene": "KRAS G12C",
+      "K_max": 100
+    },
+    "code_fn": "compute_topk_recovery"
+  },
+  "reach_residues_alk": {
+    "key": "reach_residues_alk",
+    "value": 273,
+    "formatted": "273",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "ALK residues carrying at least one class-forced variant in the chemistry-free atlas",
+    "formula": "count of distinct residues in the class-forced set",
+    "inputs": {
+      "transcript": "NM_004304.5"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_class_forced_alk": {
+    "key": "reach_class_forced_alk",
+    "value": 1427,
+    "formatted": "1,427",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "ALK class-forced variants per drug arm",
+    "formula": "single-nucleotide variants whose every route falls in one class",
+    "inputs": {
+      "transcript": "NM_004304.5"
+    },
+    "code_fn": "build_reachability_track.py::load_variants"
+  },
+  "reach_be_blocked_alk": {
+    "key": "reach_be_blocked_alk",
+    "value": 172,
+    "formatted": "172 of 273",
+    "where": [
+      "Fig 3C",
+      "\u00a73.2"
+    ],
+    "computed_from": "ALK residues whose top-sigma class-forced substitution CBE+ABE cannot make, under alectinib",
+    "formula": "count of residues where S_CBE+ABE of the top-sigma class-forced substitution is zero",
+    "inputs": {
+      "drug": "alectinib",
+      "n_residues": 273,
+      "note": "the arm Figure 3C plots"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_residues_kras": {
+    "key": "reach_residues_kras",
+    "value": 188,
+    "formatted": "188",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "KRAS G12C residues carrying at least one class-forced variant in the chemistry-free atlas",
+    "formula": "count of distinct residues in the class-forced set",
+    "inputs": {
+      "transcript": "NM_033360.4"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_class_forced_kras": {
+    "key": "reach_class_forced_kras",
+    "value": 981,
+    "formatted": "981",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "KRAS G12C class-forced variants per drug arm",
+    "formula": "single-nucleotide variants whose every route falls in one class",
+    "inputs": {
+      "transcript": "NM_033360.4"
+    },
+    "code_fn": "build_reachability_track.py::load_variants"
+  },
+  "reach_be_blocked_kras": {
+    "key": "reach_be_blocked_kras",
+    "value": 121,
+    "formatted": "121 of 188",
+    "where": [
+      "Fig 3C",
+      "\u00a73.2"
+    ],
+    "computed_from": "KRAS G12C residues whose top-sigma class-forced substitution CBE+ABE cannot make, under adagrasib",
+    "formula": "count of residues where S_CBE+ABE of the top-sigma class-forced substitution is zero",
+    "inputs": {
+      "drug": "adagrasib",
+      "n_residues": 188,
+      "note": "the arm Figure 3C plots"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_residues_met": {
+    "key": "reach_residues_met",
+    "value": 287,
+    "formatted": "287",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "MET residues carrying at least one class-forced variant in the chemistry-free atlas",
+    "formula": "count of distinct residues in the class-forced set",
+    "inputs": {
+      "transcript": "NM_000245.2"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_class_forced_met": {
+    "key": "reach_class_forced_met",
+    "value": 1486,
+    "formatted": "1,486",
+    "where": [
+      "Fig 3C"
+    ],
+    "computed_from": "MET class-forced variants per drug arm",
+    "formula": "single-nucleotide variants whose every route falls in one class",
+    "inputs": {
+      "transcript": "NM_000245.2"
+    },
+    "code_fn": "build_reachability_track.py::load_variants"
+  },
+  "reach_be_blocked_met": {
+    "key": "reach_be_blocked_met",
+    "value": 183,
+    "formatted": "183 of 287",
+    "where": [
+      "Fig 3C",
+      "\u00a73.2"
+    ],
+    "computed_from": "MET residues whose top-sigma class-forced substitution CBE+ABE cannot make, under NVP-BVU972",
+    "formula": "count of residues where S_CBE+ABE of the top-sigma class-forced substitution is zero",
+    "inputs": {
+      "drug": "NVP-BVU972",
+      "n_residues": 287,
+      "note": "the arm Figure 3C plots"
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "reach_be_blocked_share_range": {
+    "key": "reach_be_blocked_share_range",
+    "value": [
+      0.6276595744680851,
+      0.6585365853658537
+    ],
+    "formatted": "63\\%--66\\%",
+    "where": [
+      "Fig 3C",
+      "\u00a73.2"
+    ],
+    "computed_from": "range of the CBE+ABE blocked-residue share across all three genes and every drug arm",
+    "formula": "min and max over (gene, drug) of blocked residues / residues",
+    "inputs": {
+      "n_arms": 7
+    },
+    "code_fn": "build_reachability_track.py::build"
+  },
+  "top100_alk_enu_alectinib": {
+    "key": "top100_alk_enu_alectinib",
+    "value": 0.63,
+    "formatted": "63\\% [53\\%--72\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the ENU-simulated alectinib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_alk_mutii_alectinib": {
+    "key": "top100_alk_mutii_alectinib",
+    "value": 0.65,
+    "formatted": "65\\% [55\\%--74\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the MutII-simulated alectinib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_alk_enu_lorlatinib": {
+    "key": "top100_alk_enu_lorlatinib",
+    "value": 0.65,
+    "formatted": "65\\% [55\\%--74\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the ENU-simulated lorlatinib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_alk_mutii_lorlatinib": {
+    "key": "top100_alk_mutii_lorlatinib",
+    "value": 0.72,
+    "formatted": "72\\% [63\\%--80\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the MutII-simulated lorlatinib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_alk_enu_zotizalkib": {
+    "key": "top100_alk_enu_zotizalkib",
+    "value": 0.63,
+    "formatted": "63\\% [53\\%--72\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the ENU-simulated zotizalkib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_alk_mutii_zotizalkib": {
+    "key": "top100_alk_mutii_zotizalkib",
+    "value": 0.65,
+    "formatted": "65\\% [55\\%--74\\%]",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the MutII-simulated zotizalkib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "ALK",
+      "N": 1427,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_kras_enu_adagrasib": {
+    "key": "top100_kras_enu_adagrasib",
+    "value": 0.54,
+    "formatted": "54\\% [44\\%--63\\%]",
+    "where": [
+      "not reported individually: \u00a73.4 quotes the range"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the ENU-simulated adagrasib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "KRAS G12C",
+      "N": 981,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_kras_mutii_adagrasib": {
+    "key": "top100_kras_mutii_adagrasib",
+    "value": 0.4,
+    "formatted": "40\\% [31\\%--50\\%]",
+    "where": [
+      "not reported individually: \u00a73.4 quotes the range"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the MutII-simulated adagrasib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "KRAS G12C",
+      "N": 981,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_kras_enu_sotorasib": {
+    "key": "top100_kras_enu_sotorasib",
+    "value": 0.51,
+    "formatted": "51\\% [41\\%--61\\%]",
+    "where": [
+      "not reported individually: \u00a73.4 quotes the range"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the ENU-simulated sotorasib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "KRAS G12C",
+      "N": 981,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "top100_kras_mutii_sotorasib": {
+    "key": "top100_kras_mutii_sotorasib",
+    "value": 0.42,
+    "formatted": "42\\% [33\\%--52\\%]",
+    "where": [
+      "not reported individually: \u00a73.4 quotes the range"
+    ],
+    "computed_from": "fraction of the chemistry-free top-100 that the MutII-simulated sotorasib screen also ranks in its top 100, with a Wilson 95% interval",
+    "formula": "|sim top-100 \u2229 chemistry-free top-100| / 100",
+    "inputs": {
+      "gene": "KRAS G12C",
+      "N": 981,
+      "K": 100
+    },
+    "code_fn": "recompute_topk_with_ci.py::compute_curve"
+  },
+  "alk_l1196m_sigma": {
+    "key": "alk_l1196m_sigma",
+    "value": 7.74452093727412,
+    "formatted": "+7.7",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "Oh atlas alectinib Resistance score for L1196M",
+    "formula": "sigma = Resistance score, chemistry-free",
+    "inputs": {
+      "forced_class": "C>A"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1196m_cf_rank": {
+    "key": "alk_l1196m_cf_rank",
+    "value": 1,
+    "formatted": "1",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1196M chemistry-free rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by sigma",
+    "inputs": {
+      "forced_class": "C>A",
+      "shift": 0
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1196m_sim_rank": {
+    "key": "alk_l1196m_sim_rank",
+    "value": 1,
+    "formatted": "1",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1196M Mutazyme II-simulated rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by log S + beta*sigma at beta = 1",
+    "inputs": {
+      "forced_class": "C>A",
+      "shift": 0
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1198f_sigma": {
+    "key": "alk_l1198f_sigma",
+    "value": 4.55175771640876,
+    "formatted": "+4.6",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "Oh atlas alectinib Resistance score for L1198F",
+    "formula": "sigma = Resistance score, chemistry-free",
+    "inputs": {
+      "forced_class": "C>T"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1198f_cf_rank": {
+    "key": "alk_l1198f_cf_rank",
+    "value": 18,
+    "formatted": "18",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1198F chemistry-free rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by sigma",
+    "inputs": {
+      "forced_class": "C>T",
+      "shift": -15
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1198f_sim_rank": {
+    "key": "alk_l1198f_sim_rank",
+    "value": 3,
+    "formatted": "3",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1198F Mutazyme II-simulated rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by log S + beta*sigma at beta = 1",
+    "inputs": {
+      "forced_class": "C>T",
+      "shift": -15
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_v1180l_sigma": {
+    "key": "alk_v1180l_sigma",
+    "value": 5.26448801756145,
+    "formatted": "+5.3",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "Oh atlas alectinib Resistance score for V1180L",
+    "formula": "sigma = Resistance score, chemistry-free",
+    "inputs": {
+      "forced_class": "C>G"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_v1180l_cf_rank": {
+    "key": "alk_v1180l_cf_rank",
+    "value": 8,
+    "formatted": "8",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "V1180L chemistry-free rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by sigma",
+    "inputs": {
+      "forced_class": "C>G",
+      "shift": 7
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_v1180l_sim_rank": {
+    "key": "alk_v1180l_sim_rank",
+    "value": 15,
+    "formatted": "15",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "V1180L Mutazyme II-simulated rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by log S + beta*sigma at beta = 1",
+    "inputs": {
+      "forced_class": "C>G",
+      "shift": 7
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_c1156y_sigma": {
+    "key": "alk_c1156y_sigma",
+    "value": 1.11412523715659,
+    "formatted": "+1.1",
+    "where": [
+      "not reported: the variant is named but its score is not"
+    ],
+    "computed_from": "Oh atlas alectinib Resistance score for C1156Y",
+    "formula": "sigma = Resistance score, chemistry-free",
+    "inputs": {
+      "forced_class": "C>T"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_c1156y_cf_rank": {
+    "key": "alk_c1156y_cf_rank",
+    "value": 132,
+    "formatted": "132",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "C1156Y chemistry-free rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by sigma",
+    "inputs": {
+      "forced_class": "C>T",
+      "shift": -77
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_c1156y_sim_rank": {
+    "key": "alk_c1156y_sim_rank",
+    "value": 55,
+    "formatted": "55",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "C1156Y Mutazyme II-simulated rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by log S + beta*sigma at beta = 1",
+    "inputs": {
+      "forced_class": "C>T",
+      "shift": -77
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1152r_sigma": {
+    "key": "alk_l1152r_sigma",
+    "value": 0.704426250435087,
+    "formatted": "+0.7",
+    "where": [
+      "not reported: the variant is named but its score is not"
+    ],
+    "computed_from": "Oh atlas alectinib Resistance score for L1152R",
+    "formula": "sigma = Resistance score, chemistry-free",
+    "inputs": {
+      "forced_class": "T>G"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1152r_cf_rank": {
+    "key": "alk_l1152r_cf_rank",
+    "value": 225,
+    "formatted": "225",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1152R chemistry-free rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by sigma",
+    "inputs": {
+      "forced_class": "T>G",
+      "shift": 597
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_l1152r_sim_rank": {
+    "key": "alk_l1152r_sim_rank",
+    "value": 822,
+    "formatted": "822",
+    "where": [
+      "\u00a73.4"
+    ],
+    "computed_from": "L1152R Mutazyme II-simulated rank among the 1,427 class-forced ALK variants, alectinib",
+    "formula": "rank by log S + beta*sigma at beta = 1",
+    "inputs": {
+      "forced_class": "T>G",
+      "shift": 597
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "alk_largest_panel_shift": {
+    "key": "alk_largest_panel_shift",
+    "value": 597,
+    "formatted": "+597",
+    "where": [
+      "Discussion"
+    ],
+    "computed_from": "largest predicted rank shift among the ALK panel variants under Mutazyme II with alectinib",
+    "formula": "max over panel variants of rank_simulated - rank_chemfree",
+    "inputs": {
+      "variant": "L1152R",
+      "forced_class": "T>G"
+    },
+    "code_fn": "oh_decomposition"
+  },
+  "be_kras_panel_class_blocked": {
+    "key": "be_kras_panel_class_blocked",
+    "value": 7,
+    "formatted": "7 of the 12",
+    "where": [
+      "Discussion"
+    ],
+    "computed_from": "KRAS G12C panel variants reachable in one nucleotide step whose every route falls in a class CBE+ABE cannot make",
+    "formula": "max(S_CBE+ABE(c)) over one-step routes equals zero",
+    "inputs": {
+      "variants": [
+        "C12F",
+        "H95D",
+        "H95Q",
+        "R68M",
+        "R68S",
+        "V8L",
+        "Y96D"
+      ]
+    },
+    "code_fn": "classify_amino_acid_change"
+  },
+  "be_kras_panel_supplied": {
+    "key": "be_kras_panel_supplied",
+    "value": 3,
+    "formatted": "3",
+    "where": [
+      "Discussion"
+    ],
+    "computed_from": "KRAS G12C panel variants a CBE+ABE pair can produce",
+    "formula": "max(S_CBE+ABE(c)) over one-step routes exceeds zero",
+    "inputs": {
+      "variants": [
+        "H95R",
+        "Y96C",
+        "Y96H"
+      ]
+    },
+    "code_fn": "classify_amino_acid_change"
+  },
+  "kras_r68l_z_sot": {
+    "key": "kras_r68l_z_sot",
+    "value": 3.47,
+    "formatted": "+3.47",
+    "where": [
+      "\u00a73.2"
+    ],
+    "computed_from": "chemistry-free Z-score of R68L under sotorasib",
+    "formula": "Feng atlas average Z",
+    "inputs": {
+      "variant": "R68L"
+    },
+    "code_fn": "feng_decomposition"
+  },
+  "kras_r68l_z_ada": {
+    "key": "kras_r68l_z_ada",
+    "value": 4.34,
+    "formatted": "+4.34",
+    "where": [
+      "\u00a73.2"
+    ],
+    "computed_from": "chemistry-free Z-score of R68L under adagrasib",
+    "formula": "Feng atlas average Z",
+    "inputs": {
+      "variant": "R68L"
+    },
+    "code_fn": "feng_decomposition"
+  },
+  "met_wt_median_rank_nvp": {
+    "key": "met_wt_median_rank_nvp",
+    "value": 495,
+    "formatted": "495",
+    "where": [
+      "\u00a73.7"
+    ],
+    "computed_from": "median atlas rank of the NVP-BVU972 hits on the wild-type MET background",
+    "formula": "median rank by delta sigma, WT background",
+    "inputs": {
+      "found": 7,
+      "total": 10
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_wt_median_rank_amg": {
+    "key": "met_wt_median_rank_amg",
+    "value": 2472,
+    "formatted": "2,472",
+    "where": [
+      "\u00a73.7"
+    ],
+    "computed_from": "median atlas rank of the AMG 458 hits on the wild-type MET background",
+    "formula": "median rank by delta sigma, WT background",
+    "inputs": {
+      "found": 11,
+      "total": 13
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_amg_ta_share": {
+    "key": "met_amg_ta_share",
+    "value": 0.3333333333333333,
+    "formatted": "33\\%",
+    "where": [
+      "\u00a73.7",
+      "Fig 5A"
+    ],
+    "computed_from": "share of AMG 458 clones whose substitution is T>A",
+    "formula": "clones in class / total clones",
+    "inputs": {
+      "n_clones": 60
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230c": {
+    "key": "met_y1230_clones_y1230c",
+    "value": 31,
+    "formatted": "31",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230C in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>C"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230d": {
+    "key": "met_y1230_clones_y1230d",
+    "value": 1,
+    "formatted": "1",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230D in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>G"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230f": {
+    "key": "met_y1230_clones_y1230f",
+    "value": 0,
+    "formatted": "0",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230F in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>A"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230h": {
+    "key": "met_y1230_clones_y1230h",
+    "value": 20,
+    "formatted": "20",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230H in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>C"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230n": {
+    "key": "met_y1230_clones_y1230n",
+    "value": 19,
+    "formatted": "19",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230N in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>A"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "met_y1230_clones_y1230s": {
+    "key": "met_y1230_clones_y1230s",
+    "value": 4,
+    "formatted": "4",
+    "where": [
+      "\u00a73.7",
+      "Fig 5B"
+    ],
+    "computed_from": "clones carrying Y1230S in the Tiedt NVP-BVU972 screen",
+    "formula": "transcribed clone count",
+    "inputs": {
+      "classes": [
+        "T>G"
+      ]
+    },
+    "code_fn": "met_audit.py::main"
+  },
+  "lorlatinib_inter_study_spread": {
+    "key": "lorlatinib_inter_study_spread",
+    "value": 0.3219465077435653,
+    "formatted": "0.32",
+    "where": [
+      "\u00a73.6",
+      "Table 4"
+    ],
+    "computed_from": "median inter-study range of measured lorlatinib potency on the same variant",
+    "formula": "median over variants of max - min log10 fold change",
+    "inputs": {
+      "n": 18
+    },
+    "code_fn": "sigma_transport_validation.py"
+  }
+}

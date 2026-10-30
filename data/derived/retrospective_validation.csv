@@ -1,0 +1,25 @@
+variant,wt_codon,reach,class,mutagen_rate,rank_chemfree,rank_simulated,screen
+V1180L,GTT,class-forced,C>G,0.05,8,15,Doi 2022
+L1196M,CTG,class-forced,C>A,0.18,1,1,Doi 2022
+I1171N,ATC,class-forced,T>A,0.105,61,118,Doi 2022
+I1171T,ATC,class-forced,T>C,0.18,22,10,Doi 2022
+L1198F,CTC,class-forced,C>T,0.47,18,3,Doi 2022
+G1202R,GGA,multi-class,,,,,Doi 2022
+L1256F,CTC,class-forced,C>T,0.47,124,44,Takei 2025
+E1129V,GAG,class-forced,T>A,0.105,642,726,Takei 2025
+E1129K,GAG,class-forced,C>T,0.47,854,266,Takei 2025
+C1156Y,TGC,class-forced,C>T,0.47,463,125,Takei 2025
+T1151R,ACG,class-forced,C>G,0.05,567,985,Takei 2025
+I1171N,ATC,class-forced,T>A,0.314,61,40,Nuvalent 2025
+I1171S,ATC,class-forced,T>G,0.05,26,34,Nuvalent 2025
+I1171T,ATC,class-forced,T>C,0.366,22,6,Nuvalent 2025
+F1174C,TTC,class-forced,T>G,0.05,5,10,Nuvalent 2025
+F1174V,TTC,class-forced,T>G,0.05,16,20,Nuvalent 2025
+V1180L,GTT,class-forced,C>G,0.002,8,229,Nuvalent 2025
+T1151K,ACG,class-forced,C>A,0.09,72,165,Nuvalent 2025
+T1151R,ACG,class-forced,C>G,0.002,104,1190,Nuvalent 2025
+E1129K,GAG,class-forced,C>T,0.179,689,561,Nuvalent 2025
+R1192P,?,,,,,,Nuvalent 2025
+L1196M,CTG,class-forced,C>A,0.09,1,2,Nuvalent 2025
+G1269A,GGA,class-forced,C>G,0.002,15,401,Nuvalent 2025
+G1202R,GGA,multi-class,,,,,Nuvalent 2025
